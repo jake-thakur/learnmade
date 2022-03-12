@@ -24,6 +24,7 @@ footer {
 }
 
 .result-border {
+    width: 98.5%;
     display: none;
     background-color: #9ABAB8;
     border: 1px solid black;
