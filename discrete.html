@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LearnMade | Discrete</title>
+        <link rel="icon" type="image/x-icon" href="learnmade_favicon.png">
+        <link rel="stylesheet" type="text/css" href="learnmade.css">
+        <script src="discrete.js"></script>
+    </head>
+    <body>
+        <!-- running top navigation -->
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="java.html">Java</a>
+            <a href="python.html">Python</a>
+            <a href="discrete.html" class="current">Discrete</a>
+            <img src="learnmade_navbar.png" alt="LearnMade LOGO" class="logo">
+        </div>
+        <!-- side navigation -->
+        <div class="sidenav">
+            <a href="#1-1">1.1</a>
+            <a href="#1-2">1.2</a>
+            <a href="#1-3">1.3</a>
+            <a href="#1-4">1.4</a>
+            <a href="#1-5">1.5</a>
+            <a href="#1-6">1.6</a>
+            <a href="#1-7">1.7</a>
+            <a href="#1-8">1.8</a>
+            <a href="#1-9">1.9</a>
+            <a href="#2-1">2.1</a>
+            <a href="#2-2">2.2</a>
+            <a href="#2-3">2.3</a>
+            <a href="#2-4">2.4</a>
+            <a href="#2-5">2.5</a>
+            <a href="#2-6">2.6</a>
+            <a href="#2-7">2.7</a>
+            <a href="#2-8">2.8</a>
+            <a href="#2-9">2.9</a>
+            <a href="#3-1">3.1</a>
+            <a href="#3-2">3.2</a>
+            <a href="#3-3">3.3</a>
+            <a href="#3-4">3.4</a>
+            <a href="#3-5">3.5</a>
+            <a href="#3-6">3.6</a>
+            <a href="#3-7">3.7</a>
+            <a href="#3-8">3.8</a>
+            <a href="#3-9">3.9</a>
+        </div>
+        <main>
+            <img src="learnmade_white.png" alt="LearnMade LOGO" class="center-logo">
+        </main>
+        <div class="indent">
+            <div id="all">
+                <h1>All Topics:</h1>
+                <div class="d-list">
+                    <ol>
+                        <li class="sub"> Numbers, Logic
+                            <ol>
+                                <li class="sub"><a href="#1-1" class="button-topic"><span>Number Sets</span></a></li>
+                                <li class="sub"><a href="#1-2" class="button-topic"><span>Math Notation</span></a></li>
+                                <li class="sub"><a href="#1-3" class="button-topic"><span>Division Algorithm</span></a></li>
+                                <li class="sub"><a href="#1-4" class="button-topic"><span>Euclid's Algorithm</span></a></li>
+                                <li class="sub"><a href="#1-5" class="button-topic"><span>Divisibility a | b</span></a></li>
+                                <li class="sub"><a href="#1-6" class="button-topic"><span>Modular Arithmetic</span></a></li>
+                                <li class="sub"><a href="#1-7" class="button-topic"><span>Prime Distribution</span></a></li>
+                                <li class="sub"><a href="#1-8" class="button-topic"><span>Formal Logic</span></a></li>
+                                <li class="sub"><a href="#1-9" class="button-topic"><span>Boolean Algebra</span></a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ul>
+                        <li class="inline" id="d2">2) Linear Algebra
+                            <ol>
+                                <li class="sub"><a href="#2-1" class="button-topic"><span>Coordinates (x, y)</span></a></li>
+                                <li class="sub"><a href="#2-2" class="button-topic"><span>Spaces & Tuples</span></a></li>
+                                <li class="sub"><a href="#2-3" class="button-topic"><span>Vector Notation</span></a></li>
+                                <li class="sub"><a href="#2-4" class="button-topic"><span>Vector Operations</span></a></li>
+                                <li class="sub"><a href="#2-5" class="button-topic"><span>Matrix Notation</span></a></li>
+                                <li class="sub"><a href="#2-6" class="button-topic"><span>Matrix Operations</span></a></li>
+                                <li class="sub"><a href="#2-7" class="button-topic"><span>Matrix Solutions</span></a></li>
+                                <li class="sub"><a href="#2-8" class="button-topic"><span>Determinants</span></a></li>
+                                <li class="sub"><a href="#2-9" class="button-topic"><span>Invertibility (IMT)</span></a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="inline" id="d3">3) General Theory
+                            <ol>
+                                <li class="sub"><a href="#3-1" class="button-topic"><span>Sums & Products</span></a></li>
+                                <li class="sub"><a href="#3-2" class="button-topic"><span>Proof by Induction</span></a></li>
+                                <li class="sub"><a href="#3-3" class="button-topic"><span>Graph Theory</span></a></li>
+                                <li class="sub"><a href="#3-4" class="button-topic"><span>Trees & Traversal</span></a></li>
+                                <li class="sub"><a href="#3-5" class="button-topic"><span>Probability Theory</span></a></li>
+                                <li class="sub"><a href="#3-6" class="button-topic"><span>Combinatorics</span></a></li>
+                                <li class="sub"><a href="#3-7" class="button-topic"><span>Set Theory {...}</span></a></li>
+                                <li class="sub"><a href="#3-8" class="button-topic"><span>Functions f(x)</span></a></li>
+                                <li class="sub"><a href="#3-9" class="button-topic"><span>Sorting Algorithms</span></a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- lessons -->
+            <div id="1-1">
+                <br><h2>1.1: Numbers and Their Sets <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>To understand the sets of numbers, we must begin with some basic set theory.
+                    A set is a group that contains elements, denoted by set braces and interior comma separated values (CSV) called elements;
+                    for example, <span class="math">{x, y, z}</span> is a set containing elements x, y, and z.</p>
+                <p>Writing out an entire set each time we want to refer to it can be tedious, even more so when the set is large; so, it is standard to name sets
+                    as follows (using our example): </p>
+                <ul class="list">
+                    <li>◦ English: <span class="math">let S be the set containing elements x, y, and z</span></li>
+                    <li>◦ Mathematical Notation: <span class="math">S = {x, y, z}</span></li>
+                </ul>
+                <p class="footnote">*Note we will use lots of Mathematical Notation (covered next section)</p>
+                <p>This way we can simply refer to the set by stating its name (<span class="math">S</span>, rather than <span class="math">{x, y, z}</span>).
+                   Doing so is especially useful when the "element of" operator is concerned.</p>
+                <p><strong>element of </strong>is denoted by "<span class="math">&isin;</span> " and is an operator to express membership.
+                    Considering our example: it is easy to see that <span class="math">x is an element of the set, S</span>; namely, <span class="math">x &isin;&ensp;S</span>.</p>
+                <p>What about infinite sets? Luckily, there exist standard notations for such sets, but first we must define a few types of numbers: </p>
+                <ul class="list-space">
+                    <li class="math">◦ Integer: <span class="math-def">finite numbers that can be expressed without fractions. E.x., -1, 0, 1</span></li>
+                    <li class="math">◦ Natural: <span class="math-def">integers greater than or equal to 0. E.x., 0, 1, 2</span></li>
+                    <li class="math">◦ Rational: <span class="math-def">finite numbers that can be expressed as a fraction of integers. E.x., -
+                        <span class="math-frac"><span>1</span><span class="symbol">/</span><span class="bottom">2</span></span> ,
+                        <span class="math-frac"><span>1</span><span class="symbol">/</span><span class="bottom">2</span></span> ,
+                        <span class="math-frac"><span>3</span><span class="symbol">/</span><span class="bottom">2</span></span></span></li>
+                    <li class="math">◦ Irrational: <span class="math-def">infinite numbers that cannot be expressed as a fraction of integers. E.x.,
+                        -<span class="bold">&radic;</span><span class="math-radic">2</span>, e, &pi;</span></li>
+                    <li class="math">◦ Real: <span class="math-def">any integer, rational, or irrational number. E.x., 0, -
+                        <span class="math-frac"><span>3</span><span class="symbol">/</span><span class="bottom">2</span></span> ,
+                        <span class="bold">&radic;</span><span class="math-radic">2</span></span></li>
+                    <li class="math">◦ Imaginary: <span class="math-def">a number of form bi, where b is a real number, and i =
+                        <span class="bold">&radic;</span><span class="math-radic">-1</span>. E.x., i, &pi;i, 6i</span></li>
+                    <li class="math">◦ Complex: <span class="math-def">the sum of a real number, a, and an imaginary number (a + bi). E.x.,
+                        <span class="bold">&radic;</span><span class="math-radic">2</span> + &pi;i, 1 - 2i</span></li>
+                </ul>
+                <p class="footnote">In order to define the sets properly, we will introduce a simple notation called <em>Set Builder Notation</em>, defined as follows:</p>
+                <p><strong>Set Builder Notation</strong>:</p>
+                <ul class="list">
+                    <li>◦ English: <span class="math">the set of all inputs such that condition</span></li>
+                    <li>◦ Mathematical Notation: <span class="math">{all inputs | condition}</span></li>
+                </ul>
+                <p>Now, for the sets:</p>
+                <ul class="list-space">
+                    <li class="math">◦ <span class="math-bold">&#8469;</span>: <span class="math-def">the set of all natural numbers, <span class="bold">&#8469;</span> =
+                        {0, 1, 2, ...}</span></li>
+                    <li class="math">◦ <span class="math-bold">&#8484;</span>: <span class="math-def">the set of all integers, <span class="bold">&#8484;</span> =
+                        {..., -1, 0, 1, ...}</span></li>
+                    <li class="math">◦ <span class="math-bold">&#8474;</span>: <span class="math-def">the set of all rational numbers, <span class="bold">&#8474;</span> =
+                        {x | x = <span class="math-frac"><span>a</span><span class="symbol">/</span><span class="bottom">b</span></span>;
+                        a, b &isin;&ensp;<span class="bold">&#8484;</span> and b &ne; 0}</span></li>
+                    <li class="math">◦ <span class="math-bold">&#8477;</span> \ <span class="math-bold">&#8474;</span>:<span class="math-def">the set of all irrational numbers,
+                        <span class="math-bold">&#8477;</span> \ <span class="math-bold">&#8474;</span> =
+                        {x | x &ne; {x | x = <span class="math-frac"><span>a</span><span class="symbol">/</span><span class="bottom">b</span></span>;
+                        a, b &isin;&ensp;<span class="bold">&#8484;</span> and b &ne; 0}</span></li>
+                    <li class="math">◦ <span class="math-bold">&#8477;</span>: <span class="math-def">the set of all real numbers, <span class="bold">&#8477;</span> =
+                        {x | -&infin; < x < &infin;}</span></li>
+                    <li class="math">◦ &#120128;: <span class="math-def">the set of all imaginary numbers, &#120128; =
+                        {x | x = bi; b &isin;&ensp;<span class="bold">&#8477;</span>}</span></li>
+                    <li class="math">◦ <span class="math-bold">&#8450;</span>: <span class="math-def">the set of all complex numbers, <span class="bold">&#8450;</span> =
+                        {x | x = a + bi; a, b &isin;&ensp;<span class="bold">&#8477;</span>}</span></li>
+                </ul>
+                <p class="footnote">*Note the + or - superscript may be applied to a set to imply the set of positives or the set of negatives. E.x.,
+                    <span class="math-fit"><span class="bold">&#8484;</span><sup>+</sup></span> is the set of all positive integers</p>
+                <p>Below is a venn diagram of the sets:</p>
+                <img src="number_sets_diagram.png" alt="number sets diagram">
+                <p class="footnote">*Note <span class="math-fit"><span class="bold">&#8450;</span></span> contains all the other sets because
+                    <span class="math-fit">(a = 0) <span class="bold">&#8658; </span>bi &isin; &#120128;, and (b = 0)
+                    <span class="bold">&#8658; </span>a &isin;&ensp;<span class="bold">&#8477;</span></span></p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Where do I belong?</p>
+                <p>1. What is the most specific set that <span class="math">16</span> belongs to?</p>
+                <input type="radio" id="d1_1x1a" name="part1" value="ℝ">
+                <label for="d1_1x1a" class="paragraph"> <span class="math-bold">&#8477;</span></label><br>
+                <input type="radio" id="d1_1x1b" name="part1" value="ℕ">
+                <label for="d1_1x1b" class="paragraph"> <span class="math-bold">&#8469;</span></label><br>
+                <input type="radio" id="d1_1x1c" name="part1" value="ℚ">
+                <label for="d1_1x1c" class="paragraph"> <span class="math-bold">&#8474;</span></label><br>
+                <input type="radio" id="d1_1x1d" name="part1" value="ℂ">
+                <label for="d1_1x1d" class="paragraph"> <span class="math-bold">&#8450;</span></label><br>
+                <p>2. Which number is a complex number?</p>
+                <input type="radio" id="d1_1x1e" name="part2" value="π">
+                <label for="d1_1x1e" class="paragraph"> <span class="math">&pi;</span></label><br>
+                <input type="radio" id="d1_1x1f" name="part2" value="2">
+                <label for="d1_1x1f" class="paragraph"> <span class="math">2</span></label><br>
+                <input type="radio" id="d1_1x1g" name="part2" value="6 + i">
+                <label for="d1_1x1g" class="paragraph"> <span class="math">6 + i</span></label><br>
+                <input type="radio" id="d1_1x1h" name="part2" value="All of the above">
+                <label for="d1_1x1h" class="paragraph"> <span class="math">All of the above</span></label><br>
+                <p>3. What is the symbol for the set of rational numbers?</p>
+                <input type="radio" id="d1_1x1i" name="part3" value="ℝ">
+                <label for="d1_1x1i" class="paragraph"> <span class="math-bold">&#8477;</span></label><br>
+                <input type="radio" id="d1_1x1j" name="part3" value="ℕ">
+                <label for="d1_1x1j" class="paragraph"> <span class="math-bold">&#8469;</span></label><br>
+                <input type="radio" id="d1_1x1k" name="part3" value="ℚ">
+                <label for="d1_1x1k" class="paragraph"> <span class="math-bold">&#8474;</span></label><br>
+                <input type="radio" id="d1_1x1l" name="part3" value="ℂ">
+                <label for="d1_1x1l" class="paragraph"> <span class="math-bold">&#8450;</span></label><br>
+                <p>4. <span class="math">{x &isin;<span class="bold">&ensp;&#8477;</span> | x &leq; 6}</span> is the set of all real numbers less than or equal to 6</p>
+                <input type="radio" id="d1_1x1m" name="part4" value="True">
+                <label for="d1_1x1m" class="math"> True</label><br>
+                <input type="radio" id="d1_1x1n" name="part4" value="False">
+                <label for="d1_1x1n" class="math"> False</label><br>
+                <p>5. <span class="math"><span class="math-frac"><span>ln(&pi;) + <span class="bold">&radic;</span><span class="math-radic">2</span>
+                </span><span class="symbol">/</span><span class="bottom">e<sup>cos(28)</sup></span>
+                    </span> &isin;&ensp;<span class="bold">&#8477;</span></span></p>
+                <input type="radio" id="d1_1x1o" name="part5" value="True">
+                <label for="d1_1x1o" class="math"> True</label><br>
+                <input type="radio" id="d1_1x1p" name="part5" value="False">
+                <label for="d1_1x1p" class="math"> False</label><br><br>
+                <input type="button" id="d1_1x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d1_1x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d1_1x1_y1' class='math-bold'></span></td>
+                            <td><span class='math-bold'>ℕ</span></td>
+                            <td id='d1_1x1_r1'></td>
+                            </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d1_1x1_y2' class='math'></span></td>
+                            <td><span class='math'>All of the above</span></td>
+                            <td id='d1_1x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d1_1x1_y3' class='math-bold'></span></td>
+                            <td><span class='math-bold'>ℚ</span></td>
+                            <td id='d1_1x1_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><span id='d1_1x1_y4' class='math'></span></td>
+                            <td><span class='math'>True</span></td>
+                            <td id='d1_1x1_r4'></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td><span id='d1_1x1_y5' class='math'></span></td>
+                            <td><span class='math'>True</span></td>
+                            <td id='d1_1x1_r5'></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="1-2">
+                <br><h2>1.2: Mathematical Notation <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-3">
+                <br><h2>1.3: The Division Algorithm <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-4">
+                <br><h2>1.4: Euclid's Algorithm for GCD <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-5">
+                <br><h2>1.5: Divisibility <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-6">
+                <br><h2>1.6: Modular Arithmetic <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-7">
+                <br><h2>1.7: Primes and Their Distribution <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-8">
+                <br><h2>1.8: Formal Logic <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-9">
+                <br><h2>1.9: Boolean Algebra <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-1">
+                <br><h2>2.1: Coordinate Systems <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-2">
+                <br><h2>2.2: Spaces and Tuples <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-3">
+                <br><h2>2.3: Vector Notation <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-4">
+                <br><h2>2.4: Vector Operations <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-5">
+                <br><h2>2.5: Matrix Notation <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-6">
+                <br><h2>2.6: Matrix Operations <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-7">
+                <br><h2>2.7: Matrix Solutions <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-8">
+                <br><h2>2.8: Determinants <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-9">
+                <br><h2>2.9: Invertibility <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-1">
+                <br><h2>3.1: Summation and Product <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-2">
+                <br><h2>3.2: Proof by Mathematical Induction <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-3">
+                <br><h2>3.3: Graph Theory <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-4">
+                <br><h2>3.4: Trees and Traversal <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-5">
+                <br><h2>3.5: Probability Theory <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-6">
+                <br><h2>3.6: Combinatorics <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-7">
+                <br><h2>3.7: Set Theory <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-8">
+                <br><h2>3.8: Functions <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="3-9">
+                <br><h2>3.9: Sorting Algorithms <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+        </div>
+        <footer>
+            <br><a href="about.html">About</a><br>
+            <p>Copyright © Jake Thakur<br><a href="mailto:jthakur@uncc.edu">jthakur@uncc.edu</a></p>
+            <a href="https://validator.w3.org"><img src="button_validation_html5.png" alt="HTML validation"></a>
+            <a href="https://jigsaw.w3.org/css-validator"><img src="button_validation_css.png" alt="CSS validation"></a>
+        </footer>
+    </body>
+</html>

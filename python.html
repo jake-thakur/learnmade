@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LearnMade | Python</title>
+        <link rel="icon" type="image/x-icon" href="learnmade_favicon.png">
+        <link rel="stylesheet" type="text/css" href="learnmade.css">
+        <script src="python.js"></script>
+    </head>
+    <body>
+        <!-- running top navigation -->
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="java.html">Java</a>
+            <a href="python.html" class="current">Python</a>
+            <a href="discrete.html">Discrete</a>
+            <img src="learnmade_navbar.png" alt="LearnMade LOGO" class="logo">
+        </div>
+        <!-- side navigation -->
+        <div class="sidenav">
+            <a href="#1-1">1.1</a>
+            <a href="#1-2">1.2</a>
+            <a href="#1-3">1.3</a>
+            <a href="#1-4">1.4</a>
+            <a href="#1-5">1.5</a>
+            <a href="#1-6">1.6</a>
+            <a href="#1-7">1.7</a>
+            <a href="#1-8">1.8</a>
+            <a href="#1-9">1.9</a>
+            <a href="#2-1">2.1</a>
+            <a href="#2-2">2.2</a>
+            <a href="#2-3">2.3</a>
+            <a href="#2-4">2.4</a>
+            <a href="#2-5">2.5</a>
+            <a href="#2-6">2.6</a>
+            <a href="#2-7">2.7</a>
+            <a href="#2-8">2.8</a>
+            <a href="#2-9">2.9</a>
+        </div>
+        <main>
+            <img src="learnmade_white.png" alt="LearnMade LOGO" class="center-logo">
+        </main>
+        <div class="indent">
+            <div id="all">
+                <h1>All Topics:</h1>
+                <div class="jp-list">
+                    <ol>
+                        <li class="sub"> Fundamentals
+                            <ol>
+                                <li class="sub"><a href="#1-1" class="button-topic"><span>Hello, World!</span></a></li>
+                                <li class="sub"><a href="#1-2" class="button-topic"><span>Variables & Types</span></a></li>
+                                <li class="sub"><a href="#1-3" class="button-topic"><span>Operators ++</span></a></li>
+                                <li class="sub"><a href="#1-4" class="button-topic"><span>Input/Output (I/O)</span></a></li>
+                                <li class="sub"><a href="#1-5" class="button-topic"><span>Conditionals</span></a></li>
+                                <li class="sub"><a href="#1-6" class="button-topic"><span>Loops (...)</span></a></li>
+                                <li class="sub"><a href="#1-7" class="button-topic"><span>Lists [x, y, z]</span></a></li>
+                                <li class="sub"><a href="#1-8" class="button-topic"><span>Dictionaries</span></a></li>
+                                <li class="sub"><a href="#1-9" class="button-topic"><span>Functions (def)</span></a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ul>
+                        <li class="inline" id="p2">2) Good to Know
+                            <ol>
+                                <li class="sub"><a href="#2-1" class="button-topic"><span>Comments #</span></a></li>
+                                <li class="sub"><a href="#2-2" class="button-topic"><span>Escape Characters</span></a></li>
+                                <li class="sub"><a href="#2-3" class="button-topic"><span>Modules, Packages</span></a></li>
+                                <li class="sub"><a href="#2-4" class="button-topic"><span>Random Numbers</span></a></li>
+                                <li class="sub"><a href="#2-5" class="button-topic"><span>Classes & Objects</span></a></li>
+                                <li class="sub"><a href="#2-6" class="button-topic"><span>Methods (...)</span></a></li>
+                                <li class="sub"><a href="#2-7" class="button-topic"><span>Recursion (...)</span></a></li>
+                                <li class="sub"><a href="#2-8" class="button-topic"><span>Sets {x, y, z}</span></a></li>
+                                <li class="sub"><a href="#2-9" class="button-topic"><span>Exception Handling</span></a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- lessons -->
+            <div id="1-1">
+                <br><h2>1.1: "Hello, World!" and Syntax <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>If you ask someone what their first program was, odds are good they will tell you "Hello, World!"</p>
+                <p>"Hello, World!" is a very simple program that outputs "Hello, World!" to the console.
+                    Unlike in Java, this program simply consists of a single print statement, as follows:</p>
+                <p class="snippets">print("Hello, World!")</p>
+                <p class="footnote">*Note Python is case-sensitive, so <span class="snippets">Print()</span> would result in an error</p>
+                <p>Notice there is no semicolon? Unlike most languages (Java, C++, etc.), Python does <em>not</em> require a semicolon after each instruction, because it is interpreted.
+                    Source code (high level) is interpreted and executed (bytecode, middle level) by the Python Virtual Machine/Environment (PVM/VENV).</p>
+                <ul class="list">
+                    <li>◦ Semicolons are <em>not</em> needed after each instruction</li>
+                    <li>◦ Python's syntax is much simpler than other languages</li>
+                </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Print "Hello, how are you?"</p>
+                <input id="p1_1x1a" size="20"><label for="p1_1x1a"></label>
+                <input type="button" id="p1_1x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="p1_1x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='p1_1x1_y1' class='snippets'></span></td>
+                            <td><span class='snippets'>print("Hello, how are you?")</span></td>
+                            <td id='p1_1x1_r1'></td>
+                        </tr>
+                    </table>
+                </div>
+                <p><strong>Grouping:</strong> consider the example:</p>
+                <p class="snippets">def message(word):<br>&emsp;&ensp;message = "Your message: " + word<br>&emsp;&ensp;print(message)<br>message("Consistency is key!")</p>
+                <p>Above is a simple program that defines a function and calls it. The function takes an argument, modifies it, and prints it;
+                    the function call, message("Consistency is key!"), will output "Your message: Consistency is key!" The point of including this code snippet is not
+                    to show what it does, rather to illustrate the manner in which the function, message, contains code.
+                    <br><span class="footnote">*Don't worry about the details of what a function, argument, and function call are yet, it will all be covered in later sections</span></p>
+                <p>This concept of containment, formally called encapsulation when relating to a class containing variables, methods, and other properties (covered later),
+                    is the essence of a group containing something. Unlike most languages (Java, C++, etc.) Python does not use set braces {...} to denote groups.</p>
+                <p><em>In Python, a group starts with a colon : and everything within it must be <span class="bold">consistently</span> indented (by spaces or tabs).
+                    A group can be something like a class, method, conditional statement, or loop, where everything that's consistently indented after a colon : is a member of the group.
+                    Once the indentation is broken (to meet the previous level of indentation), the group is considered concluded,
+                    and the breaking element is <span class="bold">not</span> considered part of the group
+                    (in the example, line 4 is not part of the function, message, because it went back a level).</em>
+                    <br><span class="footnote">*Note if the indentation is broken by going in more, a syntax error will be thrown</span></p>
+                <ul class="list">
+                    <li>◦ A group is something like a class, method, conditional statement, or loop</li>
+                    <li>◦ Everything consistently indented after a colon : is a member of the group</li>
+                    <li>◦ Once the indentation goes back a level, the group is concluded and the breaking line is outside of it</li>
+                    <li>◦ If the indentation goes up a level, a syntax error is thrown</li>
+                </ul>
+                <p><strong>Naming Conventions:</strong></p>
+                <ul class="list">
+                    <li>◦ The first character of a class name should be uppercase</li>
+                    <li>◦ A Python file is named as follows: <span class="snippets">Name.py</span></li>
+                    <li>◦ Keywords are case sensitive</li>
+                    <li>◦ Variables and methods should follow the camelCase convention</li>
+                    <li>◦ No spaces in names. If you must, use an underscore</li>
+                </ul>
+                <p class="footnote">*We will talk about classes, keywords, variables, and methods later</p>
+                <p><strong>camelCase </strong>is a naming convention where the first character of the
+                    first word is lowercase, and then every successive word's first
+                    character is Uppercase; example: lowerUpper</p>
+                <!-- Activity 2 -->
+                <p class="activity-header">Activity 2) Where does it break?</p>
+                <p>Consider the code:<br><span class="footnote">*Line numbers are denoted in the code by <span class="snippets-comment">#x</span></span></p>
+                <p class="snippets"><span class="snippets-comment">#0</span> def message(word):<br><span class="snippets-comment">#1</span>&emsp;&ensp;message = "Your message: " + word
+                    <br><span class="snippets-comment">#2</span>&emsp;&ensp;print(message)
+                    <br><span class="snippets-comment">#3</span> message("Consistency is key!")<br><span class="snippets-comment">#4</span>
+                    <br><span class="snippets-comment">#5</span> def error(x,y):<br><span class="snippets-comment">#6</span>&emsp;&ensp;x += 2<br>
+                    <span class="snippets-comment">#7</span>&emsp;&ensp;&ensp;y += 2<br><span class="snippets-comment">#8</span>&emsp;&ensp;return x + y<br>
+                    <span class="snippets-comment">#9</span> error(6, 28)</p>
+                <p>1. What is the last line of the function, message?</p>
+                <input type="radio" id="p1_1x2a" name="part1" value="Line 0">
+                <label for="p1_1x2a" class="paragraph"> Line 0</label><br>
+                <input type="radio" id="p1_1x2b" name="part1" value="Line 2">
+                <label for="p1_1x2b" class="paragraph"> Line 2</label><br>
+                <input type="radio" id="p1_1x2c" name="part1" value="Line 4">
+                <label for="p1_1x2c" class="paragraph"> Line 4</label><br>
+                <input type="radio" id="p1_1x2d" name="part1" value="Line 5">
+                <label for="p1_1x2d" class="paragraph"> Line 5</label><br>
+                <p>2. What line throws a syntax error?</p>
+                <input type="radio" id="p1_1x2e" name="part2" value="Line 5">
+                <label for="p1_1x2e" class="paragraph"> Line 5</label><br>
+                <input type="radio" id="p1_1x2f" name="part2" value="Line 6">
+                <label for="p1_1x2f" class="paragraph"> Line 6</label><br>
+                <input type="radio" id="p1_1x2g" name="part2" value="Line 7">
+                <label for="p1_1x2g" class="paragraph"> Line 7</label><br>
+                <input type="radio" id="p1_1x2h" name="part2" value="Line 9">
+                <label for="p1_1x2h" class="paragraph"> Line 9</label><br><br>
+                <input type="button" id="p1_1x2" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="p1_1x2_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='p1_1x2_y1' class='snippets'></span></td>
+                            <td><span class='snippets'>Line 2</span></td>
+                            <td id='p1_1x2_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='p1_1x2_y2' class='snippets'></span></td>
+                            <td><span class='snippets'>Line 7</span></td>
+                            <td id='p1_1x2_r2'></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="1-2">
+                <br><h2>1.2: Variables and Data Types <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-3">
+                <br><h2>1.3: Operators <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-4">
+                <br><h2>1.4: Input/Output <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-5">
+                <br><h2>1.5: Conditionals <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-6">
+                <br><h2>1.6: Loops <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-7">
+                <br><h2>1.7: Lists <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-8">
+                <br><h2>1.8: Dictionaries <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-9">
+                <br><h2>1.9: Functions <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-1">
+                <br><h2>2.1: Comments <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-2">
+                <br><h2>2.2: Escape Characters <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-3">
+                <br><h2>2.3: Modules and Packages <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-4">
+                <br><h2>2.4: Random Numbers <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-5">
+                <br><h2>2.5: Classes and Objects <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-6">
+                <br><h2>2.6: Methods <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-7">
+                <br><h2>2.7: Recursion <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-8">
+                <br><h2>2.8: Sets <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-9">
+                <br><h2>2.9: Exception Handling <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+        </div>
+        <footer>
+            <br><a href="about.html">About</a><br>
+            <p>Copyright © Jake Thakur<br><a href="mailto:jthakur@uncc.edu">jthakur@uncc.edu</a></p>
+            <a href="https://validator.w3.org"><img src="button_validation_html5.png" alt="HTML validation"></a>
+            <a href="https://jigsaw.w3.org/css-validator"><img src="button_validation_css.png" alt="CSS validation"></a>
+        </footer>
+    </body>
+</html>

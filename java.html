@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>LearnMade | Java</title>
+        <link rel="icon" type="image/x-icon" href="learnmade_favicon.png">
+        <link rel="stylesheet" type="text/css" href="learnmade.css">
+        <script src="java.js"></script>
+    </head>
+    <body>
+        <!-- running top navigation -->
+        <div id="navbar">
+            <a href="index.html">Home</a>
+            <a href="java.html" class="current">Java</a>
+            <a href="python.html">Python</a>
+            <a href="discrete.html">Discrete</a>
+            <img src="learnmade_navbar.png" alt="LearnMade LOGO" class="logo">
+        </div>
+        <!-- side navigation -->
+        <div class="sidenav">
+            <a href="#1-1">1.1</a>
+            <a href="#1-2">1.2</a>
+            <a href="#1-3">1.3</a>
+            <a href="#1-4">1.4</a>
+            <a href="#1-5">1.5</a>
+            <a href="#1-6">1.6</a>
+            <a href="#1-7">1.7</a>
+            <a href="#1-8">1.8</a>
+            <a href="#1-9">1.9</a>
+            <a href="#2-1">2.1</a>
+            <a href="#2-2">2.2</a>
+            <a href="#2-3">2.3</a>
+            <a href="#2-4">2.4</a>
+            <a href="#2-5">2.5</a>
+            <a href="#2-6">2.6</a>
+            <a href="#2-7">2.7</a>
+            <a href="#2-8">2.8</a>
+            <a href="#2-9">2.9</a>
+        </div>
+        <main>
+            <img src="learnmade_white.png" alt="LearnMade LOGO" class="center-logo">
+        </main>
+        <div class="indent">
+            <div id="all">
+                <h1>All Topics:</h1>
+                <div class="jp-list">
+                    <ol>
+                        <li class="sub"> Fundamentals 1
+                            <ol>
+                                <li class="sub"><a href="#1-1" class="button-topic"><span>Hello, World!</span></a></li>
+                                <li class="sub"><a href="#1-2" class="button-topic"><span>Variables & Types</span></a></li>
+                                <li class="sub"><a href="#1-3" class="button-topic"><span>Operators ++</span></a></li>
+                                <li class="sub"><a href="#1-4" class="button-topic"><span>Input/Output (I/O)</span></a></li>
+                                <li class="sub"><a href="#1-5" class="button-topic"><span>Conditionals</span></a></li>
+                                <li class="sub"><a href="#1-6" class="button-topic"><span>Loops {...}</span></a></li>
+                                <li class="sub"><a href="#1-7" class="button-topic"><span>Arrays [...]</span></a></li>
+                                <li class="sub"><a href="#1-8" class="button-topic"><span>Methods (...)</span></a></li>
+                                <li class="sub"><a href="#1-9" class="button-topic"><span>Classes & Objects</span></a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <ul>
+                        <li class="inline" id="j2">2) Fundamentals 2
+                            <ol>
+                                <li class="sub"><a href="#2-1" class="button-topic"><span>Constructors</span></a></li>
+                                <li class="sub"><a href="#2-2" class="button-topic"><span>Keywords & Access</span></a></li>
+                                <li class="sub"><a href="#2-3" class="button-topic"><span>Getters/Setters</span></a></li>
+                                <li class="sub"><a href="#2-4" class="button-topic"><span>Inheritance</span></a></li>
+                                <li class="sub"><a href="#2-5" class="button-topic"><span>Interfaces</span></a></li>
+                                <li class="sub"><a href="#2-6" class="button-topic"><span>String Methods</span></a></li>
+                                <li class="sub"><a href="#2-7" class="button-topic"><span>Generics <></span></a></li>
+                                <li class="sub"><a href="#2-8" class="button-topic"><span>Comments //</span></a></li>
+                                <li class="sub"><a href="#2-9" class="button-topic"><span>Exception Handling</span></a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- lessons -->
+            <div id="1-1">
+                <br><h2>1.1: "Hello, World!" and Syntax <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>If you ask someone what their first program was, odds are good they will tell you "Hello, World!"</p>
+                <p>"Hello, World!" is a very simple program that outputs "Hello, World!" to the console.
+                    The program consists of a class (can be named whatever, in our example it is named Main)
+                    that contains a main method (sometimes called the driver) and within it
+                    a single print statement, as follows:</p>
+                <p class="snippets">public class Main <br>{<br>&emsp;&ensp;public static void main(String[] args) <br>&emsp;&ensp;{<br>&emsp;&ensp;&emsp;&ensp;System.out.println("Hello, World!");<br>&emsp;&ensp;}<br>}</p>
+                <p class="footnote">*Note Java is case-sensitive, so <span class="snippets">system.out.println();</span> would result in an error</p>
+                <p>Notice the semicolon? Java is compiled, so it requires a semicolon after each instruction in order for the compiler
+                    to identify where an instruction ends. The compiler is a program that compiles source code (high level) down to
+                    bytecode (middle level), which is then interpreted and executed by the Java Virtual Machine (JVM).</p>
+                <ul class="list">
+                    <li>◦ Semicolons are needed after each instruction</li>
+                    <li>◦ <span class="snippets">System.out.println("Hello, World!");</span> is  an instruction</li>
+                    <li>◦ <span class="snippets">public static void main(String[] args) {...}</span> is not an instruction</li>
+                    <li>◦ <span class="snippets">class Main {...}</span> is not an instruction</li>
+                </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Fill in the code</p>
+                <p><input id="j1_1x1a" size="5"><label for="j1_1x1a"></label><span class="snippets"> Main <br>{<br>&emsp;&ensp;public static void</span> <input id="j1_1x1b" size="5"><label for="j1_1x1b"></label><span class="snippets">(String[] args) <br>
+                    &emsp;&ensp;{<br>&emsp;&ensp;&emsp;&ensp;</span><input id="j1_1x1c" size="5"><label for="j1_1x1c"></label><span class="snippets">.out.println("LearnMade rocks!");<br>&emsp;&ensp;}<br>}</span></p>
+                <input type="button" id="j1_1x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="j1_1x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='j1_1x1_y1' class='snippets'></span></td>
+                            <td><span class='snippets'>class</span></td>
+                            <td id='j1_1x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='j1_1x1_y2' class='snippets'></span></td>
+                            <td><span class='snippets'>main</span></td>
+                            <td id='j1_1x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='j1_1x1_y3' class='snippets'></span></td>
+                            <td><span class='snippets'>System</span></td>
+                            <td id='j1_1x1_r3'></td>
+                        </tr>
+                    </table>
+                </div>
+                <p><strong>Grouping:</strong> looking back at our example:</p>
+                <p class="snippets">public class Main <br>{<br>&emsp;&ensp;public static void main(String[] args) <br>&emsp;&ensp;{<br>&emsp;&ensp;&emsp;&ensp;System.out.println("Hello, World!");<br>&emsp;&ensp;}<br>}</p>
+                <p>The class, Main, contains the main method, which contains the code to print "Hello, World!" This concept of containment,
+                    formally called encapsulation when relating to a class containing fields, variables, methods, and various other properties (covered later),
+                    is the essence of a group containing something.</p>
+                <p><em>Anything inside of set braces {...} is a member of the group. A group can be something like a
+                    class, method, conditional statement, or loop, where everything within its set braces belongs to it.</em></p>
+                <ul class="list">
+                    <li>◦ A group is something like a class, method, conditional statement, or loop</li>
+                    <li>◦ Everything inside a group's set braces belongs to it {...}</li>
+                </ul>
+                <p><strong>Naming Conventions:</strong></p>
+                <ul class="list">
+                    <li>◦ The first character of a class name should be uppercase</li>
+                    <li>◦ A Java file is named as follows: <span class="snippets">Name.java</span></li>
+                    <li>◦ The class name should match the filename</li>
+                    <li>◦ Keywords are case sensitive</li>
+                    <li>◦ Variables and methods should follow the camelCase convention</li>
+                    <li>◦ No spaces in names. If you must, use an underscore</li>
+                </ul>
+                <p class="footnote">*We will talk about classes, keywords, variables, and methods later</p>
+                <p><strong>camelCase </strong>is a naming convention where the first character of the
+                    first word is lowercase, and then every successive word's first
+                    character is Uppercase; example: lowerUpper</p>
+                <!-- Activity 2 -->
+                <p class="activity-header">Activity 2) Identify the correct naming</p>
+                <input type="checkbox" id="j1_1x2a" name="j1_1x2a">
+                <label for="j1_1x2a" class="paragraph"> Variable: <span class="snippets">int myInt;</span></label><br>
+                <input type="checkbox" id="j1_1x2b" name="j1_1x2b">
+                <label for="j1_1x2b" class="paragraph"> Variable: <span class="snippets">Int myInt;</span></label><br>
+                <input type="checkbox" id="j1_1x2c" name="j1_1x2c">
+                <label for="j1_1x2c" class="paragraph"> Variable: <span class="snippets">double d;</span></label><br>
+                <input type="checkbox" id="j1_1x2d" name="j1_1x2d">
+                <label for="j1_1x2d" class="paragraph"> Class: <span class="snippets">class No Spaces {...}</span></label><br>
+                <input type="checkbox" id="j1_1x2e" name="j1_1x2e">
+                <label for="j1_1x2e" class="paragraph"> Filename: <span class="snippets">Learn.java</span></label><br><br>
+                <input type="button" id="j1_1x2" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="j1_1x2_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1a.</td>
+                            <td><span id='j1_1x2_y1' class='snippets'></span></td>
+                            <td><span class='snippets'>true</span></td>
+                            <td id='j1_1x2_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>1b.</td>
+                            <td><span id='j1_1x2_y2' class='snippets'></span></td>
+                            <td><span class='snippets'>false</span></td>
+                            <td id='j1_1x2_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>1c.</td>
+                            <td><span id='j1_1x2_y3' class='snippets'></span></td>
+                            <td><span class='snippets'>true</span></td>
+                            <td id='j1_1x2_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>1d.</td>
+                            <td><span id='j1_1x2_y4' class='snippets'></span></td>
+                            <td><span class='snippets'>false</span></td>
+                            <td id='j1_1x2_r4'></td>
+                        </tr>
+                        <tr>
+                            <td>1e.</td>
+                            <td><span id='j1_1x2_y5' class='snippets'></span></td>
+                            <td><span class='snippets'>true</span></td>
+                            <td id='j1_1x2_r5'></td>
+                        </tr>
+                    </table>
+                </div>
+                <p>You might be wondering what <span class="snippets">int myInt;</span> and
+                    <span class="snippets">double d;</span> are, which leads us to the next topic: variables and data types.</p>
+            </div>
+            <div id="1-2">
+                <br><h2>1.2: Variables and Data Types <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-3">
+                <br><h2>1.3: Operators <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-4">
+                <br><h2>1.4: Input/Output <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-5">
+                <br><h2>1.5: Conditionals <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-6">
+                <br><h2>1.6: Loops <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-7">
+                <br><h2>1.7: Arrays, ArrayLists, and 2-D Arrays <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-8">
+                <br><h2>1.8: Methods and Recursion <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="1-9">
+                <br><h2>1.9: Encapsulation, Classes, and Objects <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-1">
+                <br><h2>2.1: Constructors and Parameters <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-2">
+                <br><h2>2.2: Keywords and Accessibility <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-3">
+                <br><h2>2.3: Getters and Setters <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-4">
+                <br><h2>2.4: Inheritance and Polymorphism <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-5">
+                <br><h2>2.5: Interfaces and Packages <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-6">
+                <br><h2>2.6: String Methods and Escapes<br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-7">
+                <br><h2>2.7: Abstraction, Generics, and CompareTo <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-8">
+                <br><h2>2.8: Comments and JavaDoc <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+            <div id="2-9">
+                <br><h2>2.9: Exception Handling <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+                <p>---</p>
+            </div>
+        </div>
+        <footer>
+            <br><a href="about.html">About</a><br>
+            <p>Copyright © Jake Thakur<br><a href="mailto:jthakur@uncc.edu">jthakur@uncc.edu</a></p>
+            <a href="https://validator.w3.org"><img src="button_validation_html5.png" alt="HTML validation"></a>
+            <a href="https://jigsaw.w3.org/css-validator"><img src="button_validation_css.png" alt="CSS validation"></a>
+        </footer>
+    </body>
+</html>
