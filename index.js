@@ -1,6 +1,9 @@
 // javascript for index.html, about.html
 window.onload = function()
 {
+    // Night Mode Plugin
+    $("body").nightMode({autoEnable: true, keepNormal: "img, input, a, #navbar, #sidenav"});
+
     /* navbar */
     window.onscroll = function () {stick()};
     var navbar = document.getElementById("navbar");

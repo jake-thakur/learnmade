@@ -1,6 +1,9 @@
 // javascript for java.html
 window.onload = function()
 {
+    // Night Mode Plugin
+    $("body").nightMode({autoEnable: true, keepNormal: "img, input, a, #navbar, #sidenav"});
+
     /* navbar */
     window.onscroll = function () {stick()};
     var navbar = document.getElementById("navbar");
@@ -14,11 +17,13 @@ window.onload = function()
     /* navbar */
 
     // naming convention (first letter of course)(number on LHS of .)_(number on RHS of .)x(Activity number)(abc... for fields)
-    var $ = function (id) {return document.getElementById(id);};
-    $("j1_1x1").onclick = j1_1x1;
-    $("j1_1x2").onclick = j1_1x2;
+    var _ = function (id) {return document.getElementById(id);};
+    _("j1_1x1").onclick = j1_1x1;
+    _("j1_1x2").onclick = j1_1x2;
 
     /* java interactive */
+
+    // 1.1
     // Activity 1
     function j1_1x1() {
         document.getElementById("j1_1x1_result").style.display = "block";
@@ -78,5 +83,22 @@ window.onload = function()
         if (!j1_1x2_d) {document.getElementById("j1_1x2_r4").style.backgroundColor = "#739E5B"; document.getElementById("j1_1x2_r4").innerHTML = "correct";}
         if (j1_1x2_e) {document.getElementById("j1_1x2_r5").style.backgroundColor = "#739E5B"; document.getElementById("j1_1x2_r5").innerHTML = "correct";}
     }
+    // 1.2
+    // 1.3
+    // 1.4
+    // 1.5
+    // 1.6
+    // 1.7
+    // 1.8
+    // 1.9
+    // 2.1
+    // 2.2
+    // 2.3
+    // 2.4
+    // 2.5
+    // 2.6
+    // 2.7
+    // 2.8
+    // 2.9
     /* java interactive */
 }

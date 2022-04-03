@@ -1,5 +1,8 @@
 // javascript for python.html
 window.onload = function() {
+    // Night Mode Plugin
+    $("body").nightMode({autoEnable: true, keepNormal: "img, input, a, #navbar, #sidenav"});
+
     /* navbar */
     window.onscroll = function () {stick()};
     var navbar = document.getElementById("navbar");
@@ -14,11 +17,13 @@ window.onload = function() {
     /* navbar */
 
     // naming convention (first letter of course)(number on LHS of .)_(number on RHS of .)x(Activity number)(abc... for fields)
-    var $ = function (id) {return document.getElementById(id);};
-    $("p1_1x1").onclick = p1_1x1;
-    $("p1_1x2").onclick = p1_1x2;
+    var _ = function (id) {return document.getElementById(id);};
+    _("p1_1x1").onclick = p1_1x1;
+    _("p1_1x2").onclick = p1_1x2;
 
     /* python interactive */
+
+    // 1.1
     // Activity 1
     function p1_1x1() {
         document.getElementById("p1_1x1_result").style.display = "block";
@@ -84,5 +89,22 @@ window.onload = function() {
         if (p1_1x2_bool[0]) {document.getElementById("p1_1x2_r1").style.backgroundColor = "#739E5B"; document.getElementById("p1_1x2_r1").innerHTML = "correct";}
         if (p1_1x2_bool[1]) {document.getElementById("p1_1x2_r2").style.backgroundColor = "#739E5B"; document.getElementById("p1_1x2_r2").innerHTML = "correct";}
     }
+    // 1.2
+    // 1.3
+    // 1.4
+    // 1.5
+    // 1.6
+    // 1.7
+    // 1.8
+    // 1.9
+    // 2.1
+    // 2.2
+    // 2.3
+    // 2.4
+    // 2.5
+    // 2.6
+    // 2.7
+    // 2.8
+    // 2.9
     /* python interactive */
 }
