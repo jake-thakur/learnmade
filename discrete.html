@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>LearnMade | Discrete</title>
+        <meta name="viewport" content="width=device-width, initial-scale=0.01">
         <link rel="icon" type="image/x-icon" href="images/learnmade_favicon.png">
         <link rel="stylesheet" type="text/css" href="learnmade.css">
         <script src="discrete.js"></script>
@@ -11,6 +12,9 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="jquery-night-mode-master/css/night-mode.css"/>
         <script src="jquery-night-mode-master/js/jquery.night.mode.js"></script>
+        <!--MathJax-->
+        <script>MathJax = {tex: {inlineMath: [['@@', '@@'], ['\\(', '\\)']]}};</script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     </head>
     <body>
         <!-- running top navigation -->
@@ -110,35 +114,29 @@
                 <br><h2>1.1: Numbers and Their Sets <br><a href="#all" class="small">(All Topics)</a></h2>
                 <p>To understand the sets of numbers, we must begin with some basic set theory.
                     A set is a group that contains elements, denoted by set braces and interior comma separated values (CSV) called elements;
-                    for example, <span class="math">{x, y, z}</span> is a set containing elements x, y, and z.</p>
+                    for example, <span class="math">{@@x, y, z@@}</span> is a set containing elements @@x, y,@@ and @@z@@.</p>
                 <p>Writing out an entire set each time we want to refer to it can be tedious, even more so when the set is large; so, it is standard to name sets
                     as follows (using our example): </p>
                 <ul class="list">
-                    <li>◦ English: <span class="math">let S be the set containing elements x, y, and z</span></li>
-                    <li>◦ Mathematical Notation: <span class="math">S = {x, y, z}</span></li>
+                    <li>◦ English: <span class="math">let @@S@@ be the set containing elements @@x, y,@@ and @@z@@</span></li>
+                    <li>◦ Mathematical Notation: <span class="math">@@S = @@ {@@x, y, z@@}</span></li>
                 </ul>
                 <p class="footnote">*Note we will use lots of Mathematical Notation (covered next section)</p>
-                <p>This way we can simply refer to the set by stating its name (<span class="math">S</span>, rather than <span class="math">{x, y, z}</span>).
+                <p>This way we can simply refer to the set by stating its name (<span class="math">@@S@@</span>, rather than <span class="math">{@@x, y, z@@}</span>).
                    Doing so is especially useful when the "element of" operator is concerned.</p>
-                <p><strong>element of </strong>is denoted by "<span class="math">&isin;</span> " and is an operator to express membership.
-                    Considering our example: it is easy to see that <span class="math">x is an element of the set, S</span>; namely, <span class="math">x &isin;&ensp;S</span>.</p>
+                <p><strong>element of </strong>is denoted by "<span class="math">@@&isin;@@</span>" and is an operator to express membership.
+                    Considering our example: it is easy to see that <span class="math">@@x@@ is an element of the set, @@S@@</span>; namely, <span class="math">@@x &isin; S@@</span>.</p>
                 <p>What about infinite sets? Luckily, there exist standard notations for such sets, but first we must define a few types of numbers: </p>
                 <ul class="list-space">
-                    <li class="math">◦ Integer: <span class="math-def">finite numbers that can be expressed without fractions. E.x., -1, 0, 1</span></li>
-                    <li class="math">◦ Natural: <span class="math-def">integers greater than or equal to 0. E.x., 0, 1, 2</span></li>
-                    <li class="math">◦ Rational: <span class="math-def">finite numbers that can be expressed as a fraction of integers. E.x., -
-                        <span class="math-frac"><span>1</span><span class="symbol">/</span><span class="bottom">2</span></span> ,
-                        <span class="math-frac"><span>1</span><span class="symbol">/</span><span class="bottom">2</span></span> ,
-                        <span class="math-frac"><span>3</span><span class="symbol">/</span><span class="bottom">2</span></span></span></li>
+                    <li class="math">◦ Integer: <span class="math-def">finite numbers that can be expressed without fractions. E.x., @@-1, 0, 1@@</span></li>
+                    <li class="math">◦ Natural: <span class="math-def">integers greater than or equal to 0. E.x., @@0, 1, 2@@</span></li>
+                    <li class="math">◦ Rational: <span class="math-def">finite numbers that can be expressed as a fraction of integers. E.x., @@-\frac{1}{2}, \frac{1}{2}, \frac{3}{2}@@</span></li>
                     <li class="math">◦ Irrational: <span class="math-def">infinite numbers that cannot be expressed as a fraction of integers. E.x.,
-                        -<span class="bold">&radic;</span><span class="math-radic">2</span>, e, &pi;</span></li>
-                    <li class="math">◦ Real: <span class="math-def">any integer, rational, or irrational number. E.x., 0, -
-                        <span class="math-frac"><span>3</span><span class="symbol">/</span><span class="bottom">2</span></span> ,
-                        <span class="bold">&radic;</span><span class="math-radic">2</span></span></li>
-                    <li class="math">◦ Imaginary: <span class="math-def">a number of form bi, where b is a real number, and i =
-                        <span class="bold">&radic;</span><span class="math-radic">-1</span>. E.x., i, &pi;i, 6i</span></li>
-                    <li class="math">◦ Complex: <span class="math-def">the sum of a real number, a, and an imaginary number (a + bi). E.x.,
-                        <span class="bold">&radic;</span><span class="math-radic">2</span> + &pi;i, 1 - 2i</span></li>
+                        @@-\sqrt2, e, &pi;@@</span></li>
+                    <li class="math">◦ Real: <span class="math-def">any integer, rational, or irrational number. E.x., @@0, -\frac{3}{2}, \sqrt2@@</span></li>
+                    <li class="math">◦ Imaginary: <span class="math-def">a number of form bi, where b is a real number, and @@i = \sqrt{-1}@@. E.x., @@i, &pi;i, 6i@@</span></li>
+                    <li class="math">◦ Complex: <span class="math-def">the sum of a real number, @@a@@, and an imaginary number @@(a + bi)@@. E.x.,
+                        @@\sqrt2 + &pi;i, 1 - 2i@@</span></li>
                 </ul>
                 <p class="footnote">In order to define the sets properly, we will introduce a simple notation called <em>Set Builder Notation</em>, defined as follows:</p>
                 <p><strong>Set Builder Notation</strong>:</p>
@@ -148,68 +146,53 @@
                 </ul>
                 <p>Now, for the sets:</p>
                 <ul class="list-space">
-                    <li class="math">◦ <span class="math-bold">&#8469;</span>: <span class="math-def">the set of all natural numbers, <span class="bold">&#8469;</span> =
-                        {0, 1, 2, ...}</span></li>
-                    <li class="math">◦ <span class="math-bold">&#8484;</span>: <span class="math-def">the set of all integers, <span class="bold">&#8484;</span> =
-                        {..., -1, 0, 1, ...}</span></li>
-                    <li class="math">◦ <span class="math-bold">&#8474;</span>: <span class="math-def">the set of all rational numbers, <span class="bold">&#8474;</span> =
-                        {x | x = <span class="math-frac"><span>a</span><span class="symbol">/</span><span class="bottom">b</span></span>;
-                        a, b &isin;&ensp;<span class="bold">&#8484;</span> and b &ne; 0}</span></li>
-                    <li class="math">◦ <span class="math-bold">&#8477;</span> \ <span class="math-bold">&#8474;</span>:<span class="math-def">the set of all irrational numbers,
-                        <span class="math-bold">&#8477;</span> \ <span class="math-bold">&#8474;</span> =
-                        {x | x &ne; {x | x = <span class="math-frac"><span>a</span><span class="symbol">/</span><span class="bottom">b</span></span>;
-                        a, b &isin;&ensp;<span class="bold">&#8484;</span> and b &ne; 0}</span></li>
-                    <li class="math">◦ <span class="math-bold">&#8477;</span>: <span class="math-def">the set of all real numbers, <span class="bold">&#8477;</span> =
-                        {x | -&infin; < x < &infin;}</span></li>
-                    <li class="math">◦ &#120128;: <span class="math-def">the set of all imaginary numbers, &#120128; =
-                        {x | x = bi; b &isin;&ensp;<span class="bold">&#8477;</span>}</span></li>
-                    <li class="math">◦ <span class="math-bold">&#8450;</span>: <span class="math-def">the set of all complex numbers, <span class="bold">&#8450;</span> =
-                        {x | x = a + bi; a, b &isin;&ensp;<span class="bold">&#8477;</span>}</span></li>
+                    <li class="math">◦ @@&#8469;@@: <span class="math-def">the set of all natural numbers</span>, @@&#8469;@@ = {@@0, 1, 2,...@@}</li>
+                    <li class="math">◦ @@&#8484;@@: <span class="math-def">the set of all integers</span>, @@&#8484;@@ = {@@..., -1, 0, 1,...@@}</li>
+                    <li class="math">◦ @@&#8474;@@: <span class="math-def">the set of all rational numbers</span>, @@&#8474; =@@ {@@x\:|\:x = \frac{a}{b};\:a, b &isin; &#8484;@@ and @@b \not= 0@@}</li>
+                    <li class="math">◦ @@&#8477;@@ \ @@&#8474;@@: <span class="math-def">the set of all irrational numbers</span>, @@&#8477;@@ \ @@&#8474; = @@ {@@x\:|\:x &ne; @@ {@@x\:|\:x = \frac{a}{b};\:a, b &isin; &#8484;@@ and @@b \not= 0@@}</li>
+                    <li class="math">◦ @@&#8477;@@: <span class="math-def">the set of all real numbers</span>, @@&#8477; = @@ {@@x\:|-&infin; < x < &infin;@@}</li>
+                    <li class="math">◦ @@&#120128;@@: <span class="math-def">the set of all imaginary numbers</span>, @@&#120128; = @@ {@@x\:|\:x = bi;\: b &isin;&#8477;@@}</li>
+                    <li class="math">◦ @@&#8450;@@: <span class="math-def">the set of all complex numbers</span>, @@&#8450; = @@ {@@x\:|\:x = a + bi;\: a, b &isin;&#8477;@@}</li>
                 </ul>
-                <p class="footnote">*Note the + or - superscript may be applied to a set to imply the set of positives or the set of negatives. E.x.,
-                    <span class="math-fit"><span class="bold">&#8484;</span><sup>+</sup></span> is the set of all positive integers</p>
+                <p class="footnote">*Note the + or - superscript may be applied to a set to imply the set of positives or the set of negatives. E.x., @@&#8484;^+@@ is the set of all positive integers</p>
                 <p>Below is a venn diagram of the sets:</p>
                 <img src="images/number_sets_diagram.png" alt="number sets diagram">
-                <p class="footnote">*Note <span class="math-fit"><span class="bold">&#8450;</span></span> contains all the other sets because
-                    <span class="math-fit">(a = 0) <span class="bold">&#8658; </span>bi &isin; &#120128;, and (b = 0)
-                    <span class="bold">&#8658; </span>a &isin;&ensp;<span class="bold">&#8477;</span></span></p>
+                <p class="footnote">*Note @@&#8450;@@ contains all the other sets because @@(a = 0) &#8658; bi &isin; &#120128;@@, and @@(b = 0) &#8658; a &isin; &#8477;@@</p>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Where do I belong?</p>
-                <p>1. What is the most specific set that <span class="math">16</span> belongs to?</p>
+                <p>1. What is the most specific set that <span class="math">@@16@@</span> belongs to?</p>
                 <input type="radio" id="d1_1x1a" name="part1" value="ℝ">
-                <label for="d1_1x1a" class="paragraph"> <span class="math-bold">&#8477;</span></label><br>
+                <label for="d1_1x1a" class="math"> @@&#8477;@@</label><br>
                 <input type="radio" id="d1_1x1b" name="part1" value="ℕ">
-                <label for="d1_1x1b" class="paragraph"> <span class="math-bold">&#8469;</span></label><br>
+                <label for="d1_1x1b" class="math"> @@&#8469;@@</label><br>
                 <input type="radio" id="d1_1x1c" name="part1" value="ℚ">
-                <label for="d1_1x1c" class="paragraph"> <span class="math-bold">&#8474;</span></label><br>
+                <label for="d1_1x1c" class="math"> @@&#8474;@@</label><br>
                 <input type="radio" id="d1_1x1d" name="part1" value="ℂ">
-                <label for="d1_1x1d" class="paragraph"> <span class="math-bold">&#8450;</span></label><br>
+                <label for="d1_1x1d" class="math"> @@&#8450;@@</label><br>
                 <p>2. Which number is a complex number?</p>
                 <input type="radio" id="d1_1x1e" name="part2" value="π">
-                <label for="d1_1x1e" class="paragraph"> <span class="math">&pi;</span></label><br>
+                <label for="d1_1x1e" class="math"> @@&pi;@@</label><br>
                 <input type="radio" id="d1_1x1f" name="part2" value="2">
-                <label for="d1_1x1f" class="paragraph"> <span class="math">2</span></label><br>
+                <label for="d1_1x1f" class="math"> @@2@@</label><br>
                 <input type="radio" id="d1_1x1g" name="part2" value="6 + i">
-                <label for="d1_1x1g" class="paragraph"> <span class="math">6 + i</span></label><br>
+                <label for="d1_1x1g" class="math"> @@6 + i@@</label><br>
                 <input type="radio" id="d1_1x1h" name="part2" value="All of the above">
-                <label for="d1_1x1h" class="paragraph"> <span class="math">All of the above</span></label><br>
+                <label for="d1_1x1h" class="math"> All of the above</label><br>
                 <p>3. What is the symbol for the set of rational numbers?</p>
                 <input type="radio" id="d1_1x1i" name="part3" value="ℝ">
-                <label for="d1_1x1i" class="paragraph"> <span class="math-bold">&#8477;</span></label><br>
+                <label for="d1_1x1i" class="math"> @@&#8477;@@</label><br>
                 <input type="radio" id="d1_1x1j" name="part3" value="ℕ">
-                <label for="d1_1x1j" class="paragraph"> <span class="math-bold">&#8469;</span></label><br>
+                <label for="d1_1x1j" class="math"> @@&#8469;@@</label><br>
                 <input type="radio" id="d1_1x1k" name="part3" value="ℚ">
-                <label for="d1_1x1k" class="paragraph"> <span class="math-bold">&#8474;</span></label><br>
+                <label for="d1_1x1k" class="math"> @@&#8474;@@</label><br>
                 <input type="radio" id="d1_1x1l" name="part3" value="ℂ">
-                <label for="d1_1x1l" class="paragraph"> <span class="math-bold">&#8450;</span></label><br>
-                <p>4. <span class="math">{x &isin;<span class="bold">&ensp;&#8477;</span> | x &leq; 6}</span> is the set of all real numbers less than or equal to 6</p>
+                <label for="d1_1x1l" class="math"> @@&#8450;@@</label><br>
+                <p>4. <span class="math">{@@x &isin; &#8477;\:|\:x &leq; 6@@}</span> is the set of all real numbers less than or equal to 6</p>
                 <input type="radio" id="d1_1x1m" name="part4" value="True">
                 <label for="d1_1x1m" class="math"> True</label><br>
                 <input type="radio" id="d1_1x1n" name="part4" value="False">
                 <label for="d1_1x1n" class="math"> False</label><br>
-                <p>5. <span class="math"><span class="math-frac"><span>ln(&pi;) + <span class="bold">&radic;</span><span class="math-radic">2</span>
-                </span><span class="symbol">/</span><span class="bottom">e<sup>cos(28)</sup></span>
-                    </span> &isin;&ensp;<span class="bold">&#8477;</span></span></p>
+                <p>5. <span class="math">@@\frac{ln(&pi;) + \sqrt2}{e^{cos(28)}} &isin; &#8477;@@</span></p>
                 <input type="radio" id="d1_1x1o" name="part5" value="True">
                 <label for="d1_1x1o" class="math"> True</label><br>
                 <input type="radio" id="d1_1x1p" name="part5" value="False">
@@ -227,8 +210,8 @@
                         </tr>
                         <tr>
                             <td>1.</td>
-                            <td><span id='d1_1x1_y1' class='math-bold'></span></td>
-                            <td><span class='math-bold'>ℕ</span></td>
+                            <td><span id='d1_1x1_y1' class='math'></span></td>
+                            <td><span class='math'>@@ℕ@@</span></td>
                             <td id='d1_1x1_r1'></td>
                             </tr>
                         <tr>
@@ -239,8 +222,8 @@
                         </tr>
                         <tr>
                             <td>3.</td>
-                            <td><span id='d1_1x1_y3' class='math-bold'></span></td>
-                            <td><span class='math-bold'>ℚ</span></td>
+                            <td><span id='d1_1x1_y3' class='math'></span></td>
+                            <td><span class='math'>@@ℚ@@</span></td>
                             <td id='d1_1x1_r3'></td>
                         </tr>
                         <tr>
@@ -267,26 +250,26 @@
                 <h4>A full reference of Mathematical Symbols can be found <a href="https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols">here</a></h4>
                 <p>Logic:</p>
                 <ul class="list-space">
-                    <li class="math">◦ <span>&#8658; </span>: <span class="math-def">Logical Implication (if, then)</span></li>
-                    <li class="math">◦ <span>&#8660; </span>: <span class="math-def">Logical Equivalence (if and only if, then)</span></li>
-                    <li class="math">◦ <span>&#172; </span>: <span class="math-def">Logical Negation (Not)</span></li>
-                    <li class="math">◦ <span>&#8756; </span>: <span class="math-def">Logical Conclusion (Therefore)</span></li>
-                    <li class="math">◦ <span>&#8704; </span>: <span class="math-def">Universal Quantifier (For All)</span></li>
-                    <li class="math">◦ <span>&#8707; </span>: <span class="math-def">Existential Quantifier (There Exists)</span></li>
+                    <li class="math">◦ <span>@@&#8658;@@ </span>: <span class="math-def">Logical Implication (if, then)</span></li>
+                    <li class="math">◦ <span>@@&#8660;@@ </span>: <span class="math-def">Logical Equivalence (if and only if (iff.), then)</span></li>
+                    <li class="math">◦ <span>@@&#172;@@ </span>: <span class="math-def">Logical Negation (Not)</span></li>
+                    <li class="math">◦ <span>@@&#8756;@@ </span>: <span class="math-def">Logical Conclusion (Therefore)</span></li>
+                    <li class="math">◦ <span>@@&#8704;@@ </span>: <span class="math-def">Universal Quantifier (For All)</span></li>
+                    <li class="math">◦ <span>@@&#8707;@@ </span>: <span class="math-def">Existential Quantifier (There Exists)</span></li>
                 </ul>
-                <p class="footnote">X &#8658; Y means X implies Y (if X, then Y)</p>
-                <p class="footnote">X &#8660; Y means X and Y are equivalent (if and only if X, then Y)</p>
-                <p class="footnote">let X = true, such that &#172;X means not X = false</p>
-                <p class="footnote">&#8704; X, |X| > 0  means for all values of X, the absolute value of X is greater than 0</p>
-                <p class="footnote">&#8707; X such that X > 0 means there exists some value of X, such that it is greater than 0</p>
+                <p class="footnote">@@X &#8658; Y@@ means @@X@@ implies @@Y@@ (if @@X@@, then @@Y@@)</p>
+                <p class="footnote">@@X &#8660; Y@@ means @@X@@ and @@Y@@ are equivalent (if and only if @@X@@, then @@Y@@)</p>
+                <p class="footnote">let @@X@@ = true, such that @@&#172;X@@ means not @@X@@ = false</p>
+                <p class="footnote">@@&#8704; X,\:|X| > 0@@  means for all values of @@X@@, the absolute value of @@X@@ is greater than @@0@@</p>
+                <p class="footnote">@@&#8707; X@@ such that @@X > 0@@ means there exists some value of @@X@@, such that it is greater than @@0@@</p>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Logical?</p>
-                <p>1. <span class="math">&#8707; X such that X &isin;<span class="bold">&ensp;&#8477;</span></span></p>
+                <p>1. <span class="math">@@&#8707; X@@ such that @@X &isin; &#8477;@@</span></p>
                 <input type="radio" id="d1_2x1a" name="part1" value="True">
                 <label for="d1_2x1a" class="math">True</label><br>
                 <input type="radio" id="d1_2x1b" name="part1" value="False">
                 <label for="d1_2x1b" class="math">False</label><br>
-                <p>2. <span class="math">X &isin;<span class="bold">&ensp;&#8477;</span> &#8658; X &isin;<span class="bold">&ensp;&#8484;</span></span></p>
+                <p>2. <span class="math">@@X &isin; &#8477; &#8658; X &isin; &#8484;@@</span></p>
                 <input type="radio" id="d1_2x1c" name="part2" value="True">
                 <label for="d1_2x1c" class="math">True</label><br>
                 <input type="radio" id="d1_2x1d" name="part2" value="False">
@@ -318,129 +301,132 @@
                 </div>
                 <p>Operators and Comparison:</p>
                 <ul class="list-space">
-                    <li class="math">◦ <span class="math-bold">&ne; </span>: <span class="math-def">Not Equal</span></li>
-                    <li class="math">◦ <span class="math-bold">&equiv; </span>: <span class="math-def">Congruent (Equivalent in a Congruence Class)</span></li>
-                    <li class="math-norm">◦ <span>&#8739; </span>: <span class="math-def">Divides (Remainder = 0)</span></li>
-                    <li class="math-norm">◦ <span>&#8740; </span>: <span class="math-def">Does not Divide (Remainder &ne; 0)</span></li>
-                    <li class="math-norm">◦ <span>&#8741; </span>: <span class="math-def">Parallel (Two lines that never intersect and have the same distance between each other at any given point)</span></li>
-                    <li class="math-norm">◦ <span>&#10178; </span>: <span class="math-def">Perpendicular (Two lines that intersect at a 90° angle at some point)</span></li>
-                    <li class="math">◦ <span>&ge; </span>: <span class="math-def">Greater Than or Equal</span></li>
-                    <li class="math">◦ <span>&le; </span>: <span class="math-def">Less Than or Equal</span></li>
-                    <li class="math">◦ <span class="math-bold">&asymp; </span>: <span class="math-def">Approximately Equal</span></li>
+                    <li class="math">◦ <span class="math-bold">@@&ne;@@ </span>: <span class="math-def">Not Equal</span></li>
+                    <li class="math">◦ <span class="math-bold">@@&equiv;@@ </span>: <span class="math-def">Congruent (Equivalent in a Congruence Class)</span></li>
+                    <li class="math">◦ <span>@@&#8739;@@ </span>: <span class="math-def">Divides (Remainder @@= 0@@)</span></li>
+                    <li class="math">◦ <span>@@&#8740;@@ </span>: <span class="math-def">Does not Divide (Remainder @@&ne; 0@@)</span></li>
+                    <li class="math">◦ <span>@@&#8741;@@ </span>: <span class="math-def">Parallel (Two lines that never intersect and have the same distance between each other at any given point)</span></li>
+                    <li class="math">◦ <span>@@&#10178;@@ </span>: <span class="math-def">Perpendicular (Two lines that intersect at a @@90°@@ angle at some point)</span></li>
+                    <li class="math">◦ <span>@@&ge;@@ </span>: <span class="math-def">Greater Than or Equal</span></li>
+                    <li class="math">◦ <span>@@&le;@@ </span>: <span class="math-def">Less Than or Equal</span></li>
+                    <li class="math">◦ <span class="math-bold">@@&asymp;@@ </span>: <span class="math-def">Approximately Equal</span></li>
                 </ul>
-                <p class="footnote">2 &ne; 3 (2 does not equal 3)</p>
-                <p class="footnote">4 &equiv; 1 (mod 3) (4 is congruent to 1 when divided by 3; namely, the remainder is 1)</p>
-                <p class="footnote">3 &#8739; 6 (3 divides 6)</p>
-                <p class="footnote">3 &#8739; 7 (3 does not divide 7)</p>
-                <p class="footnote">3 &ge; 2 (3 is greater than or equal to 2)</p>
-                <p class="footnote">2 &le; 3 (2 is less than or equal to 3)</p>
-                <p class="footnote">1.1 &asymp; 1.11 (1.1 is approximately equal to 1.11)</p>
+                <p class="footnote">@@2 &ne; 3@@ (2 does not equal 3)</p>
+                <p class="footnote">@@4 &equiv; 1\: (mod\: 3)@@ (4 is congruent to 1 when divided by 3; namely, the remainder is 1)</p>
+                <p class="footnote">@@3 &#8739; 6@@ (3 divides 6)</p>
+                <p class="footnote">@@3 &#8739; 7@@ (3 does not divide 7)</p>
+                <p class="footnote">@@3 &ge; @@ (3 is greater than or equal to 2)</p>
+                <p class="footnote">@@2 &le; 3@@ (2 is less than or equal to 3)</p>
+                <p class="footnote">@@1.1 &asymp; 1.11@@ (1.1 is approximately equal to 1.11)</p>
                 <p>There are many more symbols and notations that will be used in this website, but they will be introduced with their
                 respective (later) topics as to avoid confusion! The introduction of how to denote divisibility and congruence leads us to our next few lessons (1.3 - 1.7).</p>
             </div>
             <div id="1-3">
                 <br><h2>1.3: The Division Algorithm <br><a href="#all" class="small">(All Topics)</a></h2>
                 <p>What is division? Division is an algorithm that is defined by the operations multiplication and addition. Well, you might be thinking, "I was taught that division was an operation!"
-                Yes, that is what we were all taught growing up; but first, let's take a look at subtraction. Really, subtraction is just adding two numbers with a catch: the second one was multiplied by -1; namely
-                    <span class="math">a - b = a + (-1) * b</span>... But why do we care? Well, for subtraction we don't get anything really cool from this definition,
+                Yes, that is what we were all taught growing up; but first, let's take a look at subtraction. Really, subtraction is just adding two numbers with a catch: the second one was multiplied by @@-1@@; namely
+                    <span class="math">@@a - b = a + b(-1)@@</span>... But why do we care? Well, for subtraction we don't get anything really cool from this definition,
                     but with division we are given two really important quantities: the quotient and the remainder.</p>
-                <p>The dividend, divisor, quotient, and remainder are the same as they always were:<br><br>
-                    Dividend: the number to be divided<br><br>
-                    Divisor: the number to be divided by<br><br>
-                    Quotient: how many times a number fits into the dividend without exceeding it
-                    <br><br>Remainder: how much is left (between the divisor times the quotient and the dividend); namely, the difference (between the two). When we think of division in the same way that we thought of subtraction above, we are given the following theorem (Euclid):</p>
-                <p class="math-def-h">Let a and b be integers with b > 0<span><br></span>Then there exist unique integers q and r such that a = bq + r, where 0 &le; r < b</p>
+                <p>The dividend, divisor, quotient, and remainder are the same as they always were:</p>
                 <ul>
-                    <li class="math">◦ a: dividend</li>
-                    <li class="math">◦ b: divisor</li>
-                    <li class="math">◦ q: quotient</li>
-                    <li class="math">◦ r: remainder</li>
+                    <li>◦ Dividend: the number to be divided</li>
+                    <li>◦ Divisor: the number to be divided by</li>
+                    <li>◦ Quotient: how many times a number fits into the dividend without exceeding it</li>
+                    <li>◦ Remainder: how much is left (between the divisor times the quotient and the dividend); namely, the difference (between the two)</li>
                 </ul>
-                <p>This theorem greatly simplifies the jarring English used above, defining division in terms of multiplication and addition. From this, we get the following: <span class="math-def">r = bq - a</span>,
+                <p>When we think of division in the same way that we thought of subtraction above, we are given the following theorem (Euclid):</p>
+                <p class="math-def-h">Let a and b be integers with @@b > 0@@<span><br></span>Then there exist unique integers @@q@@ and @@r@@ such that @@a = bq + r@@, where @@0 &le; r < b@@</p>
+                <ul>
+                    <li class="math">◦ @@a@@: dividend</li>
+                    <li class="math">◦ @@b@@: divisor</li>
+                    <li class="math">◦ @@q@@: quotient</li>
+                    <li class="math">◦ @@r@@: remainder</li>
+                </ul>
+                <p>This theorem greatly simplifies the jarring English used above, defining division in terms of multiplication and addition. From this, we get the following: <span class="math-def">@@r = bq - a@@</span>,
                 which is obvious, but what really does it mean? We have defined the remainder as the difference of the (product of the divisor and the quotient) and the dividend, as we said above!</p>
                 <p>So what do we do with this seemingly overcomplicated definition of division? Well... we divide stuff. Let's take a look at how to do it:</p>
-                <p><strong>Example 1</strong>: 55 divided by 3</p>
+                <p><strong>Example 1</strong>: @@55@@ divided by @@3@@</p>
                 <p>By the Division Algorithm, we see that:</p>
                 <ul>
-                    <li class="math">a = 55, b = 3 &#8658;</li>
-                    <li class="math">55 = 3q + r</li>
+                    <li class="math">@@a = 55, b = 3 &#8658;@@</li>
+                    <li class="math">@@55 = 3q + r@@</li>
                 </ul>
-                <p>With that, our next step is to find <span class="math">q</span> by answering the question, "How many times does 3 go into 55?"</p>
-                <p class="footnote">*Note a > 0</p>
-                <p>We can do so by using the brute force method of letting <span class="math">q = 1</span> and iterating up to a value of <span class="math">q</span>
-                such that <span class="math">3q > 55</span>, in which case the <strong>previous</strong> value of <span class="math">q</span> is the quotient.</p>
+                <p>With that, our next step is to find <span class="math">@@q@@</span> by answering the question, "How many times does @@3@@ go into @@55@@?"</p>
+                <p class="footnote">*Note @@a > 0@@</p>
+                <p>We can do so by using the brute force method of letting <span class="math">@@q = 1@@</span> and iterating up to a value of <span class="math">@@q@@</span>
+                such that <span class="math">@@3q > 55@@</span>, in which case the <strong>previous</strong> value of <span class="math">@@q@@</span> is the quotient.</p>
                 <p class="footnote">*Note a smarter approach would be to pick a larger number and guess and check down to the first product less than 55</p>
                 <ul>
-                    <li class="math">let q = 1 &#8658; 3 * 1 = 3, 3 < 55</li>
-                    <li class="math">let q = 2 &#8658; 3 * 2 = 6, 6 < 55</li>
+                    <li class="math">let @@q = 1 &#8658; 3 * 1 = 3, 3 < 55@@</li>
+                    <li class="math">let @@q = 2 &#8658; 3 * 2 = 6, 6 < 55@@</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
-                    <li class="math">let q = 18 &#8658; 3 * 18 = 54, 54 < 55</li>
-                    <li class="math">let q = 19 &#8658; 3 * 19 = 57, 57 > 55 &#8658; q = 18</li>
+                    <li class="math">let @@q = 18 &#8658; 3 * 18 = 54, 54 < 55@@</li>
+                    <li class="math">let @@q = 19 &#8658; 3 * 19 = 57, 57 > 55 &#8658; q = 18@@</li>
                 </ul>
                 <p>With that, by the Division Algorithm, we obtain the following:</p>
                 <ul>
-                    <li class="math">55 = 3 * 18 + r</li>
+                    <li class="math">@@55 = 3 * 18 + r@@</li>
                 </ul>
                 <p>Now, all that is left to do is find the remainder by rearranging the algebraic expression:</p>
                 <ul>
-                    <li class="math">55 = 3 * 18 + r &#8658;</li>
-                    <li class="math">55 - (3 * 18) = r &#8658;</li>
-                    <li class="math">r = 1</li>
+                    <li class="math">@@55 = 3 * 18 + r &#8658;@@</li>
+                    <li class="math">@@55 - (3 * 18) = r &#8658;@@</li>
+                    <li class="math">@@r = 1@@</li>
                 </ul>
                 <p>Finally, we obtain the following equality by the Division Algorithm:</p>
                 <ul>
-                    <li class="math">55 = 3 * 18 + 1 &#8658;</li>
-                    <li class="math">55 = 55</li>
+                    <li class="math">@@55 = 3 * 18 + 1 &#8658;@@</li>
+                    <li class="math">@@55 = 55@@</li>
                 </ul>
-                <p>Thus, when 55 is divided by 3, a quotient of 18 and a remainder of 1 are given.</p>
-                <p><strong>Example 2</strong>: -22 divided by 7</p>
+                <p>Thus, when @@55@@ is divided by @@3@@, a quotient of @@18@@ and a remainder of @@1@@ are given.</p>
+                <p><strong>Example 2</strong>: @@-22@@ divided by @@7@@</p>
                 <p>By the Division Algorithm, we see that:</p>
                 <ul>
-                    <li class="math">a = -22, b = 7 &#8658;</li>
-                    <li class="math">-22 = 7q + r</li>
+                    <li class="math">@@a = -22, b = 7 &#8658;@@</li>
+                    <li class="math">@@-22 = 7q + r@@</li>
                 </ul>
-                <p>With that, our next step is to find <span class="math">q</span> by answering the question, "How many times does 7 go into -22?"</p>
-                <p class="footnote">*Note a < 0</p>
-                <p>We can do so by using the brute force method of letting <span class="math">q = -1</span> and iterating down to a value of <span class="math">q</span>
-                    such that <span class="math">7q < -22</span>, in which case the <strong>that</strong> value of <span class="math">q</span> is the quotient.</p>
+                <p>With that, our next step is to find <span class="math">@@q@@</span> by answering the question, "How many times does @@7@@ go into @@-22@@?"</p>
+                <p class="footnote">*Note @@a < 0@@</p>
+                <p>We can do so by using the brute force method of letting <span class="math">@@q = -1@@</span> and iterating down to a value of <span class="math">@@q@@</span>
+                    such that <span class="math">@@7q < -22@@</span>, in which case the <strong>that</strong> value of <span class="math">@@q@@</span> is the quotient.</p>
                 <ul>
-                    <li class="math">let q = -1 &#8658; 7 * -1 = -7, -7 > -22</li>
-                    <li class="math">let q = -2 &#8658; 7 * -2 = -14, -14 > -22</li>
-                    <li class="math">let q = -3 &#8658; 7 * -3 = -21, -21 > -22</li>
-                    <li class="math">let q = -4 &#8658; 7 * -4 = -28, -28 < -22 &#8658; q = -4</li>
+                    <li class="math">let @@q = -1 &#8658; 7 * -1 = -7, -7 > -22@@</li>
+                    <li class="math">let @@q = -2 &#8658; 7 * -2 = -14, -14 > -22@@</li>
+                    <li class="math">let @@q = -3 &#8658; 7 * -3 = -21, -21 > -22@@</li>
+                    <li class="math">let @@q = -4 &#8658; 7 * -4 = -28, -28 < -22 &#8658; q = -4@@</li>
                 </ul>
                 <p>With that, by the Division Algorithm, we obtain the following:</p>
                 <ul>
-                    <li class="math">-22 = 7 * -4 + r</li>
+                    <li class="math">@@-22 = 7 * -4 + r@@</li>
                 </ul>
                 <p>Now, all that is left to do is find the remainder by rearranging the algebraic expression:</p>
                 <ul>
-                    <li class="math">-22 = 7 * -4 + r &#8658;</li>
-                    <li class="math">-22 - (7 * -4) = r &#8658;</li>
-                    <li class="math">r = 6</li>
+                    <li class="math">@@-22 = 7 * -4 + r &#8658;@@</li>
+                    <li class="math">@@-22 - (7 * -4) = r &#8658;@@</li>
+                    <li class="math">@@r = 6@@</li>
                 </ul>
                 <p>Finally, we obtain the following equality by the Division Algorithm:</p>
                 <ul>
-                    <li class="math">-22 = 7 * -4 + 6 &#8658;</li>
-                    <li class="math">-22 = -22</li>
+                    <li class="math">@@-22 = 7 * -4 + 6 &#8658;@@</li>
+                    <li class="math">@@-22 = -22@@</li>
                 </ul>
-                <p id="find-q-r">Thus, when -22 is divided by 7, a quotient of -4 and a remainder of 6 are given.</p>
+                <p id="find-q-r">Thus, when @@-22@@ is divided by @@7@@, a quotient of @@-4@@ and a remainder of @@6@@ are given.</p>
                 <p><strong>Generalizing the steps:</strong></p>
                 <ol>
-                    <li>1. <span class="math">Using values of a and b, write an expression of the form a = bq + r</span></li>
-                    <li>2. <span class="math">find the value of q by finding the greatest value of q such that bq < a</span></li>
-                    <li>3. <span class="math">find the value of r by rearranging the expression to the form r = a - bq</span></li>
+                    <li>1. <span class="math">Using values of @@a@@ and @@b@@, write an expression of the form @@a = bq + r@@</span></li>
+                    <li>2. <span class="math">find the value of @@q@@ by finding the greatest value of @@q@@ such that @@bq < a@@</span></li>
+                    <li>3. <span class="math">find the value of @@r@@ by rearranging the expression to the form @@r = a - bq@@</span></li>
                 </ol>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) What's leftover?</p>
-                <p>1. 224 divided by 9</p>
-                <label for="d1_3x1a" class="math">q = </label><input id="d1_3x1a" size="1"><br>
-                <label for="d1_3x1b" class="math">r = </label><input id="d1_3x1b" size="1"><br>
-                <p>2. -312 divided by 5</p>
-                <label for="d1_3x1c" class="math">q = </label><input id="d1_3x1c" size="1"><br>
-                <label for="d1_3x1d" class="math">r = </label><input id="d1_3x1d" size="1"><br><br>
+                <p>1. @@224@@ divided by @@9@@</p>
+                <label for="d1_3x1a" class="math">@@q = @@ </label><input id="d1_3x1a" size="1"><br>
+                <label for="d1_3x1b" class="math">@@r = @@ </label><input id="d1_3x1b" size="1"><br>
+                <p>2. @@-312@@ divided by @@5@@</p>
+                <label for="d1_3x1c" class="math">@@q = @@ </label><input id="d1_3x1c" size="1"><br>
+                <label for="d1_3x1d" class="math">@@r = @@ </label><input id="d1_3x1d" size="1"><br><br>
                 <input type="button" id="d1_3x1" value="Verify" class="button-interact"/>
                 <div class="button-whitespace"></div>
                 <div id="d1_3x1_result" class="result-border">
@@ -455,25 +441,25 @@
                         <tr>
                             <td>1a.</td>
                             <td><span id='d1_3x1_y1' class='math'></span></td>
-                            <td><span class='math'>24</span></td>
+                            <td><span class='math'>@@24@@</span></td>
                             <td id='d1_3x1_r1'></td>
                         </tr>
                         <tr>
                             <td>1b.</td>
                             <td><span id='d1_3x1_y2' class='math'></span></td>
-                            <td><span class='math'>8</span></td>
+                            <td><span class='math'>@@8@@</span></td>
                             <td id='d1_3x1_r2'></td>
                         </tr>
                         <tr>
                             <td>2a.</td>
                             <td><span id='d1_3x1_y3' class='math'></span></td>
-                            <td><span class='math'>-63</span></td>
+                            <td><span class='math'>@@-63@@</span></td>
                             <td id='d1_3x1_r3'></td>
                         </tr>
                         <tr>
                             <td>2b.</td>
                             <td><span id='d1_3x1_y4' class='math'></span></td>
-                            <td><span class='math'>3</span></td>
+                            <td><span class='math'>@@3@@</span></td>
                             <td id='d1_3x1_r4'></td>
                         </tr>
                     </table>
@@ -483,110 +469,110 @@
                 <br><h2>1.4: Divisibility <br><a href="#all" class="small">(All Topics)</a></h2>
                 <p>Since we discussed how division is defined and works, the topic of divisibility is now of interest.
                 One definition of Divisibility via the Division Algorithm is as follows:</p>
-                <p class="math-norm"><span class="math-def-h">Let a and b be integers where a is to be divided by b<br>
-                    It is said that b divides a, denoted by b </span>&#8739;<span class="math-def-h"> a, if and only if the remainder is 0
-                    <br>Namely, by the Divison Algorithm, b </span>&#8739;<span class="math-def-h"> a &#8660; a = bq + 0<br>
-                    If the remainder is not 0, then it is said that b does not divide a, denoted by b </span> &#8740;<span class="math-def-h"> a</span></p>
+                <p class="math"><span class="math-def-h">Let @@a@@ and @@b@@ be integers where @@a@@ is to be divided by @@b@@<br>
+                    It is said that b divides @@a@@, denoted by @@b &#8739; a@@, if and only if the remainder is @@0@@
+                    <br>Namely, by the Divison Algorithm, @@b &#8739; a &#8660; a = bq + 0@@<br>
+                    If the remainder is not @@0@@, then it is said that @@b@@ does not divide @@a@@, denoted by</span> @@b&#8740;@@<span class="math-def-h"> @@a@@</span></p>
                 <p>Another definition of Divisibility:</p>
-                <p class="math-norm"><span class="math-def-h">Let a, b, and k be integers where a is to be divided by b, and k is some integer<br>
-                    It is said that b divides a, denoted by b </span>&#8739;<span class="math-def-h"> a, if and only if a is a multiple of b; namely, a = kb<br>
-                    If a &ne; kb, then it is said that b does not divide a, denoted by b </span> &#8740;<span class="math-def-h"> a</span></p>
+                <p class="math"><span class="math-def-h">Let @@a@@, @@b@@, and @@k@@ be integers where @@a@@ is to be divided by @@b@@, and @@k@@ is some integer<br>
+                    It is said that @@b@@ divides @@a@@, denoted by @@b@@ </span>@@&#8739;@@<span class="math-def-h"> @@a@@, if and only if @@a@@ is a multiple of @@b@@; namely, a = kb<br>
+                    If @@a &ne; kb@@, then it is said that @@b@@ does not divide @@a@@, denoted by @@b@@ </span> @@&#8740;@@<span class="math-def-h"> @@a@@</span></p>
                 <ul>
-                    <li class="math-norm">◦ <span class="math">b </span> &#8739;<span class="math"> a &#8658; b is a divisor of a</span></li>
-                    <li class="math-norm">◦ <span class="math">b </span> &#8740;<span class="math"> a &#8658; b is not a divisor of a</span></li>
+                    <li class="math">◦ <span class="math">@@b &#8739; a &#8658; b@@ is a divisor of @@a@@</span></li>
+                    <li class="math">◦ <span class="math">@@b &#8740; a &#8658; b@@ is not a divisor of @@a@@</span></li>
                 </ul>
-                <p><strong>Example 1</strong>: 19 &#8739; 1482?</p>
-                <p>We begin by checking if 1482 is a multiple of 19, if 19 divides 1482 then 1482 = 19k for some integer k:</p>
+                <p><strong>Example 1</strong>: @@19 &#8739; 1482@@?</p>
+                <p>We begin by checking if @@1482@@ is a multiple of @@19@@, if @@19@@ divides @@1482@@ then @@1482 = 19k@@ for some integer @@k@@:</p>
                 <ul>
-                    <li class="math">let k = 1 &#8658; 19 * 1 = 19, 19 &ne; 1482</li>
-                    <li class="math">let k = 2 &#8658; 19 * 2 = 38, 38 &ne; 1482</li>
+                    <li class="math">let @@k = 1 &#8658; 19 * 1 = 19, 19 &ne; 1482@@</li>
+                    <li class="math">let @@k = 2 &#8658; 19 * 2 = 38, 38 &ne; 1482@@</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
-                    <li class="math">let k = 77 &#8658; 19 * 77 = 1463, 1463 &ne; 1482</li>
-                    <li class="math">let k = 78 &#8658; 19 * 78 = 1482, 1482 = 1482 &#8658; k = 78</li>
+                    <li class="math">let @@k = 77 &#8658; 19 * 77 = 1463, 1463 &ne; 1482@@</li>
+                    <li class="math">let @@k = 78 &#8658; 19 * 78 = 1482, 1482 = 1482 &#8658; k = 78@@</li>
                 </ul>
-                <p>Since 1482 is a multiple of 19, 19 &#8739; 1482</p>
+                <p>Since @@1482@@ is a multiple of @@19@@, @@19 &#8739; 1482@@</p>
                 <ul>
-                    <li class="math">By the Division Algorithm, 1482 = 19 * 78 + 0</li>
+                    <li class="math">By the Division Algorithm, @@1482 = 19 * 78 + 0@@</li>
                 </ul>
-                <p><strong>Example 2</strong>: 3 &#8739; 1343?</p>
-                <p>We begin by checking if 1343 is a multiple of 3:</p>
+                <p><strong>Example 2</strong>: @@3 &#8739; 1343@@?</p>
+                <p>We begin by checking if @@1343@@ is a multiple of @@3@@:</p>
                 <ul>
-                    <li class="math">let k = 1 &#8658; 3 * 1 = 3, 3 &ne; 1343</li>
-                    <li class="math">let k = 2 &#8658; 3 * 2 = 6, 6 &ne; 1343</li>
+                    <li class="math">let @@k = 1 &#8658; 3 * 1 = 3, 3 &ne; 1343@@</li>
+                    <li class="math">let @@k = 2 &#8658; 3 * 2 = 6, 6 &ne; 1343@@</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
-                    <li class="math">let k = 447 &#8658; 3 * 447 = 1341, 1341 &ne; 1343</li>
-                    <li class="math">let k = 448 &#8658; 3 * 448 = 1344, 1344 &ne; 1343 &#8658; k = 447</li>
+                    <li class="math">let @@k = 447 &#8658; 3 * 447 = 1341, 1341 &ne; 1343@@</li>
+                    <li class="math">let @@k = 448 &#8658; 3 * 448 = 1344, 1344 &ne; 1343 &#8658; k = 447@@</li>
                 </ul>
-                <p>Since 1343 is not a multiple of 3, 3 &#8740; 1343</p>
+                <p>Since @@1343@@ is not a multiple of @@3@@, @@3 &#8740; 1343@@</p>
                 <ul>
-                    <li class="math">By the Division Algorithm, 1343 = 3 * 447 + 2</li>
+                    <li class="math">By the Division Algorithm, @@1343 = 3 * 447 + 2@@</li>
                 </ul>
-                <p><strong>Example 3</strong>: 7 &#8739; -28?</p>
-                <p>We begin by checking if -28 is a multiple of 7:</p>
+                <p><strong>Example 3</strong>: @@7 &#8739; -28@@?</p>
+                <p>We begin by checking if @@-28@@ is a multiple of @@7@@:</p>
                 <ul>
-                    <li class="math">let k = -1 &#8658; 19 * -1 = -7, -7 &ne; -28</li>
-                    <li class="math">let k = -2 &#8658; 19 * -2 = -14, -14 &ne; -28</li>
-                    <li class="math">let k = -3 &#8658; 19 * -3 = -21, -21 &ne; -28</li>
-                    <li class="math">let k = -4 &#8658; 19 * -4 = -28, -28 = -28 &#8658; k = -4</li>
+                    <li class="math">let @@k = -1 &#8658; 19 * -1 = -7, -7 &ne; -28@@</li>
+                    <li class="math">let @@k = -2 &#8658; 19 * -2 = -14, -14 &ne; -28@@</li>
+                    <li class="math">let @@k = -3 &#8658; 19 * -3 = -21, -21 &ne; -28@@</li>
+                    <li class="math">let @@k = -4 &#8658; 19 * -4 = -28, -28 = -28 &#8658; k = -4@@</li>
                 </ul>
-                <p>Since -28 is a multiple of 7, 7 &#8739; -28</p>
+                <p>Since @@-28@@ is a multiple of @@7@@, @@7@@ &#8739; @@-28@@</p>
                 <ul>
-                    <li class="math">By the Division Algorithm, -28 = 7 * -4 + 0</li>
+                    <li class="math">By the Division Algorithm, @@-28 = 7 * -4 + 0@@</li>
                 </ul>
-                <p><strong>Example 4</strong>: 16 &#8739; -1528?</p>
-                <p>We begin by checking if -1582 is a multiple of 16:</p>
+                <p><strong>Example 4</strong>: @@16 &#8739; -1528?@@</p>
+                <p>We begin by checking if @@-1582@@ is a multiple of @@16@@:</p>
                 <ul>
-                    <li class="math">let k = -1 &#8658; 16 * -1 = -16, -16 &ne; -1528</li>
-                    <li class="math">let k = -2 &#8658; 16 * -2 = -32, -32 &ne; -1528</li>
+                    <li class="math">let @@ = -1 &#8658; 16 * -1 = -16, -16 &ne; -1528@@</li>
+                    <li class="math">let @@k = -2 &#8658; 16 * -2 = -32, -32 &ne; -1528@@</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
                     <li class="math">.</li>
-                    <li class="math">let k = -95 &#8658; 16 * -95 = -1520, -1520 &ne; -1528</li>
-                    <li class="math">let k = -96 &#8658; 16 * -96 = -1536, -1536 &ne; -1528 &#8658; k = -96</li>
+                    <li class="math">let @@k = -95 &#8658; 16 * -95 = -1520, -1520 &ne; -1528@@</li>
+                    <li class="math">let @@k = -96 &#8658; 16 * -96 = -1536, -1536 &ne; -1528 &#8658; k = -96@@</li>
                 </ul>
-                <p>Since -1528 is not a multiple of 16, 16 &#8740; -1528</p>
+                <p>Since @@-1528@@ is not a multiple of @@16@@, @@16 &#8740; -1528@@</p>
                 <ul>
-                    <li class="math">By the Division Algorithm, -1528 = 16 * -96 + 8</li>
+                    <li class="math">By the Division Algorithm, @@-1528 = 16 * -96 + 8@@</li>
                 </ul>
-                <p><strong>Example 5</strong>: 3 &#8739; (18x + 63x<sup>2</sup> - 123x<sup>6</sup>)?</p>
+                <p><strong>Example 5</strong>: @@3 &#8739; (18x + 63x^2 - 123x^6)@@?</p>
                 <p>What? Notice that the coefficient of each term is a factor of 3:</p>
                 <ul>
-                    <li class="math">18x + 63x<sup>2</sup> - 123x<sup>6</sup> &#8658;</li>
-                    <li class="math">3(6x + 21x<sup>2</sup> - 41x<sup>6</sup>), let k = 6x + 21x<sup>2</sup> - 41x<sup>6</sup> &#8658;</li>
-                    <li class="math">3(6x + 21x<sup>2</sup> - 41x<sup>6</sup>) = 3k</li>
+                    <li class="math">@@18x + 63x^2 - 123x^6 &#8658;@@</li>
+                    <li class="math">@@3(6x + 21x^2 - 41x^6)@@, let @@k = 6x + 21x^2 - 41x^6 &#8658;@@</li>
+                    <li class="math">@@3(6x + 21x^2 - 41x^6) = 3k@@</li>
                 </ul>
-                <p>Since (18x + 63x<sup>2</sup> - 123x<sup>6</sup>) is a multiple of 3, 3 &#8739; (18x + 63x<sup>2</sup> - 123x<sup>6</sup>)</p>
+                <p>Since @@(18x + 63x^2 - 123x^6)@@ is a multiple of @@3, 3 &#8739; (18x + 63x^2 - 123x^6)@@</p>
                 <ul>
-                    <li class="math">By the Division Algorithm, 18x + 63x<sup>2</sup> - 123x<sup>6</sup> = 3 * (6x + 21x<sup>2</sup> - 41x<sup>6</sup>) + 0</li>
+                    <li class="math">By the Division Algorithm, @@18x + 63x^2 - 123x^6 = 3 * (6x + 21x^2 - 41x^6) + 0@@</li>
                 </ul>
                 <p><strong>Generalizing the steps:</strong></p>
                 <ol>
-                    <li>1. <span class="math">Using values of a and b, write an expression of the form a = bq + 0</span></li>
-                    <li>2. <span class="math">If possible, find the value of q satisfying the equality a = bq + 0</span></li>
-                    <li>3. <span class="math">If q exists, then b divides a. If q does not exist, then b does not divide a</span></li>
+                    <li>1. <span class="math">Using values of @@a@@ and @@b@@, write an expression of the form @@a = bq + 0@@</span></li>
+                    <li>2. <span class="math">If possible, find the value of @@q@@ satisfying the equality @@a = bq + 0@@</span></li>
+                    <li>3. <span class="math">If @@q@@ exists, then @@b@@ divides @@a@@. If @@q@@ does not exist, then @@b@@ does not divide @@a@@</span></li>
                 </ol>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Divisible?</p>
-                <p>1. 2 &#8739; 121512553331</p>
+                <p>1. <span class="math">@@2 &#8739; 121512553331@@</span></p>
                 <input type="radio" id="d1_4x1a" name="part1" value="True">
                 <label for="d1_4x1a" class="math"> True</label><br>
                 <input type="radio" id="d1_4x1b" name="part1" value="False">
                 <label for="d1_4x1b" class="math"> False</label><br>
-                <p>2. 2 &#8739; 121512553330</p>
+                <p>2. <span class="math">@@2 &#8739; 121512553330@@</span></p>
                 <input type="radio" id="d1_4x1c" name="part2" value="True">
                 <label for="d1_4x1c" class="math"> True</label><br>
                 <input type="radio" id="d1_4x1d" name="part2" value="False">
                 <label for="d1_4x1d" class="math"> False</label><br>
-                <p>3. 13 &#8739; 169e<sup>x</sup></p>
+                <p>3. <span class="math">@@13 &#8739; 169e^x@@</span></p>
                 <input type="radio" id="d1_4x1e" name="part3" value="True">
                 <label for="d1_4x1e" class="math"> True</label><br>
                 <input type="radio" id="d1_4x1f" name="part3" value="False">
                 <label for="d1_4x1f" class="math"> False</label><br>
-                <p>4. 7 &#8739; (35x + 21)<sup>2</sup></p>
+                <p>4. <span class="math">@@7 &#8739; (35x + 21)^2@@</span></p>
                 <input type="radio" id="d1_4x1g" name="part4" value="True">
                 <label for="d1_4x1g" class="math"> True</label><br>
                 <input type="radio" id="d1_4x1h" name="part4" value="False">
@@ -633,93 +619,93 @@
                 <br><h2>1.5: Euclid's Algorithm for GCD <br><a href="#all" class="small">(All Topics)</a></h2>
                 <p>Our next topic is the Greatest Common Divisor (GCD). This is another familiar topic, defined by its name... literally.
                     The GCD of two (or more) integers is the largest number that divides all of them.</p>
-                <p class="math-def-h">Let a, b, and d be integers, where d is a divisor of both a and b<span><br></span>
-                    Then there does not exist an integer, c, such that c is a divisor of both a and b, where c > d
-                    <span><br></span>It is then said that d is the greatest common divisor of a and b; namely, GCD(a, b) = d</p>
+                <p class="math-def-h">Let @@a, b,@@ and @@d@@ be integers, where @@d@@ is a divisor of both @@a@@ and @@b@@<span><br></span>
+                    Then there does not exist an integer, @@c@@, such that @@c@@ is a divisor of both @@a@@ and @@b@@, where @@c > d@@
+                    <span><br></span>It is then said that @@d@@ is the greatest common divisor of @@a@@ and @@b@@; namely, @@GCD(a, b) = d@@</p>
                 <p>In the past, we might have calculated the GCD by guessing and checking, but there is actually a nice algorithm, the Euclidean Algorithm,
                 which is used to compute the GCD of two integers. The Euclidean Algorithm is essentially a recursive version of the Division Algorithm, defined as follows:</p>
-                <p class="math-def-h">Consider we want to compute the GCD of two integers a and b, where a > b<br>
-                    Let q and r be integers given by the Division Algorithm, a = bq + r, and let a and b be the integers from above<span><br></span>
-                    We then complete the Division Algorithm a first time by <a href="#find-q-r">finding the values of q and r</a> that satisfy the equality
-                    <span><br></span>After doing so, we then set up another equality with the values of b and r as follows:<br>
-                    b = rx + y, to which we then find the values of x (quotient) and y (remainder) as usual<br>
-                    We then keep doing this process until the remainder is 0, in which case the remainder from the <strong>previous</strong> iteration is the GCD of a and b</p>
-                <p class="footnote">*Note when dealing with negative values of a and b we can take the absolute value and proceed as usual <a href="https://proofwiki.org/wiki/GCD_for_Negative_Integers">(Proof)</a></p>
+                <p class="math-def-h">Consider we want to compute the GCD of two integers @@a@@ and @@b@@, where @@a > b@@<br>
+                    Let @@q@@ and @@r@@ be integers given by the Division Algorithm, @@a = bq + r@@, and let @@a@@ and @@b@@ be the integers from above<span><br></span>
+                    We then complete the Division Algorithm a first time by <a href="#find-q-r">finding the values</a> of @@q@@ and @@r@@ that satisfy the equality
+                    <span><br></span>After doing so, we then set up another equality with the values of @@b@@ and @@r@@ as follows:<br>
+                    @@b = rx + y@@, to which we then find the values of @@x@@ (quotient) and @@y@@ (remainder) as usual<br>
+                    We then keep doing this process until the remainder is @@0@@, in which case the remainder from the <strong>previous</strong> iteration is the GCD of @@a@@ and @@b@@</p>
+                <p class="footnote">*Note when dealing with negative values of @@a@@ and @@b@@ we can take the absolute value and proceed as usual <a href="https://proofwiki.org/wiki/GCD_for_Negative_Integers">(Proof)</a></p>
                 <p>In theory this may be confusing, so let's look at an example before generalizing:</p>
-                <p class="footnote">*Note we will use subscripts starting from 1 to denote the iterations</p>
-                <p><strong>Example</strong>: find GCD(687, 24)</p>
+                <p class="footnote">*Note we will use subscripts starting from @@1@@ to denote the iterations</p>
+                <p><strong>Example</strong>: find @@GCD(687, 24)@@</p>
                 <ul>
-                    <li class="math">a = 687, b = 24</li>
-                    <li class="math">687 = 24q<sub>1</sub> + r<sub>1</sub> &#8658; 687 = 24 * 28 + 15 &#8658;</li>
-                    <li class="math">24 = 15q<sub>2</sub> + r<sub>2</sub> &#8658; 24 = 15 * 1 + 9 &#8658;</li>
-                    <li class="math">15 = 9q<sub>3</sub> + r<sub>3</sub> &#8658; 15 = 9 * 1 + 6 &#8658;</li>
-                    <li class="math">9 = 6q<sub>4</sub> + r<sub>4</sub> &#8658; 9 = 6 * 1 + 3 &#8658;</li>
-                    <li class="math">6 = 3q<sub>5</sub> + r<sub>5</sub> &#8658; 6 = 3 * 2 + 0 &#8658;</li>
-                    <li class="math">GCD(687, 24) = 3</li>
+                    <li class="math">@@a = 687, b = 24@@</li>
+                    <li class="math">@@687 = 24q_1 + r_1 &#8658; 687 = 24 * 28 + 15 &#8658;@@</li>
+                    <li class="math">@@24 = 15q_2 + r_2 &#8658; 24 = 15 * 1 + 9 &#8658;@@</li>
+                    <li class="math">@@15 = 9q_3 + r_3 &#8658; 15 = 9 * 1 + 6 &#8658;@@</li>
+                    <li class="math">@@9 = 6q_4 + r_4 &#8658; 9 = 6 * 1 + 3 &#8658;@@</li>
+                    <li class="math">@@6 = 3q_5 + r_5 &#8658; 6 = 3 * 2 + 0 &#8658;@@</li>
+                    <li class="math">@@GCD(687, 24) = 3@@</li>
                 </ul>
-                <p>A bonus of the Euclidean Algorithm is that we can find integer values, m and n, to the linear combination am + bn = GCD(a, b) by applying what is called the
+                <p>A bonus of the Euclidean Algorithm is that we can find integer values, @@m@@ and @@n@@, to the linear combination @@am + bn = GCD(a, b)@@ by applying what is called the
                 Extended Euclidean Algorithm, which is essentially working down to the calculation of the GCD by substitution</p>
                 <ul>
-                    <li class="math">687 = 24 * 28 + 15 &#8658; 15 = 687 - 24 * 28</li>
-                    <li class="math">24 = 15 * 1 + 9 &#8658; 9 = 24 - 15 &#8658; </li>
-                    <li class="math">9 = 24 - (687 - 24 * 28) &#8658; 9 = 24 * 29 - 687</li>
-                    <li class="math">15 = 9 * 1 + 6 &#8658; 6 = 15 - 9 &#8658;</li>
-                    <li class="math">6 = (687 - 24 * 28) - (24 * 29 - 687) &#8658; 6 = 687 * 2 - 24 * 57</li>
-                    <li class="math">9 = 6 * 1 + 3 &#8658; 3 = 9 - 6 &#8658;</li>
-                    <li class="math">3 = (24 * 29 - 687) - (687 * 2 - 24 * 57) &#8658; 3 = 24 * 86 - 687 * 3</li>
-                    <li class="math">Thus, 3 = 687(-3) + 24(86) &#8658; m = -3, n = 86</li>
+                    <li class="math">@@687 = 24 * 28 + 15 &#8658; 15 = 687 - 24 * 28@@</li>
+                    <li class="math">@@24 = 15 * 1 + 9 &#8658; 9 = 24 - 15 &#8658;@@</li>
+                    <li class="math">@@9 = 24 - (687 - 24 * 28) &#8658; 9 = 24 * 29 - 687@@</li>
+                    <li class="math">@@15 = 9 * 1 + 6 &#8658; 6 = 15 - 9 &#8658;@@</li>
+                    <li class="math">@@6 = (687 - 24 * 28) - (24 * 29 - 687) &#8658; 6 = 687 * 2 - 24 * 57@@</li>
+                    <li class="math">@@9 = 6 * 1 + 3 &#8658; 3 = 9 - 6 &#8658;@@</li>
+                    <li class="math">@@3 = (24 * 29 - 687) - (687 * 2 - 24 * 57) &#8658; 3 = 24 * 86 - 687 * 3@@</li>
+                    <li class="math">Thus, @@3 = 687(-3) + 24(86) &#8658; m = -3, n = 86@@</li>
                 </ul>
                 <p class="footnote">*Note this is particular useful for solving Linear Diophantine Equations</p>
                 <p><strong>Generalizing the steps to the Euclidean Algorithm for GCD:</strong></p>
                 <ol>
-                    <li>1. <span class="math">Using values of a and b, write an expression of the form a = bq<sub>1</sub> + r<sub>1</sub></span></li>
-                    <li>2. <span class="math">Find the value of q<sub>1</sub> by finding the greatest value of q<sub>1</sub> such that bq<sub>1</sub> < a</span></li>
-                    <li>3. <span class="math">Find the value of r<sub>1</sub> by rearranging the expression to the form r<sub>1</sub> = a - bq<sub>1</sub></span></li>
-                    <li>4. <span class="math">Using values of b and r<sub>1</sub>, write an expression of the form b = r<sub>1</sub> * q<sub>2</sub> + r<sub>2</sub></span></li>
-                    <li>5. <span class="math">Find the values of q<sub>2</sub> and r<sub>2</sub> by applying the procedures in steps 2 and 3, respectively</span></li>
-                    <li>6. <span class="math">Using values of r<sub>1</sub> and r<sub>2</sub>, write an expression of the form r<sub>1</sub> = r<sub>2</sub> * q<sub>3</sub> + r<sub>3</sub></span></li>
-                    <li>7. <span class="math">Repeat steps 5 and 6 until r<sub>n-2</sub> = r<sub>n-1</sub> * q<sub>n</sub> + 0</span></li>
-                    <li>8. <span class="math">When r<sub>n</sub> = 0 (shown above), GCD(a, b) = r<sub>n-1</sub></span></li>
+                    <li>1. <span class="math">Using values of @@a@@ and @@b@@, write an expression of the form @@a = bq_1 + r_1@@</span></li>
+                    <li>2. <span class="math">Find the value of @@q_1@@ by finding the greatest value of @@q_1@@ such that @@bq_1 < a@@</span></li>
+                    <li>3. <span class="math">Find the value of @@r_1@@ by rearranging the expression to the form @@r_1 = a - bq_1@@</span></li>
+                    <li>4. <span class="math">Using values of @@b@@ and @@r_1@@, write an expression of the form @@b = r_1 * q_2 + r_2@@</span></li>
+                    <li>5. <span class="math">Find the values of @@q_2@@ and @@r_2@@ by applying the procedures in steps 2 and 3, respectively</span></li>
+                    <li>6. <span class="math">Using values of @@r_1@@ and @@r_2@@, write an expression of the form @@r_1 = r_2 * q_3 + r_3@@</span></li>
+                    <li>7. <span class="math">Repeat steps 5 and 6 until @@r_{n-2} = r_{n-1} * q_n + 0@@</span></li>
+                    <li>8. <span class="math">When @@r_n = 0@@ (shown above), @@GCD(a, b) = r_{n-1}@@</span></li>
                 </ol>
                 <p><strong>Generalizing the steps to the Extended Euclidean Algorithm for Linear Combinations:</strong></p>
                 <ol>
                     <li>1. <span class="math">Calculate the GCD using the method above</span></li>
-                    <li>2. <span class="math">Obtain r<sub>1</sub> as a Linear Combination of a and b by isolating it</span></li>
-                    <li>3. <span class="math">Isolate r<sub>2</sub> and substitute the Linear Combination r<sub>1</sub> into the expression</span></li>
-                    <li>4. <span class="math">Apply arithmetic techniques to obtain r<sub>2</sub> as a Linear Combination of a and b</span></li>
-                    <li>5. <span class="math">Repeat steps 3 and 4 until obtaining r<sub>n-1</sub> as a Linear Combination of a and b</span></li>
-                    <li>6. <span class="math">The coefficients of a and b given by r<sub>n-1</sub> = am + bn are the unknowns to the Linear Combination</span></li>
+                    <li>2. <span class="math">Obtain @@r_1@@ as a Linear Combination of @@a@@ and @@b@@ by isolating it</span></li>
+                    <li>3. <span class="math">Isolate @@r_2@@ and substitute the Linear Combination @@r_1@@ into the expression</span></li>
+                    <li>4. <span class="math">Apply arithmetic techniques to obtain @@r_2@@ as a Linear Combination of @@a@@ and @@b@@</span></li>
+                    <li>5. <span class="math">Repeat steps 3 and 4 until obtaining @@r_{n-1}@@ as a Linear Combination of @@a@@ and @@b@@</span></li>
+                    <li>6. <span class="math">The coefficients of @@a@@ and @@b@@ given by @@r_{n-1} = am + bn@@ are the unknowns to the Linear Combination</span></li>
                 </ol>
                 <p>A nice property of the GCD is that we can calculate the GCD of multiple integers via a recursive process. For example:</p>
                 <p><strong>GCD(a, b, c, d):</strong></p>
                 <ol>
-                    <li>1. <span class="math">Calculate the GCD(a, b)</span></li>
-                    <li>2. <span class="math">GCD(a, b, c, d) = GCD(GCD(a, b), c, d)</span></li>
-                    <li>3. <span class="math">Calculate GCD(GCD(a, b), c)</span></li>
-                    <li>4. <span class="math">GCD(a, b, c, d) = GCD(GCD(GCD(a, b), c), d)</span></li>
-                    <li>5. <span class="math">Let n = GCD(GCD(a, b), c), then GCD(a, b, c, d) = GCD(GCD(GCD(a, b), c), d) = GCD(n, d)</span></li>
+                    <li>1. <span class="math">Calculate the @@GCD(a, b)@@</span></li>
+                    <li>2. <span class="math">@@GCD(a, b, c, d) = GCD(GCD(a, b), c, d)@@</span></li>
+                    <li>3. <span class="math">Calculate @@GCD(GCD(a, b), c)@@</span></li>
+                    <li>4. <span class="math">@@GCD(a, b, c, d) = GCD(GCD(GCD(a, b), c), d)@@</span></li>
+                    <li>5. <span class="math">Let @@n = GCD(GCD(a, b), c)@@, then @@GCD(a, b, c, d) = GCD(GCD(GCD(a, b), c), d) = GCD(n, d)@@</span></li>
                 </ol>
                 <p>A bonus concept is the Least Common Multiple (LCM) which is given
                    <a href="https://proofwiki.org/wiki/Product_of_GCD_and_LCM" class="footnote">(Proof)</a> by the following famous relation:<br><br>
-                <span class="math">LCM[a, b] = <span class="math-frac"><span>|a * b|</span><span class="symbol">/</span><span class="bottom">GCD(a, b)</span></span></span></p>
+                <span class="math">@@LCM[a, b] = \frac{|a*b|}{GCD(a,b)}@@</span></p>
                 <p>Similar to the GCD, the LCM of multiple integers can be calculated via a recursive process. For example:</p>
-                <p><strong>LCM[a, b, c, d]:</strong></p>
+                <p><strong>@@LCM[a, b, c, d]@@:</strong></p>
                 <ol>
-                    <li>1. <span class="math">Calculate the LCM[a, b]</span></li>
-                    <li>2. <span class="math">LCM[a, b, c, d] = LCM[LCM[a, b], c, d]</span></li>
-                    <li>3. <span class="math">Calculate LCM[LCM[a, b], c]</span></li>
-                    <li>4. <span class="math">LCM[a, b, c, d] = LCM[LCM[LCM[a, b], c], d]</span></li>
-                    <li>5. <span class="math">Let n = LCM[LCM[a, b], c], then LCM[a, b, c, d] = LCM[LCM[LCM[a, b], c], d] = LCM[n, d]</span></li>
+                    <li>1. <span class="math">Calculate the @@LCM[a, b]@@</span></li>
+                    <li>2. <span class="math">@@LCM[a, b, c, d] = LCM[LCM[a, b], c, d]@@</span></li>
+                    <li>3. <span class="math">Calculate @@LCM[LCM[a, b], c]@@</span></li>
+                    <li>4. <span class="math">@@LCM[a, b, c, d] = LCM[LCM[LCM[a, b], c], d]@@</span></li>
+                    <li>5. <span class="math">Let @@n = LCM[LCM[a, b], c]@@, then @@LCM[a, b, c, d] = LCM[LCM[LCM[a, b], c], d] = LCM[n, d]@@</span></li>
                 </ol>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) GCD this, GCD that</p>
-                <p>1. What is the Greatest Common Divisor of 1024, 2056, and 4096?</p>
-                <label for="d1_5x1a" class="math">GCD(1024, 2056, 4096) = </label><input id="d1_5x1a" size="1"><br>
-                <p>2. Find integers m and n such that GCD(341, 22) = 341m + 22n</p>
-                <label for="d1_5x1b" class="math">m = </label><input id="d1_5x1b" size="1"><br>
-                <label for="d1_5x1c" class="math">n = </label><input id="d1_5x1c" size="1"><br>
-                <p>3. Find the Least Common Multiple of 1024, 2056, and 4096</p>
-                <label for="d1_5x1d" class="math">LCM[1024, 2056, 4096] = </label><input id="d1_5x1d" size="1"><br><br>
+                <p>1. What is the Greatest Common Divisor of @@1024, 2056,@@ and @@4096@@?</p>
+                <label for="d1_5x1a" class="math">@@GCD(1024, 2056, 4096) = @@ </label><input id="d1_5x1a" size="1"><br>
+                <p>2. Find integers @@m@@ and @@n@@ such that @@GCD(341, 22) = 341m + 22n@@</p>
+                <label for="d1_5x1b" class="math">@@m = @@ </label><input id="d1_5x1b" size="1"><br>
+                <label for="d1_5x1c" class="math">@@n = @@ </label><input id="d1_5x1c" size="1"><br>
+                <p>3. Find the Least Common Multiple of @@1024, 2056,@@ and @@4096@@</p>
+                <label for="d1_5x1d" class="math">@@LCM[1024, 2056, 4096] = @@ </label><input id="d1_5x1d" size="1"><br><br>
                 <input type="button" id="d1_5x1" value="Verify" class="button-interact"/>
                 <div class="button-whitespace"></div>
                 <div id="d1_5x1_result" class="result-border">
@@ -734,25 +720,25 @@
                         <tr>
                             <td>1.</td>
                             <td><span id='d1_5x1_y1' class='math'></span></td>
-                            <td><span class='math'>8</span></td>
+                            <td><span class='math'>@@8@@</span></td>
                             <td id='d1_5x1_r1'></td>
                         </tr>
                         <tr>
                             <td>2a.</td>
                             <td><span id='d1_5x1_y2' class='math'></span></td>
-                            <td><span class='math'>1</span></td>
+                            <td><span class='math'>@@1@@</span></td>
                             <td id='d1_5x1_r2'></td>
                         </tr>
                         <tr>
                             <td>2b.</td>
                             <td><span id='d1_5x1_y3' class='math'></span></td>
-                            <td><span class='math'>-15</span></td>
+                            <td><span class='math'>@@-15@@</span></td>
                             <td id='d1_5x1_r3'></td>
                         </tr>
                         <tr>
                             <td>3.</td>
                             <td><span id='d1_5x1_y4' class='math'></span></td>
-                            <td><span class='math'>1052672</span></td>
+                            <td><span class='math'>@@1052672@@</span></td>
                             <td id='d1_5x1_r4'></td>
                         </tr>
                     </table>
@@ -760,19 +746,171 @@
             </div>
             <div id="1-6">
                 <br><h2>1.6: Modular Arithmetic <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>An extension of division is the concept of Modular Arithmetic; arithmetic in the set @@&#8484;_n@@</p>
+                <p>@@&#8484;_n@@ is the set of integers from @@0@@ to @@n - 1@@; namely, @@&#8484;_n = @@ {@@0, 1, 2,..., n - 1@@}, where @@n &isin; &#8484;@@<p>
+                <p>So what is the significance of this? <span class="math">When an integer is divided by @@n@@, it has @@n@@ possible <strong>unique</strong> remainders, from @@0@@ to @@n - 1@@</span>; it is from this property
+                that the set @@&#8484;_n@@ is defined</p>
+                <strong>Every element of @@&#8484;_n@@ is unique and its own distinct Congruence Class</strong>
+                <p>The Congruence Classes of @@&#8484;_n@@ are <span class="math">@@[0], [1], [2],..., [n - 1]@@</span></p>
+                <p><strong>Example</strong>: @@&#8484;_5 = @@ {@@0, 1, 2, 3, 4@@}</p>
+                <p><strong>Definition</strong>: Given <span class="math">@@a, b &isin; &#8484;, a@@</span> is congruent to @@&#8484;_n@@ iff. @@a@@ and @@b@@ are in the same Congruence Class; namely, <br>
+                <span class="math">@@a &equiv; b\:(mod\: n)@@</span></p>
+                <p><strong>Theorem</strong>: <span class="math">@@a &equiv; b\:(mod\: n)@@ iff. @@n &#8739; a - b@@</span></p>
+                <p>So how do we find the value of <span class="math">b</span>, provided we have <span class="math">a</span> and <span class="math">n</span>? The Division Algorithm, set up as follows:</p>
+                <ul>
+                    <li class="math">@@a = nq + b@@</li>
+                    <li class="math">@@b = a - nq@@</li>
+                </ul>
+                <p>We then proceed as usual, here's an example:</p>
+                <p><strong>Example</strong>: Verify the congruence <span class="math">@@28 &equiv; 3\: (mod\: 5)@@</span></p>
+                <ul>
+                    <li class="math">@@28 = 5q + 3 &#8658;@@</li>
+                    <li class="math">@@25 = 5q &#8658; q = 5 &#8658;@@</li>
+                    <li class="math">@@28 = 5 * 5 + 3 &#8658; 28 = 28@@</li>
+                </ul>
+                <p>Thus, the congruence is true, @@28 = [3]@@ in @@&#8484;_5@@</p>
+                <p>However, the main question to answer when dealing with congruences usually looks something like this:</p>
+                <p><span class="math">\(mx\equiv b\:(mod\:p)\)</span>, where <span class="math">@@m, b,@@</span> and <span class="math">@@n@@</span> are given and we must solve for <span class="math">@@x@@</span></p>
+                <p>Before we continue to solve this Linear Congruence, we must first understand what a <strong>Multiplicative Inverse</strong> is:</p>
+                <p><strong>Definition: </strong>given an element @@x@@, then its multiplicative inverse, @@x^{-1}@@ is an element such that @@x * x^{-1} = 1@@</p>
+                <p><strong>Example: </strong>the multiplicative inverse of @@4@@ in <span class="math">@@&#8477;@@ </span>is @@\frac{1}{4}@@ since @@4*\frac{1}{4} = 1@@</p>
+                <p>However, we are interested in multiplicative inverses in @@&#8484;_n@@ not <span class="math">@@&#8477;@@</span></p>
+                <p>It's the same idea, however we are restricted to the elements of @@&#8484;_n@@, to go about finding the inverse we must
+                check the product of each element and the given integer until it is congruent to @@1\: (mod\: n)@@. Let's look at an example:</p>
+                <p><strong>Example</strong>: Find @@3^{-1}@@ in @@&#8484;_7@@</p>
+                <ul>
+                    <li class="math">@@3 * 0 = 0 &#8658; 0 &nequiv; 1\: (mod\: 7)@@</li>
+                    <li class="math">@@3 * 1 = 3 &#8658; 3 &nequiv; 1\: (mod\: 7)@@</li>
+                    <li class="math">@@3 * 2 = 6 &#8658; 6 &nequiv; 1\: (mod\: 7)@@</li>
+                    <li class="math">@@3 * 3 = 9 &#8658; 2 &nequiv; 1\: (mod\: 7)@@</li>
+                    <li class="math">@@3 * 4 = 12 &#8658; 5 &nequiv; 1\: (mod\: 7)@@</li>
+                    <li class="math">@@3 * 5 = 15 &#8658; 1 &equiv; 1\: (mod\: 7)@@</li>
+                </ul>
+                <p>So @@3^{-1}=5@@ in @@&#8484;_7@@, since @@3 * 5 &equiv; 1\: (mod\: 7)@@</p>
+                <p>But sometimes there won't be a multiplicative inverse in @@&#8484;_n@@, in which case the approach is to convert to a Linear
+                Diophantine Equation and solve for the unknown. However, we will only consider the group @@&#8484;_p^*@@</p>
+                <p>Given <span class="math">@@p@@ is <a href="#1-7">prime</a>, @@&#8484;_p^* = @@ {@@1, 2,..., p - 1@@}, where every element has a multiplicative inverse</span></p>
+                <p><strong>Example</strong>: Solve <span class="math">@@7x &equiv; 192\: (mod\: 11)@@</span></p>
+                <p>First, let's find @@7^{-1}@@ in @@&#8484;_{11}^*@@</p>
+                <ul>
+                    <li class="math">@@7 * 1 = 7 &#8658; 7 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 2 = 14 &#8658; 3 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 3 = 21 &#8658; 10 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 4 = 28 &#8658; 6 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 5 = 35 &#8658; 2 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 6 = 42 &#8658; 9 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 7 = 49 &#8658; 5 &nequiv; 1\: (mod\: 11)@@</li>
+                    <li class="math">@@7 * 8 = 56 &#8658; 1 &equiv; 1\: (mod\: 11)@@</li>
+                </ul>
+                <p>So @@7^{-1}=8@@ in @@&#8484;_{11}^*@@, since @@7 * 8 &equiv; 1\: (mod\: 11)@@</p>
+                <p>Next we have to multiply both sides of the congruence by @@7^{-1}@@ and reduce @@(mod\: 11)@@</p>
+                <ul>
+                    <li class="math">@@7x * 8 &equiv; 192 * 8\: (mod\: 11) &#8658;@@</li>
+                    <li class="math">@@x &equiv; 1536\: (mod\: 11) &#8658;@@</li>
+                    <li class="math">@@x &equiv; 7\: (mod\: 11)@@</li>
+                </ul>
+                <p>Thus, @@x=7@@ We can check this by substituting and reducing @@(mod\: 11)@@</p>
+                <ul>
+                    <li class="math">@@7 * 7 &equiv; 192\: (mod\: 11) &#8658;@@</li>
+                    <li class="math">@@49 &equiv; 192\: (mod\: 11) &#8658;@@</li>
+                    <li class="math">@@5 &equiv; 5\: (mod\: 11)@@</li>
+                </ul>
+                <p><strong>Generalizing the steps to solving <span class="math"> \(mx\equiv b\:(mod\:p)\)</span>:</strong></p>
+                <ol>
+                    <li>1. <span class="math">Find \(m^{-1}\) in \(&#8484;_p^*\)</span></li>
+                    <li>2. <span class="math">Multiply both sides of the congruence by \(m^{-1}\)</span></li>
+                    <li>3. <span class="math">Reduce the congruence \(x\equiv b*m^{-1}\:(mod\:p)\)</span></li>
+                </ol>
+                <p>We are going to introduce a way to solve a system of linear congruences by using the Chinese Remainder Theorem:</p>
+                <p class="math"><span class="math-def-h">Consider the system of simultaneous congruences:</span></p>
+                <ul>
+                    <li class="math">\(x\equiv a_1\:(mod\:n_1)\)</li>
+                    <li class="math">\(x\equiv a_2\:(mod\:n_2)\)</li>
+                    <li>.</li>
+                    <li>.</li>
+                    <li>.</li>
+                    <li class="math">\(x\equiv a_k\:(mod\:n_k)\)</li>
+                </ul>
+                <p class="math"><span class="math-def-h">Where \(n_1,n_2,...,n_k\) are pairwise <a href="#1-7">coprime </a> integers, then<br>
+                The system has a solution, which is unique modulo \(N=n_1n_2...n_k\) </span></p>
+                <p class="math"><span class="math-def-h">Given by \(\sum_{i=1}^k a_ib_ic_i\), Where \(b_i\) = \(\frac{N}{n_i}\) and \(c_i\) = \(b_ix\equiv a_i\:(mod\:n_i)\)</span></p>
+                <p class="footnote">*Note don't worry about the definition of coprime, it will be covered in the next section and all examples in this section will satisfy the criterion</p>
+                <p><strong>Example</strong>: Solve the following system:</p>
+                <ul>
+                    <li class="math">\(x\equiv 1\:(mod\:3)\)</li>
+                    <li class="math">\(x\equiv 2\:(mod\:5)\)</li>
+                    <li class="math">\(x\equiv 3\:(mod\:7)\)</li>
+                </ul>
+                <p>The first step is to find the values of @@N@@ and @@b_1,b_2,b_3@@</p>
+                <ul>
+                    <li class="math">@@N=3*5*7\Rightarrow N=105@@</li>
+                    <li class="math">@@b_1 = \frac{105}{3}\Rightarrow b_1=35@@</li>
+                    <li class="math">@@b_2 = \frac{105}{5}\Rightarrow b_2=21@@</li>
+                    <li class="math">@@b_3 = \frac{105}{7}\Rightarrow b_3=15@@</li>
+                </ul>
+                <p>Next we need to find the values of @@c_1,c_2,c_3@@</p>
+                <ul>
+                    <li class="math">@@c_1 = 35x \equiv 1\: (mod\:3)\Rightarrow x = 2 \Rightarrow c_1 = 2@@</li>
+                    <li class="math">@@b_2 = 21x \equiv 2\: (mod\:5)\Rightarrow x = 1 \Rightarrow c_2 = 1@@</li>
+                    <li class="math">@@b_3 = 15x \equiv 3\: (mod\:7)\Rightarrow x = 1 \Rightarrow c_3 = 1@@</li>
+                </ul>
+                <p>The last step is to find the solution, @@x@@</p>
+                <ul>
+                    <li class="math">@@x=1*35*2+2*21*1+3*15*1\Rightarrow x=70+42+45\Rightarrow x=157@@</li>
+                </ul>
+                <p>So the solution to the system is @@x=157\equiv 52\:(mod\:105)@@</p>
+
+                <p class="activity-header">Activity 1) GCD this, GCD that</p>
+                <p>1. Solve @@19x \equiv 4\:(mod\:17)@@</p>
+                <label for="d1_6x1a" class="math">@@x = @@ </label><input id="d1_6x1a" size="1"><br>
+                <p>2. Solve the system</p>
+                <ul>
+                    <li class="math">\(x\equiv 2\:(mod\:3)\)</li>
+                    <li class="math">\(x\equiv 4\:(mod\:5)\)</li>
+                    <li class="math">\(x\equiv 8\:(mod\:11)\)</li>
+                    <li class="math">\(x\equiv 9\:(mod\:13)\)</li>
+                </ul>
+                <label for="d1_6x1b" class="math">@@N = @@ </label><input id="d1_6x1b" size="1"><br>
+                <label for="d1_6x1c" class="math">@@x = @@ </label><input id="d1_6x1c" size="1"><br><br>
+                <input type="button" id="d1_6x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d1_6x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d1_6x1_y1' class='math'></span></td>
+                            <td><span class='math'>@@2@@</span></td>
+                            <td id='d1_6x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2a.</td>
+                            <td><span id='d1_6x1_y2' class='math'></span></td>
+                            <td><span class='math'>@@2145@@</span></td>
+                            <td id='d1_6x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>2b.</td>
+                            <td><span id='d1_6x1_y3' class='math'></span></td>
+                            <td><span class='math'>@@74@@</span></td>
+                            <td id='d1_6x1_r3'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="1-7">
                 <br><h2>1.7: Primes and Their Distribution <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Prime definition</p>
-                <p>Composite definition</p>
-                <p>FTA</p>
-                <p>Relatively prime definition</p>
-                <p>---</p>
+                <p><strong>Fundamental Theorem of Arithmetic</strong>: Every integer can be uniquely represented as a product of primes <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic">(Euclid)</a></p>
+                <p class="footnote">*Note said product is called the prime factorization of the integer</p>
+                <p><strong>Prime Definition</strong>: An integer, @@p@@ is Prime iff. @@\pm 1@@ and @@\pm p@@ are its only divisors; namely, its prime factorization is @@1*p@@</p>
+                <p><strong>Composite Definition</strong>: An integer, @@c@@ is Composite if there exists at least one other divisor, @@d@@, in addition to the divisors @@\pm 1@@ and @@\pm c@@; namely, its prime factorization consists of a product of smaller integers</p>
+                <p><strong>Coprime Definition</strong>: Two integers, @@a@@ and @@b@@ are said to be Relatively Prime (coprime) if @@GCD(a,b) = 1@@</p>
             </div>
             <div id="1-8">
                 <br><h2>1.8: Number Systems <br><a href="#all" class="small">(All Topics)</a></h2>

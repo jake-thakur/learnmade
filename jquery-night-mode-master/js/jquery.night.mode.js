@@ -139,10 +139,11 @@ $(nightTrigger).prop('disabled', true).html(modericon[4]).css({
 }
 
 function nightModeOff(){
-$("#main-logo").attr("src", "images/learnmade_white.png");
-$(nightTrigger).prop('disabled', false).html(modericon[3]).css({
-      'background' : '#262626',
-      'color' : '#f2f2f2'
+    $(".math-frac span.bottom").css({'border-top': '2px solid black'});
+    $("#main-logo").attr("src", "images/learnmade_white.png");
+    $(nightTrigger).prop('disabled', false).html(modericon[3]).css({
+          'background' : '#262626',
+          'color' : '#f2f2f2'
 });
     $(nightObject).css({
     'background' : '',//default

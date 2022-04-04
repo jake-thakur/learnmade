@@ -183,46 +183,34 @@ table th {
 
 .math {
     font-size: 32px;
-    font-family: Didot, serif;
-    font-style: oblique;
-    font-weight: 500;
-    color: black;
-}
-
-.math-norm {
-    font-size: 32px;
-    font-family: Didot, serif;
+    font-family: "Cambria Math", serif;
     font-weight: 500;
     color: black;
 }
 
 .math-def {
     font-size: 28px;
-    font-family: Didot, serif;
-    font-style: oblique;
+    font-family: "Cambria Math", serif;
     font-weight: 500;
     color: black;
 }
 
 .math-def-h {
     font-size: 40px;
-    font-family: Didot, serif;
-    font-style: oblique;
+    font-family: "Cambria Math", serif;
     font-weight: 500;
     color: black;
 }
 
 .math-fit {
-    font-family: Didot, serif;
-    font-style: oblique;
+    font-family: "Cambria Math", serif;
     font-weight: 500;
     color: black;
 }
 
 .math-bold {
     font-size: 32px;
-    font-family: Didot, serif;
-    font-style: oblique;
+    font-family: "Cambria Math", serif;
     font-weight: bold;
     color: black;
 }
@@ -246,7 +234,7 @@ table th {
 }
 
 .math-radic {
-    text-decoration: 1px overline;
+    text-decoration: 4px overline;
 }
 
 /* list stuff */
@@ -311,6 +299,7 @@ ul.list-space {
     position: sticky;
     z-index: 2;
 }
+
 
 #navbar a {
     float: left;
