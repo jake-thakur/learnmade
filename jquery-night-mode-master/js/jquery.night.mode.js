@@ -121,7 +121,7 @@ if (time >=0 && time <7 ||  time > 19){
  }
 function nightModeEnable(){
    $(".math-frac span.bottom").css({'border-top': '2px solid rgba(255, 255, 255, 0.7'});
-   $("#main-logo").attr("src", "learnmade_black2.png");
+   $("#main-logo").attr("src", "images/learnmade_black2.png");
    $(nightObject).not(keepNormal).css({
      'background' : '#1E1F1E',
      'color' : 'rgba(240, 255, 255, 0.7)',
@@ -139,7 +139,7 @@ $(nightTrigger).prop('disabled', true).html(modericon[4]).css({
 }
 
 function nightModeOff(){
-$("#main-logo").attr("src", "learnmade_white.png");
+$("#main-logo").attr("src", "images/learnmade_white.png");
 $(nightTrigger).prop('disabled', false).html(modericon[3]).css({
       'background' : '#262626',
       'color' : '#f2f2f2'
