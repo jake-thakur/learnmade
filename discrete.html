@@ -251,14 +251,14 @@
                 <p>Logic:</p>
                 <ul class="list-space">
                     <li class="math">◦ <span>@@&#8658;@@ </span>: <span class="math-def">Logical Implication (if, then)</span></li>
-                    <li class="math">◦ <span>@@&#8660;@@ </span>: <span class="math-def">Logical Equivalence (if and only if (iff.), then)</span></li>
+                    <li class="math">◦ <span>@@&#8660;@@ </span>: <span class="math-def">Logical Equivalence (if and only if (iff.))</span></li>
                     <li class="math">◦ <span>@@&#172;@@ </span>: <span class="math-def">Logical Negation (Not)</span></li>
                     <li class="math">◦ <span>@@&#8756;@@ </span>: <span class="math-def">Logical Conclusion (Therefore)</span></li>
                     <li class="math">◦ <span>@@&#8704;@@ </span>: <span class="math-def">Universal Quantifier (For All)</span></li>
                     <li class="math">◦ <span>@@&#8707;@@ </span>: <span class="math-def">Existential Quantifier (There Exists)</span></li>
                 </ul>
                 <p class="footnote">@@X &#8658; Y@@ means @@X@@ implies @@Y@@ (if @@X@@, then @@Y@@)</p>
-                <p class="footnote">@@X &#8660; Y@@ means @@X@@ and @@Y@@ are equivalent (if and only if @@X@@, then @@Y@@)</p>
+                <p class="footnote">@@X &#8660; Y@@ means @@X@@ and @@Y@@ are equivalent (@@X@@ if and only if @@Y@@)</p>
                 <p class="footnote">let @@X@@ = true, such that @@&#172;X@@ means not @@X@@ = false</p>
                 <p class="footnote">@@&#8704; X,\:|X| > 0@@  means for all values of @@X@@, the absolute value of @@X@@ is greater than @@0@@</p>
                 <p class="footnote">@@&#8707; X@@ such that @@X > 0@@ means there exists some value of @@X@@, such that it is greater than @@0@@</p>
@@ -1041,7 +1041,7 @@
                     <li class="math">@@22=16*1+6\Rightarrow d_2 = 6@@</li>
                     <li class="math">@@1=16*0+1\Rightarrow d_3 = 1@@</li>
                 </ul>
-                <p>Thus, @@5742_{10}\Leftrightarrow @@ <span class="math">0X@@166@@E</span></p>
+                <p>Thus, @@5742_{10}\Leftrightarrow @@ <span class="math">0X166E</span></p>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Converter</p>
                 <p>1. What is @@11110_2@@ in base 10?</p>
@@ -1051,7 +1051,7 @@
                 <p>3. What is @@922_{10}@@ in binary?</p>
                 <input id="d1_8x1c" size="8"><label for="d1_8x1c" class="math">@@_2@@</label><br>
                 <p>4. What is @@77216_8@@ in decimal?</p>
-                <input id="d1_8x1d" size="4"><label for="d1_5x1d" class="math">@@_{10}@@</label><br><br>
+                <input id="d1_8x1d" size="4"><label for="d1_8x1d" class="math">@@_{10}@@</label><br><br>
                 <input type="button" id="d1_8x1" value="Verify" class="button-interact"/>
                 <div class="button-whitespace"></div>
                 <div id="d1_8x1_result" class="result-border">
@@ -1092,11 +1092,42 @@
             </div>
             <div id="1-9">
                 <br><h2>1.9: Formal Logic <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p><strong>Proposition</strong>: A Proposition is statement that is either true or false</p>
+                <ul>
+                    <li><strong>Example 1</strong>: The prime factorization of @@52 = 1*2^2*13@@ (proposition with truth value @@T@@)</li>
+                    <li><strong>Example 2</strong>: "Dogs have wings" (proposition with truth value @@F@@)</li>
+                    <li><strong>Example 3</strong>: "Do you like LearnMade?" (not a proposition)</li>
+                    <li><strong>Example 4</strong>: "Go get some food" (not a proposition)</li>
+                </ul>
+                <p class="footnote">*Note the truth value is what indicates whether a proposition is @@T@@ (true) or @@F@@ (false)</p>
+                <p><strong>Compound Proposition</strong>: A Compound Proposition is statement that is composed of multiple propositions, let them be @@p@@ and @@q@@</p>
+                <p><strong>Conjunction</strong>: A logic operator to connect propositions, denoted by @@\land@@ where @@p\land q\equiv T@@ only when both @@p@@ and @@q@@ are true (logical and)</p>
+                <img src="images/logic-and.png" alt="Conjunction Truth Table">
+                <p><strong>Disjunction</strong>: A logic operator to connect propositions, denoted by @@\lor@@ where @@p\lor q\equiv T@@ when either @@p@@ or @@q@@ is true, or if both are true (logical or)</p>
+                <img src="images/logic-or.png" alt="Disjunction Truth Table">
+                <p><strong>Exclusive Or</strong>: A logic operator to connect propositions, denoted by @@\oplus@@ where @@p\oplus q\equiv T@@ only when exactly either @@p@@ is true or @@q@@ is true (logical xor)</p>
+                <img src="images/logic-xor.png" alt="Exclusive Or Truth Table">
+                <p><strong>Negation</strong>: A logic operator to negate propositions, denoted by @@\neg@@ where @@\neg T\equiv F@@ (logical not)</p>
+                <img src="images/logic-neg.png" alt="Negation Truth Table">
+                <p><strong>Conditional</strong>: Operation @@p\rightarrow q@@ means "if @@p@@, then @@q@@" (@@p@@ implies @@q@@) when @@p@@ is the hypothesis and @@q@@ is the conclusion,
+                    @@p\rightarrow q\equiv F@@ when the hypothesis is false and the conclusion is true, and @@p\rightarrow q\equiv T@@ otherwise</p>
+                <img src="images/cond.png" alt="Conditional Truth Table">
+                <p><strong>Biconditional</strong>: Operation @@p\leftrightarrow q@@ means "@@p@@ if and only if @@q@@" (@@p@@ implies @@q@@ and @@q@@ implies @@p@@) when @@p@@ is the hypothesis and @@q@@ is the conclusion,
+                    @@p\rightarrow q\equiv T@@ when the hypothesis and the conclusion are the same, and @@p\leftrightarrow q\equiv F@@ when they are different</p>
+                <img src="images/bicond.png" alt="Biconditional Truth Table">
+                <p><strong>Relation</strong>: If @@p@@ is the hypothesis and @@q@@ is the conclusion</p>
+                <ul>
+                    <li class="math">◦ Converse: Then the converse is when @@q@@ is the hypothesis and @@p@@ is the conclusion</li>
+                    <li class="math">◦ Contrapositive: Then the contrapositive is when @@\neg q@@ is the hypothesis and @@\neg p@@ is the conclusion</li>
+                    <li class="math">◦ Inverse: Then the inverse is when @@\neg p@@ is the hypothesis and @@\neg q@@ is the conclusion</li>
+                </ul>
+                <img src="images/cci.png" alt="Converse Truth Table">
+                <p><strong>Tautology</strong>: When the proposition is always true, regardless of the individual truth values of the individual propositions</p>
+                <img src="images/tautology.png" alt="Tautology Truth Table">
+                <p><strong>Contradiction</strong>: When the proposition is always false, regardless of the individual truth values of the individual propositions</p>
+                <img src="images/contradiction.png" alt="Contradiction Truth Table">
+                <p>--- Logical Equivalence, Laws</p>
+                <p>--- Predicate, Quantifiers</p>
             </div>
             <div id="2-1">
                 <br><h2>2.1: Boolean Algebra <br><a href="#all" class="small">(All Topics)</a></h2>
