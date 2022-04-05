@@ -97,7 +97,6 @@ else {
      }
 
 $(brControler).on('input', function(){
-   $(".math-frac span.bottom").css({'border-top': '2px solid rgba(255, 255, 255,' +$(this).val()/101+')'});
    $(allChild).not(keepNormal).css({
       'color' : 'rgba(255, 255, 255,' +$(this).val()/101+')',
     });
@@ -120,7 +119,6 @@ if (time >=0 && time <7 ||  time > 19){
     }
  }
 function nightModeEnable(){
-   $(".math-frac span.bottom").css({'border-top': '2px solid rgba(255, 255, 255, 0.7'});
    $("#main-logo").attr("src", "images/learnmade_black2.png");
    $(nightObject).not(keepNormal).css({
      'background' : '#1E1F1E',
@@ -139,7 +137,6 @@ $(nightTrigger).prop('disabled', true).html(modericon[4]).css({
 }
 
 function nightModeOff(){
-    $(".math-frac span.bottom").css({'border-top': '2px solid black'});
     $("#main-logo").attr("src", "images/learnmade_white.png");
     $(nightTrigger).prop('disabled', false).html(modericon[3]).css({
           'background' : '#262626',

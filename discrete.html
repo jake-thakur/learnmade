@@ -860,7 +860,7 @@
                 </ul>
                 <p>So the solution to the system is @@x=157\equiv 52\:(mod\:105)@@</p>
 
-                <p class="activity-header">Activity 1) GCD this, GCD that</p>
+                <p class="activity-header">Activity 1) Linear Congruences</p>
                 <p>1. Solve @@19x \equiv 4\:(mod\:17)@@</p>
                 <label for="d1_6x1a" class="math">@@x = @@ </label><input id="d1_6x1a" size="1"><br>
                 <p>2. Solve the system</p>
@@ -906,19 +906,189 @@
             </div>
             <div id="1-7">
                 <br><h2>1.7: Primes and Their Distribution <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>Primes are one of, if not the most important type of number. They give us the beautiful property in the group @@&#8484;_p^*@@ that every element has an inverse,
+                can be used for encryption, have many pleasing geometric and arithmetic properties, there are infinitely many of them <a href="https://en.wikipedia.org/wiki/Euclid%27s_theorem">(Euclid)</a>, and they have endless applications</p>
                 <p><strong>Fundamental Theorem of Arithmetic</strong>: Every integer can be uniquely represented as a product of primes <a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic">(Euclid)</a></p>
                 <p class="footnote">*Note said product is called the prime factorization of the integer</p>
                 <p><strong>Prime Definition</strong>: An integer, @@p@@ is Prime iff. @@\pm 1@@ and @@\pm p@@ are its only divisors; namely, its prime factorization is @@1*p@@</p>
                 <p><strong>Composite Definition</strong>: An integer, @@c@@ is Composite if there exists at least one other divisor, @@d@@, in addition to the divisors @@\pm 1@@ and @@\pm c@@; namely, its prime factorization consists of a product of smaller integers</p>
                 <p><strong>Coprime Definition</strong>: Two integers, @@a@@ and @@b@@ are said to be Relatively Prime (coprime) if @@GCD(a,b) = 1@@</p>
+                <p>Let's look at some examples considering the above statements:</p>
+                <p><strong>Example 1</strong>: The prime factorization of @@52 = 1*2^2*13@@ (composite)</p>
+                <p><strong>Example 2</strong>: The prime factorization of @@623 = 1*7*89@@ (composite)</p>
+                <p><strong>Example 3</strong>: The prime factorization of @@1188 = 1*2^2*3^3*11@@ (composite)</p>
+                <p><strong>Example 4</strong>: The prime factorization of @@593 = 1*593@@ (prime)</p>
+                <p><strong>Example 5</strong>: Are @@21@@ and @@8@@ relatively prime? @@GCD(21,8)=1\Rightarrow 21@@ and @@8@@ are relatively prime</p>
+                <img src="images/even_spiral_10000.png" alt="Prime Spiral" width="25%" height="25%">
+                <p class="footnote">A Prime Phyllotaxis Spiral <a href="https://maxwelldemon.com/2012/03/18/prime-phyllotaxis-spirals/">(source)</a></p>
+                <p><strong>Resources</strong> (Regarding the development in primes): <a href="https://en.wikipedia.org/wiki/Largest_known_prime_number">Current Largest Prime</a>, <a href="https://prime-numbers.info/list/primes">List of Primes</a></p>
+                <p class="activity-header">Activity 1) Properties</p>
+                <p>1. Is @@1213@@ prime?</p>
+                <input type="radio" id="d1_7x1a" name="part1" value="Yes">
+                <label for="d1_7x1a" class="math"> Yes</label><br>
+                <input type="radio" id="d1_7x1b" name="part1" value="No">
+                <label for="d1_7x1b" class="math"> No</label><br>
+                <p>2. Write the prime factorization of @@516@@</p>
+                <label for="d1_7x1c" class="math">@@516 = @@ </label><input id="d1_7x1c" size="4"><br>
+                <p>3. Are @@1234567890@@ and @@62@@ coprime?</p>
+                <input type="radio" id="d1_7x1d" name="part2" value="Yes">
+                <label for="d1_7x1d" class="math"> Yes</label><br>
+                <input type="radio" id="d1_7x1e" name="part2" value="No">
+                <label for="d1_7x1e" class="math"> No</label><br><br>
+                <input type="button" id="d1_7x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d1_7x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d1_7x1_y1' class='math'></span></td>
+                            <td><span class='math'>Yes</span></td>
+                            <td id='d1_7x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d1_7x1_y2' class='math'></span></td>
+                            <td><span class='math'>@@2^2*3*43@@</span></td>
+                            <td id='d1_7x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d1_7x1_y3' class='math'></span></td>
+                            <td><span class='math'>No</span></td>
+                            <td id='d1_7x1_r3'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="1-8">
                 <br><h2>1.8: Number Systems <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>We can represent numbers in many ways, but typically we use the decimal system, consisting of digits 0 - 9. Maybe the reason that we commonly use the
+                decimal system is it makes counting easier; we have 10 fingers, and the decimal system has 10 digits (fingers are also called digits coincidentally)</p>
+                <p>Some common number systems</p>
+                <p><p><strong>Binary</strong>: System with 2 digits (base 2) {@@0, 1@@}</p>
+                <p><p><strong>Decimal</strong>: System with 10 digits (base 10) {@@0, 1, 2, 3, 4, 5, 6, 7, 8, 9@@}</p>
+                <p><p><strong>Hexadecimal</strong>: System with 16 digits (base 16) {@@0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F@@}</p>
+                <ul>
+                    <li class="math">◦ Binary is commonly used in machine code to be executed by the CPU</li>
+                    <li class="math">◦ Decimal is commonly used in everyday life as the main number system</li>
+                    <li class="math">◦ Hexadecimal is commonly used for memory addresses and color values</li>
+                </ul>
+                <p><strong>Convert from decimal to binary</strong>:</p>
+                <ul>
+                    <li class="math">1. Consider a decimal number, @@n@@</li>
+                    <li class="math">2. Divide @@n@@ by 2 and record the remainder, this is the right-most digit of the binary number</li>
+                    <li class="math">3. Divide the quotient given by @@\frac{n}{2}@@ by 2 and record the remainder, this is the second right-most digit</li>
+                    <li class="math">4. Keep dividing the quotients by 2 while recording the remainders from right to left</li>
+                    <li class="math">5. When the quotient is 0, the remainder from that division is the left-most digit </li>
+                </ul>
+                <p><strong>Convert from binary to decimal</strong>:</p>
+                <ul>
+                    <li class="math">1. Consider a binary number with @@n@@ digits: @@d_{n-1}...d_2d_1d_0@@</li>
+                    <li class="math">2. The decimal number = @@d_{n-1}*2^{n-1}+...+d_2*2^2+d_1*2^1+d_0*2^0@@</li>
+                </ul>
+                <p><strong>Convert from decimal to hexadecimal</strong>:</p>
+                <ul>
+                    <li class="math">1. Consider a decimal number, @@n@@</li>
+                    <li class="math">2. Divide @@n@@ by 16 and record the remainder, this is the right-most digit of the hex number</li>
+                    <li class="math">3. Divide the quotient given by @@\frac{n}{16}@@ by 16 and record the remainder, this is the second right-most digit</li>
+                    <li class="math">4. Keep dividing the quotients by 16 while recording the remainders from right to left</li>
+                    <li class="math">5. When the quotient is 0, the remainder from that division is the left-most digit </li>
+                </ul>
+                <p><strong>Convert from hexadecimal to decimal</strong>:</p>
+                <ul>
+                    <li class="math">1. Consider a hex number with @@n@@ digits: @@d_{n-1}...d_2d_1d_0@@</li>
+                    <li class="math">2. The decimal number = @@d_{n-1}*16^{n-1}+...+d_2*16^2+d_1*16^1+d_0*16^0@@</li>
+                </ul>
+                <p><strong>Convert from decimal to base k, where k is some integer</strong>:</p>
+                <ul>
+                    <li class="math">1. Consider a decimal number, @@n@@, where base @@k@@ has @@k@@ digits {@@0,1,...,k-1@@}</li>
+                    <li class="math">2. Divide @@n@@ by k and record the remainder, this is the right-most digit of the base k number</li>
+                    <li class="math">3. Divide the quotient given by @@\frac{n}{k}@@ by k and record the remainder, this is the second right-most digit</li>
+                    <li class="math">4. Keep dividing the quotients by k while recording the remainders from right to left</li>
+                    <li class="math">5. When the quotient is 0, the remainder from that division is the left-most digit </li>
+                </ul>
+                <p><strong>Convert from base k to decimal, where k is some integer</strong>:</p>
+                <ul>
+                    <li class="math">1. Consider a base k number with @@n@@ digits: @@d_{n-1}...d_2d_1d_0@@</li>
+                    <li class="math">2. Note @@d_i\in@@ {@@0,1,...,k-1@@} for @@0\le i\le n-1@@</li>
+                    <li class="math">3. The decimal number = @@d_{n-1}*k^{n-1}+...+d_2*k^2+d_1*k^1+d_0*k^0@@</li>
+                </ul>
+                <p>Below is a chart with the 16 standard conversions between binary, decimal, and hexadecimal:</p>
+                <img src="images/bin-dec-hex.png" alt="bin-dec-hex chart" height="555">
+                <p><strong>Notation</strong>:</p>
+                <ul>
+                    <li class="math">◦ Binary (base 2) is denoted by a subscript of 2; e.x., @@1001101_2@@</li>
+                    <li class="math">◦ Decimal (base 10) is denoted by a subscript of 10; e.x., @@5742_{10}@@</li>
+                    <li class="math">◦ Hexadecimal (base 16) is denoted by 0X followed by the number; e.x., 0XBFF1</li>
+                </ul>
+                <p><strong>Example 1</strong>: Convert @@1001101_2@@ to decimal</p>
+                <ul>
+                    <li class="math">Decimal = @@1*2^6+0*2^5+0*2^4+1*2^3+1*2^2+0*2^1+1*2^0\Rightarrow@@</li>
+                    <li class="math">Decimal = @@2^6+2^3+2^2+2^0\Rightarrow 64+8+4+1 = 77@@</li>
+                </ul>
+                <p>Thus, @@1001101_2 \Leftrightarrow 77_{10}@@</p>
+                <p><strong>Example 2</strong>: Convert @@5742_{10}@@ to hexadecimal</p>
+                <ul>
+                    <li class="math">@@5742=16*358+14\Rightarrow d_0 = 14 = E@@</li>
+                    <li class="math">@@358=16*22+6\Rightarrow d_1 = 6@@</li>
+                    <li class="math">@@22=16*1+6\Rightarrow d_2 = 6@@</li>
+                    <li class="math">@@1=16*0+1\Rightarrow d_3 = 1@@</li>
+                </ul>
+                <p>Thus, @@5742_{10}\Leftrightarrow @@ <span class="math">0X@@166@@E</span></p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Converter</p>
+                <p>1. What is @@11110_2@@ in base 10?</p>
+                <input id="d1_8x1a" size="1"><label for="d1_8x1a" class="math">@@_{10}@@</label><br>
+                <p>2. What is @@922_{10}@@ in hexadecimal?</p>
+                <label for="d1_8x1b" class="math"></label><input id="d1_8x1b" size="4"><br>
+                <p>3. What is @@922_{10}@@ in binary?</p>
+                <input id="d1_8x1c" size="8"><label for="d1_8x1c" class="math">@@_2@@</label><br>
+                <p>4. What is @@77216_8@@ in decimal?</p>
+                <input id="d1_8x1d" size="4"><label for="d1_5x1d" class="math">@@_{10}@@</label><br><br>
+                <input type="button" id="d1_8x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d1_8x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d1_8x1_y1' class='math'></span></td>
+                            <td><span class='math'>@@30_{10}@@</span></td>
+                            <td id='d1_8x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d1_8x1_y2' class='math'></span></td>
+                            <td><span class='math'>0X39A</span></td>
+                            <td id='d1_8x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d1_8x1_y3' class='math'></span></td>
+                            <td><span class='math'>@@1110011010_2@@</span></td>
+                            <td id='d1_8x1_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><span id='d1_8x1_y4' class='math'></span></td>
+                            <td><span class='math'>@@32398_{10}@@</span></td>
+                            <td id='d1_8x1_r4'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="1-9">
                 <br><h2>1.9: Formal Logic <br><a href="#all" class="small">(All Topics)</a></h2>

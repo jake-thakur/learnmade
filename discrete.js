@@ -24,6 +24,8 @@ window.onload = function()
     _("d1_4x1").onclick = d1_4x1;
     _("d1_5x1").onclick = d1_5x1;
     _("d1_6x1").onclick = d1_6x1;
+    _("d1_7x1").onclick = d1_7x1;
+    _("d1_8x1").onclick = d1_8x1;
 
     /* discrete interactive */
 
@@ -280,7 +282,81 @@ window.onload = function()
         if (d1_6x1_bool[2]) {document.getElementById("d1_6x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d1_6x1_r3").innerHTML = "correct";}
     }
     // 1.7
+    // Activity 1
+    function d1_7x1() {
+        document.getElementById("d1_7x1_result").style.display = "block";
+
+        var d1_7x1_a = document.getElementById("d1_7x1a").checked;
+        var d1_7x1_b = document.getElementById("d1_7x1b").checked;
+        var d1_7x1_d = document.getElementById("d1_7x1d").checked;
+        var d1_7x1_e = document.getElementById("d1_7x1e").checked;
+
+        // placeholder values
+        var d1_7x1_v1, d1_7x1_v3;
+        var d1_7x1_v2 = document.getElementById("d1_7x1c").value;
+        if (d1_7x1_a) {d1_7x1_v1 = document.getElementById("d1_7x1a").value;}
+        if (d1_7x1_b) {d1_7x1_v1 = document.getElementById("d1_7x1b").value;}
+        if (d1_7x1_d) {d1_7x1_v3 = document.getElementById("d1_7x1d").value;}
+        if (d1_7x1_e) {d1_7x1_v3 = document.getElementById("d1_7x1e").value;}
+
+        // determine if answers are correct
+        var d1_7x1_user = [d1_7x1_v1, d1_7x1_v2, d1_7x1_v3];
+        var d1_7x1_key1 = ["Yes", "2^2*3*43", "No"];
+        var d1_7x1_key2 = ["Yes", "2*2*3*43", "No"];
+        var d1_7x1_bool = [false, false, false];
+        for (i = 0; i < d1_7x1_key1.length; i++) {
+            if (d1_7x1_user[i] == d1_7x1_key1[i] || d1_7x1_user[i] == d1_7x1_key2[i]) {d1_7x1_bool[i] = true;}
+        }
+
+        document.getElementById("d1_7x1_y1").innerHTML = d1_7x1_v1;
+        document.getElementById("d1_7x1_y2").innerHTML = d1_7x1_v2;
+        document.getElementById("d1_7x1_y3").innerHTML = d1_7x1_v3;
+
+        // if incorrect
+        if (!d1_7x1_bool[0]) {document.getElementById("d1_7x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d1_7x1_r1").innerHTML = "incorrect";}
+        if (!d1_7x1_bool[1]) {document.getElementById("d1_7x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d1_7x1_r2").innerHTML = "incorrect";}
+        if (!d1_7x1_bool[2]) {document.getElementById("d1_7x1_r3").style.backgroundColor = "#B5534F"; document.getElementById("d1_7x1_r3").innerHTML = "incorrect";}
+
+        // if correct
+        if (d1_7x1_bool[0]) {document.getElementById("d1_7x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d1_7x1_r1").innerHTML = "correct";}
+        if (d1_7x1_bool[1]) {document.getElementById("d1_7x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d1_7x1_r2").innerHTML = "correct";}
+        if (d1_7x1_bool[2]) {document.getElementById("d1_7x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d1_7x1_r3").innerHTML = "correct";}
+    }
     // 1.8
+    // Activity 1
+    function d1_8x1() {
+        document.getElementById("d1_8x1_result").style.display = "block";
+
+        var d1_8x1_v1 = document.getElementById("d1_8x1a").value;
+        var d1_8x1_v2 = document.getElementById("d1_8x1b").value;
+        var d1_8x1_v3 = document.getElementById("d1_8x1c").value;
+        var d1_8x1_v4 = document.getElementById("d1_8x1d").value;
+
+        var d1_8x1_user = [d1_8x1_v1, d1_8x1_v2, d1_8x1_v3, d1_8x1_v4];
+        var d1_8x1_key1 = [30, '0X39A', 1110011010, 32398];
+        var d1_8x1_key2 = [30, '0x39a', 1110011010, 32398];
+        var d1_8x1_bool = [false, false, false, false];
+        for (i = 0; i < d1_8x1_key1.length; i++) {
+            if (d1_8x1_user[i] == d1_8x1_key1[i] || d1_8x1_user[i] == d1_8x1_key2[i]) {d1_8x1_bool[i] = true;}
+        }
+
+        document.getElementById("d1_8x1_y1").innerHTML = d1_8x1_v1;
+        document.getElementById("d1_8x1_y2").innerHTML = d1_8x1_v2;
+        document.getElementById("d1_8x1_y3").innerHTML = d1_8x1_v3;
+        document.getElementById("d1_8x1_y4").innerHTML = d1_8x1_v4;
+
+        // if incorrect
+        if (!d1_8x1_bool[0]) {document.getElementById("d1_8x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d1_8x1_r1").innerHTML = "incorrect";}
+        if (!d1_8x1_bool[1]) {document.getElementById("d1_8x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d1_8x1_r2").innerHTML = "incorrect";}
+        if (!d1_8x1_bool[2]) {document.getElementById("d1_8x1_r3").style.backgroundColor = "#B5534F"; document.getElementById("d1_8x1_r3").innerHTML = "incorrect";}
+        if (!d1_8x1_bool[3]) {document.getElementById("d1_8x1_r4").style.backgroundColor = "#B5534F"; document.getElementById("d1_8x1_r4").innerHTML = "incorrect";}
+
+        // if incorrect
+        if (d1_8x1_bool[0]) {document.getElementById("d1_8x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d1_8x1_r1").innerHTML = "correct";}
+        if (d1_8x1_bool[1]) {document.getElementById("d1_8x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d1_8x1_r2").innerHTML = "correct";}
+        if (d1_8x1_bool[2]) {document.getElementById("d1_8x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d1_8x1_r3").innerHTML = "correct";}
+        if (d1_8x1_bool[3]) {document.getElementById("d1_8x1_r4").style.backgroundColor = "#739E5B"; document.getElementById("d1_8x1_r4").innerHTML = "correct";}
+    }
     // 1.9
     // 2.1
     // 2.2
