@@ -27,6 +27,7 @@
         </div>
         <!-- side navigation -->
         <div class="sidenav">
+            <a href="#all">All</a>
             <a href="#1-1">1.1</a>
             <a href="#1-2">1.2</a>
             <a href="#1-3">1.3</a>
@@ -68,7 +69,7 @@
                                 <li class="sub"><a href="#1-1" class="button-topic"><span>Number Sets</span></a></li>
                                 <li class="sub"><a href="#1-2" class="button-topic"><span>Math Notation</span></a></li>
                                 <li class="sub"><a href="#1-3" class="button-topic"><span>Division Algorithm</span></a></li>
-                                <li class="sub"><a href="#1-4" class="button-topic"><span>Divisibility a | b</span></a></li>
+                                <li class="sub"><a href="#1-4" class="button-topic"><span>Divisibility b | a</span></a></li>
                                 <li class="sub"><a href="#1-5" class="button-topic"><span>Euclid's Algorithm</span></a></li>
                                 <li class="sub"><a href="#1-6" class="button-topic"><span>Modular Arithmetic</span></a></li>
                                 <li class="sub"><a href="#1-7" class="button-topic"><span>Prime Distribution</span></a></li>
@@ -78,17 +79,17 @@
                         </li>
                     </ol>
                     <ul>
-                        <li class="inline" id="d2">2) Linear Algebra
+                        <li class="inline" id="d2">2) Misc., Algebra
                             <ol>
                                 <li class="sub"><a href="#2-1" class="button-topic"><span>Boolean Algebra</span></a></li>
-                                <li class="sub"><a href="#2-2" class="button-topic"><span>Coordinates (x, y)</span></a></li>
+                                <li class="sub"><a href="#2-2" class="button-topic"><span>Coordinates (...)</span></a></li>
                                 <li class="sub"><a href="#2-3" class="button-topic"><span>Vector Notation</span></a></li>
                                 <li class="sub"><a href="#2-4" class="button-topic"><span>Vector Operations</span></a></li>
                                 <li class="sub"><a href="#2-5" class="button-topic"><span>Matrix Notation</span></a></li>
                                 <li class="sub"><a href="#2-6" class="button-topic"><span>Matrix Operations</span></a></li>
-                                <li class="sub"><a href="#2-7" class="button-topic"><span>Matrix Solutions</span></a></li>
-                                <li class="sub"><a href="#2-8" class="button-topic"><span>Determinants</span></a></li>
-                                <li class="sub"><a href="#2-9" class="button-topic"><span>Invertibility (IMT)</span></a></li>
+                                <li class="sub"><a href="#2-7" class="button-topic"><span>Determinants</span></a></li>
+                                <li class="sub"><a href="#2-8" class="button-topic"><span>Invertibility (IMT)</span></a></li>
+                                <li class="sub"><a href="#2-9" class="button-topic"><span>Solving Systems</span></a></li>
                             </ol>
                         </li>
                     </ul>
@@ -103,7 +104,7 @@
                                 <li class="sub"><a href="#3-6" class="button-topic"><span>Combinatorics</span></a></li>
                                 <li class="sub"><a href="#3-7" class="button-topic"><span>Set Theory {...}</span></a></li>
                                 <li class="sub"><a href="#3-8" class="button-topic"><span>Functions f(x)</span></a></li>
-                                <li class="sub"><a href="#3-9" class="button-topic"><span>Sorting Algorithms</span></a></li>
+                                <li class="sub"><a href="#3-9" class="button-topic"><span>Some Algorithms</span></a></li>
                             </ol>
                         </li>
                     </ul>
@@ -112,9 +113,9 @@
             <!-- lessons -->
             <div id="1-1">
                 <br><h2>1.1: Numbers and Their Sets <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>To understand the sets of numbers, we must begin with some basic set theory.
+                <p>To understand the sets of numbers, we must begin with some basic set theory
                     A set is a group that contains elements, denoted by set braces and interior comma separated values (CSV) called elements;
-                    for example, <span class="math">{@@x, y, z@@}</span> is a set containing elements @@x, y,@@ and @@z@@.</p>
+                    for example, <span class="math">{@@x, y, z@@}</span> is a set containing elements @@x, y,@@ and @@z@@</p>
                 <p>Writing out an entire set each time we want to refer to it can be tedious, even more so when the set is large; so, it is standard to name sets
                     as follows (using our example): </p>
                 <ul class="list">
@@ -122,10 +123,10 @@
                     <li>◦ Mathematical Notation: <span class="math">@@S = @@ {@@x, y, z@@}</span></li>
                 </ul>
                 <p class="footnote">*Note we will use lots of Mathematical Notation (covered next section)</p>
-                <p>This way we can simply refer to the set by stating its name (<span class="math">@@S@@</span>, rather than <span class="math">{@@x, y, z@@}</span>).
-                   Doing so is especially useful when the "element of" operator is concerned.</p>
-                <p><strong>element of </strong>is denoted by "<span class="math">@@&isin;@@</span>" and is an operator to express membership.
-                    Considering our example: it is easy to see that <span class="math">@@x@@ is an element of the set, @@S@@</span>; namely, <span class="math">@@x &isin; S@@</span>.</p>
+                <p>This way we can simply refer to the set by stating its name (<span class="math">@@S@@</span>, rather than <span class="math">{@@x, y, z@@}</span>)
+                   Doing so is especially useful when the "element of" operator is concerned</p>
+                <p><strong>element of </strong>is denoted by "<span class="math">@@&isin;@@</span>" and is an operator to express membership
+                    Considering our example: it is easy to see that <span class="math">@@x@@ is an element of the set, @@S@@</span>; namely, <span class="math">@@x &isin; S@@</span></p>
                 <p>What about infinite sets? Luckily, there exist standard notations for such sets, but first we must define a few types of numbers: </p>
                 <ul class="list-space">
                     <li class="math">◦ Integer: <span class="math-def">finite numbers that can be expressed without fractions. E.x., @@-1, 0, 1@@</span></li>
@@ -245,8 +246,8 @@
                 <br><h2>1.2: Mathematical Notation <br><a href="#all" class="small">(All Topics)</a></h2>
                 <p>Math has symbols... lots of them. But they are nothing to be scared of! Rather, they are just a shorthand
                 mathematicians use to simplify the way things are denoted. As shown in the previous lesson regarding sets,
-                stating something in English takes much more space than stating the same thing using Mathematical Notation.</p>
-                <p>In this lesson we will explore the most commonly used symbols on this website!</p>
+                stating something in English takes much more space than stating the same thing using Mathematical Notation</p>
+                <p class="footnote">*Note in this lesson we will explore the most commonly used symbols on this website</p>
                 <h4>A full reference of Mathematical Symbols can be found <a href="https://en.wikipedia.org/wiki/Glossary_of_mathematical_symbols">here</a></h4>
                 <p>Logic:</p>
                 <ul class="list-space">
@@ -319,14 +320,14 @@
                 <p class="footnote">@@2 &le; 3@@ (2 is less than or equal to 3)</p>
                 <p class="footnote">@@1.1 &asymp; 1.11@@ (1.1 is approximately equal to 1.11)</p>
                 <p>There are many more symbols and notations that will be used in this website, but they will be introduced with their
-                respective (later) topics as to avoid confusion! The introduction of how to denote divisibility and congruence leads us to our next few lessons (1.3 - 1.7).</p>
+                respective (later) topics as to avoid confusion! The introduction of how to denote divisibility and congruence leads us to our next few lessons (1.3 - 1.7)</p>
             </div>
             <div id="1-3">
                 <br><h2>1.3: The Division Algorithm <br><a href="#all" class="small">(All Topics)</a></h2>
                 <p>What is division? Division is an algorithm that is defined by the operations multiplication and addition. Well, you might be thinking, "I was taught that division was an operation!"
                 Yes, that is what we were all taught growing up; but first, let's take a look at subtraction. Really, subtraction is just adding two numbers with a catch: the second one was multiplied by @@-1@@; namely
                     <span class="math">@@a - b = a + b(-1)@@</span>... But why do we care? Well, for subtraction we don't get anything really cool from this definition,
-                    but with division we are given two really important quantities: the quotient and the remainder.</p>
+                    but with division we are given two really important quantities: the quotient and the remainder</p>
                 <p>The dividend, divisor, quotient, and remainder are the same as they always were:</p>
                 <ul>
                     <li>◦ Dividend: the number to be divided</li>
@@ -354,7 +355,7 @@
                 <p>With that, our next step is to find <span class="math">@@q@@</span> by answering the question, "How many times does @@3@@ go into @@55@@?"</p>
                 <p class="footnote">*Note @@a > 0@@</p>
                 <p>We can do so by using the brute force method of letting <span class="math">@@q = 1@@</span> and iterating up to a value of <span class="math">@@q@@</span>
-                such that <span class="math">@@3q > 55@@</span>, in which case the <strong>previous</strong> value of <span class="math">@@q@@</span> is the quotient.</p>
+                such that <span class="math">@@3q > 55@@</span>, in which case the <strong>previous</strong> value of <span class="math">@@q@@</span> is the quotient</p>
                 <p class="footnote">*Note a smarter approach would be to pick a larger number and guess and check down to the first product less than 55</p>
                 <ul>
                     <li class="math">let @@q = 1 &#8658; 3 * 1 = 3, 3 < 55@@</li>
@@ -380,7 +381,7 @@
                     <li class="math">@@55 = 3 * 18 + 1 &#8658;@@</li>
                     <li class="math">@@55 = 55@@</li>
                 </ul>
-                <p>Thus, when @@55@@ is divided by @@3@@, a quotient of @@18@@ and a remainder of @@1@@ are given.</p>
+                <p>Thus, when @@55@@ is divided by @@3@@, a quotient of @@18@@ and a remainder of @@1@@ are given</p>
                 <p><strong>Example 2</strong>: @@-22@@ divided by @@7@@</p>
                 <p>By the Division Algorithm, we see that:</p>
                 <ul>
@@ -390,7 +391,7 @@
                 <p>With that, our next step is to find <span class="math">@@q@@</span> by answering the question, "How many times does @@7@@ go into @@-22@@?"</p>
                 <p class="footnote">*Note @@a < 0@@</p>
                 <p>We can do so by using the brute force method of letting <span class="math">@@q = -1@@</span> and iterating down to a value of <span class="math">@@q@@</span>
-                    such that <span class="math">@@7q < -22@@</span>, in which case the <strong>that</strong> value of <span class="math">@@q@@</span> is the quotient.</p>
+                    such that <span class="math">@@7q < -22@@</span>, in which case the <strong>that</strong> value of <span class="math">@@q@@</span> is the quotient</p>
                 <ul>
                     <li class="math">let @@q = -1 &#8658; 7 * -1 = -7, -7 > -22@@</li>
                     <li class="math">let @@q = -2 &#8658; 7 * -2 = -14, -14 > -22@@</li>
@@ -412,7 +413,7 @@
                     <li class="math">@@-22 = 7 * -4 + 6 &#8658;@@</li>
                     <li class="math">@@-22 = -22@@</li>
                 </ul>
-                <p id="find-q-r">Thus, when @@-22@@ is divided by @@7@@, a quotient of @@-4@@ and a remainder of @@6@@ are given.</p>
+                <p id="find-q-r">Thus, when @@-22@@ is divided by @@7@@, a quotient of @@-4@@ and a remainder of @@6@@ are given</p>
                 <p><strong>Generalizing the steps:</strong></p>
                 <ol>
                     <li>1. <span class="math">Using values of @@a@@ and @@b@@, write an expression of the form @@a = bq + r@@</span></li>
@@ -617,8 +618,8 @@
             </div>
             <div id="1-5">
                 <br><h2>1.5: Euclid's Algorithm for GCD <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Our next topic is the Greatest Common Divisor (GCD). This is another familiar topic, defined by its name... literally.
-                    The GCD of two (or more) integers is the largest number that divides all of them.</p>
+                <p>Our next topic is the Greatest Common Divisor (GCD). This is another familiar topic, defined by its name... literally
+                    The GCD of two (or more) integers is the largest number that divides all of them</p>
                 <p class="math-def-h">Let @@a, b,@@ and @@d@@ be integers, where @@d@@ is a divisor of both @@a@@ and @@b@@<span><br></span>
                     Then there does not exist an integer, @@c@@, such that @@c@@ is a divisor of both @@a@@ and @@b@@, where @@c > d@@
                     <span><br></span>It is then said that @@d@@ is the greatest common divisor of @@a@@ and @@b@@; namely, @@GCD(a, b) = d@@</p>
@@ -1099,7 +1100,7 @@
                     <li><strong>Example 3</strong>: "Do you like LearnMade?" (not a proposition)</li>
                     <li><strong>Example 4</strong>: "Go get some food" (not a proposition)</li>
                 </ul>
-                <p class="footnote">*Note the truth value is what indicates whether a proposition is @@T@@ (true) or @@F@@ (false)</p>
+                <p><strong>Truth Value</strong>: A value that indicates whether a proposition is @@T@@ (true) or @@F@@ (false)</p>
                 <p><strong>Compound Proposition</strong>: A Compound Proposition is statement that is composed of multiple propositions, let them be @@p@@ and @@q@@</p>
                 <p><strong>Conjunction</strong>: A logic operator to connect propositions, denoted by @@\land@@ where @@p\land q\equiv T@@ only when both @@p@@ and @@q@@ are true (logical and)</p>
                 <img src="images/logic-and.png" alt="Conjunction Truth Table">
@@ -1122,20 +1123,221 @@
                     <li class="math">◦ Inverse: Then the inverse is when @@\neg p@@ is the hypothesis and @@\neg q@@ is the conclusion</li>
                 </ul>
                 <img src="images/cci.png" alt="Converse Truth Table">
-                <p><strong>Tautology</strong>: When the proposition is always true, regardless of the individual truth values of the individual propositions</p>
+                <p><strong>Tautology</strong>: When the proposition is always true, regardless of the truth values of the individual propositions</p>
                 <img src="images/tautology.png" alt="Tautology Truth Table">
-                <p><strong>Contradiction</strong>: When the proposition is always false, regardless of the individual truth values of the individual propositions</p>
+                <p><strong>Contradiction</strong>: When the proposition is always false, regardless of the truth values of the individual propositions</p>
                 <img src="images/contradiction.png" alt="Contradiction Truth Table">
-                <p>--- Logical Equivalence, Laws</p>
-                <p>--- Predicate, Quantifiers</p>
+                <p><strong>Logical Equivalence</strong>: Propositions are said to be logically equivalent if they both have to the same truth value when evaluated. Laws of logic
+                    can be applied to help simplify a proposition</p>
+                <p><strong>DeMorgan's Law</strong>: DeMorgan's Law is particularly useful for simplifying propositions. Essentially, it is the distribution of a negation about a statement (there are two versions)</p>
+                <ul>
+                    <li class="math">◦ <strong>Version 1</strong>: @@\neg (p\lor q)\equiv (\neg p\land \neg q)@@</li>
+                    <li class="math">◦ <strong>Version 2</strong>: @@\neg (p\land q)\equiv (\neg p\lor \neg q)@@</li>
+                </ul>
+                <p><strong>Laws of Propositional Logic</strong>: Standard Laws that can be used to reduce any applicable proposition</p>
+                <img src="images/logic-laws.png" alt="Logic Laws">
+                <p><strong>Predicate</strong>: A proposition involving variables such that, depending on the input values, the proposition is true or false. Can be expressed as a function @@P(x,y,...,n)@@ </p>
+                <ul>
+                    <li><strong>Example 1</strong>: @@P(x):x@@ is prime</li>
+                    <li><strong>Example 2</strong>: @@P(x,y,z):x^2+y^2=z^2@@</li>
+                </ul>
+                <p><strong>Quantifiers</strong>: Operators that may quantify a statement, there are two main quantifiers (Universal and Existential) </p>
+                <ul>
+                    <li class="math">◦ <strong>Universal</strong>: Denoted by @@&#8704;@@, meaning "For All" so @@&#8704;x@@ means "For All values of @@x@@"</li>
+                    <li class="math">◦ <strong>Existential</strong>: Denoted by @@&#8707;@@, meaning "There Exists" so @@&#8707;x@@ means "There Exists some value of @@x@@"</li>
+                </ul>
+                <ul>
+                    <li><strong>Example 1</strong>: @@\forall x:x^2>0@@ (true)</li>
+                    <li><strong>Example 2</strong>: @@\exists x:\sqrt x\notin\mathbb{R}@@ (true)</li>
+                </ul>
+                <p><strong>DeMorgan's Law for Quantified Statements</strong>: Like before, this is essentially the distribution of a negation, this time about a quantified statement (there are two versions)</p>
+                <ul>
+                    <li class="math">◦ <strong>Version 1</strong>: @@\neg \forall x\:P(x)\equiv \exists x\:\neg P(x)@@</li>
+                    <li class="math">◦ <strong>Version 2</strong>: @@\neg \exists x\:P(x)\equiv \forall x\:\neg P(x)@@</li>
+                </ul>
+                <p><strong>Nested Quantifiers</strong>: When a statement has more than one quantifier, evaluated by applying the quantifier to its respective variable</p>
+                <ul>
+                    <li><strong>Example 1</strong>: @@\forall x\forall y:xy=1@@ (false)</li>
+                    <li><strong>Example 2</strong>: @@\exists x\forall y:xy=y@@ (true)</li>
+                </ul>
+                <p><strong>DeMorgan's Law for Nested Quantified Statements</strong>: Like before, this is essentially the distribution of a negation, this time about a nested quantified statement (there are four versions)</p>
+                <ul>
+                    <li class="math">◦ <strong>Version 1</strong>: @@\neg \forall x\forall y\:P(x,y)\equiv \exists x\exists y\:\neg P(x,y)@@</li>
+                    <li class="math">◦ <strong>Version 2</strong>: @@\neg \forall x\exists y\:P(x,y)\equiv \exists x\forall y\:\neg P(x,y)@@</li>
+                    <li class="math">◦ <strong>Version 3</strong>: @@\neg \exists x\forall y\:P(x,y)\equiv \forall x\exists y\:\neg P(x,y)@@</li>
+                    <li class="math">◦ <strong>Version 4</strong>: @@\neg \exists x\exists y\:P(x,y)\equiv \forall x\forall y\:\neg P(x,y)@@</li>
+                </ul>
+                <p><strong>Convert English to Logic</strong>: Look for key implications and translate them to their respective logical operators</p>
+                <p><strong>Example</strong>: Considering <span class="math">@@P(x)@@: "person @@x@@ watches One Piece" and @@Q(x):@@ "person @@x@@ likes One Piece" we will translate the following statements to logical expressions:</span></p>
+                <ul>
+                    <li class="math">◦ "Everyone that watches One Piece likes One Piece" @@\equiv \forall x:P(x)\rightarrow Q(x)@@</li>
+                    <li class="math">◦ "Someone who does not watch One Piece likes One Piece" @@\equiv \exists x:\neg P(x)\land Q(x)@@</li>
+                    <li class="math">◦ "Someone does not watch One Piece and someone dislikes One Piece" @@\equiv \exists x:\neg P(x)\land \exists x:\neg Q(x)@@</li>
+                    <li class="math">◦ "Nobody that watches One Piece dislikes One Piece" @@\equiv \neg \exists x:P(x)\rightarrow \neg Q(x)@@</li>
+                </ul>
+                <a class="footnote" href="https://en.wikipedia.org/wiki/One_Piece_(TV_series)">(One Piece)</a>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Logical 2</p>
+                <p>1. Is <span class="math">"LearnMade contains thousands of lines of code" a proposition?</span></p>
+                <input type="radio" id="d1_9x1a" name="part1" value="Yes">
+                <label for="d1_9x1a" class="math"> Yes</label><br>
+                <input type="radio" id="d1_9x1b" name="part1" value="No">
+                <label for="d1_9x1b" class="math"> No</label><br>
+                <p>2. Given @@P(x): ln(x+1)\in \mathbb{R}@@, what is the truth value of @@P(-1)@@?</p>
+                <input type="radio" id="d1_9x1c" name="part2" value="T">
+                <label for="d1_9x1c" class="math"> @@T@@</label><br>
+                <input type="radio" id="d1_9x1d" name="part2" value="F">
+                <label for="d1_9x1d" class="math"> @@F@@</label><br>
+                <p>3. Is @@\exists x: Q(x) \land \neg P(x)@@ the correct logic translation of <span class="math">"There is a person that is in class and did not take notes"</span> given @@P(x)@@: <span class="math">"@@x@@ took notes"</span> and @@Q(x)@@: <span class="math">"@@x@@ is in class"?</span></p>
+                <input type="radio" id="d1_9x1e" name="part3" value="Yes">
+                <label for="d1_9x1e" class="math"> Yes</label><br>
+                <input type="radio" id="d1_9x1f" name="part3" value="No">
+                <label for="d1_9x1f" class="math"> No</label><br>
+                <p>4. Using the laws of propositional logic, are @@(\neg p\land s)\lor \neg (p\lor s)@@ and @@\neg p@@ logically equivalent?</p>
+                <input type="radio" id="d1_9x1g" name="part4" value="Yes">
+                <label for="d1_9x1g" class="math"> Yes</label><br>
+                <input type="radio" id="d1_9x1h" name="part4" value="No">
+                <label for="d1_9x1h" class="math"> No</label><br>
+                <p>5. Which law of propositional logic was applied to the statement @@(\neg p \land \neg q)\lor (\neg p \land q)@@ to get @@\neg p \land (\neg q \lor q)@@?</p>
+                <input type="radio" id="d1_9x1i" name="part5" value="DeMorgan's">
+                <label for="d1_9x1i" class="math"> DeMorgan's</label><br>
+                <input type="radio" id="d1_9x1j" name="part5" value="Commutative">
+                <label for="d1_9x1j" class="math"> Commutative</label><br>
+                <input type="radio" id="d1_9x1k" name="part5" value="Associative">
+                <label for="d1_9x1k" class="math"> Associative</label><br>
+                <input type="radio" id="d1_9x1l" name="part5" value="Distributive">
+                <label for="d1_9x1l" class="math"> Distributive</label><br>
+                <p>6. Which term best defines the expression @@p\leftrightarrow \neg p@@?</p>
+                <input type="radio" id="d1_9x1m" name="part6" value="Tautology">
+                <label for="d1_9x1m" class="math"> Tautology</label><br>
+                <input type="radio" id="d1_9x1n" name="part6" value="Contradiction">
+                <label for="d1_9x1n" class="math"> Contradiction</label><br>
+                <input type="radio" id="d1_9x1o" name="part6" value="Neither">
+                <label for="d1_9x1o" class="math"> Neither</label><br>
+                <p>7. Consider @@\neg p\rightarrow q@@, which term best defines the expression @@q\rightarrow \neg p@@?</p>
+                <input type="radio" id="d1_9x1p" name="part7" value="Converse">
+                <label for="d1_9x1p" class="math"> Converse</label><br>
+                <input type="radio" id="d1_9x1q" name="part7" value="Contrapositive">
+                <label for="d1_9x1q" class="math"> Contrapositive</label><br>
+                <input type="radio" id="d1_9x1r" name="part7" value="Inverse">
+                <label for="d1_9x1r" class="math"> Inverse</label><br>
+                <input type="radio" id="d1_9x1s" name="part7" value="None of the Above">
+                <label for="d1_9x1s" class="math"> None of the Above</label><br>
+                <p>8. What is the truth value of the proposition statement @@(\neg \neg \neg F \land (T \lor \neg \neg F)) \oplus T@@</p>
+                <input type="radio" id="d1_9x1t" name="part8" value="T">
+                <label for="d1_9x1t" class="math"> @@T@@</label><br>
+                <input type="radio" id="d1_9x1u" name="part8" value="F">
+                <label for="d1_9x1u" class="math"> @@F@@</label><br><br>
+                <input type="button" id="d1_9x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d1_9x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d1_9x1_y1' class='math'></span></td>
+                            <td><span class='math'>Yes</span></td>
+                            <td id='d1_9x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d1_9x1_y2' class='math'></span></td>
+                            <td><span class='math'>@@F@@</span></td>
+                            <td id='d1_9x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d1_9x1_y3' class='math'></span></td>
+                            <td><span class='math'>Yes</span></td>
+                            <td id='d1_9x1_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><span id='d1_9x1_y4' class='math'></span></td>
+                            <td><span class='math'>Yes</span></td>
+                            <td id='d1_9x1_r4'></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td><span id='d1_9x1_y5' class='math'></span></td>
+                            <td><span class='math'>Distributive</span></td>
+                            <td id='d1_9x1_r5'></td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td><span id='d1_9x1_y6' class='math'></span></td>
+                            <td><span class='math'>Contradiction</span></td>
+                            <td id='d1_9x1_r6'></td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td><span id='d1_9x1_y7' class='math'></span></td>
+                            <td><span class='math'>Converse</span></td>
+                            <td id='d1_9x1_r7'></td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td><span id='d1_9x1_y8' class='math'></span></td>
+                            <td><span class='math'>@@F@@</span></td>
+                            <td id='d1_9x1_r8'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="2-1">
                 <br><h2>2.1: Boolean Algebra <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Boolean Algebra is like Formal Logic, but instead of @@T@@'s and @@F@@'s there are @@1@@'s and @@0@@'s, which behave the same, respectively</p>
+                <p>There are a couple important conventions to discuss when it comes to Boolean Algebra: one of them is how the @@+@@, @@*@@, and @@'@@ operators are defined</p>
+                <p><strong>@@+@@</strong> <span class="footnote">(behaves like or)</span></p>
+                <ul>
+                    <li class="math">@@0+0=0@@</li>
+                    <li class="math">@@0+1=1@@</li>
+                    <li class="math">@@1+0=1@@</li>
+                    <li class="math">@@1+1=1@@</li>
+                </ul>
+                <p><strong>@@*@@ </strong> <span class="footnote">(behaves like and)</span></p>
+                <ul>
+                    <li class="math">@@0*0=0@@</li>
+                    <li class="math">@@0*1=0@@</li>
+                    <li class="math">@@1*0=0@@</li>
+                    <li class="math">@@1*1=1@@</li>
+                </ul>
+                <p><strong>@@'@@</strong> <span class="footnote">(behaves like not)</span></p>
+                <ul>
+                    <li class="math">@@0'=1@@</li>
+                    <li class="math">@@1'=0@@</li>
+                </ul>
+                <p class="footnote">*Note we are looking at <strong>Boolean</strong> addition not Integer addition, so @@1+1=1@@ reads like @@T \lor T \equiv T@@</p>
+                <p>It is also important to mention that the @@'@@ operator is called the complement. Next we will look at Logic Gates</p>
+                <p><strong>Logic Gates</strong>: Operators (used in circuits) that output a certain boolean value depending on the inputs</p>
+                <ul>
+                    <li class="math">◦ <strong>Yes</strong>: Output is the same as the input</li>
+                    <li class="math">◦ <strong>Not</strong>: Output is the complement of the input</li>
+                    <li class="math">◦ <strong>And</strong>: Output is @@1@@ if both inputs are @@1@@, @@0@@ otherwise</li>
+                    <li class="math">◦ <strong>Or</strong>: Output is @@1@@ if one or both inputs are @@1@@, @@0@@ otherwise</li>
+                    <li class="math">◦ <strong>Xor</strong>: Output is @@1@@ if one input is @@1@@ and the other is @@0@@, @@0@@ otherwise</li>
+                    <li class="math">◦ <strong>Nand</strong>: Output is @@0@@ if both inputs are @@1@@, @@1@@ otherwise</li>
+                    <li class="math">◦ <strong>Nor</strong>: Output is @@0@@ if one or both inputs are @@1@@, @@1@@ otherwise</li>
+                    <li class="math">◦ <strong>Xnor</strong>: Output is @@0@@ if one input is @@1@@ and the other is @@0@@, @@1@@ otherwise</li>
+                </ul>
+                <img src="images/logic-gates2.png" alt="Logic Gates">
+                <p>Just like Formal Logic, Boolean Algebra uses expressions. A Boolean expression...</p>
+                <p>Laws</p>
+                <p>Minterm (1, SOP), Maxterm (0, POS)</p>
             </div>
             <div id="2-2">
                 <br><h2>2.2: Coordinate Systems <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1148,131 +1350,141 @@
             </div>
             <div id="2-3">
                 <br><h2>2.3: Vector Notation <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Tuples</p>
+                <p>n-dimensional vector</p>
+                <p>Euclidean vector spaces</p>
             </div>
             <div id="2-4">
                 <br><h2>2.4: Vector Operations <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>addition</p>
+                <p>subtraction (addition)</p>
+                <p>scalar multiplication</p>
+                <p>dot product</p>
+                <p>cross product (3D)</p>
             </div>
             <div id="2-5">
                 <br><h2>2.5: Matrix Notation <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>SLE's</p>
+                <p>Collection of vectors</p>
+                <p>nxn matrix</p>
+                <p>Identity matrix</p>
+                <p>Matrix Equation</p>
+                <p>Row Echelon</p>
             </div>
             <div id="2-6">
                 <br><h2>2.6: Matrix Operations <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Addition</p>
+                <p>subtraction (addition)</p>
+                <p>Scalar multiplication</p>
+                <p>Matrix multiplication</p>
+                <p>Row operations</p>
             </div>
             <div id="2-7">
-                <br><h2>2.7: Matrix Solutions <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <br><h2>2.7: Determinants <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>Definition</p>
+                <p>1x1</p>
+                <p>2x2</p>
+                <p>3x3 (cofactor expansion)</p>
+                <p>4x4</p>
+                <p>nxn</p>
+                <p>Properties (row operations)</p>
             </div>
             <div id="2-8">
-                <br><h2>2.8: Determinants <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <br><h2>2.8: Invertibility<br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>1x1</p>
+                <p>2x2</p>
+                <p>3x3</p>
+                <p>nxn</p>
+                <p>Invertible Matrix Theorem</p>
             </div>
             <div id="2-9">
-                <br><h2>2.9: Invertibility <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <br><h2>2.9: Solving Systems <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>Substitution</p>
+                <p>RREF method</p>
+                <p>Inverse method</p>
             </div>
             <div id="3-1">
                 <br><h2>3.1: Summation and Product <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Finite Sum</p>
+                <p>Infinite Sum theory (converge, diverge)</p>
+                <p>Finite Product</p>
+                <p>Infinite Sum theory (converge, diverge)</p>
             </div>
             <div id="3-2">
                 <br><h2>3.2: Proof by Mathematical Induction <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Procedure</p>
+                <p>Example: Triangular Number</p>
+                <p>Example: Fibonacci Sequence</p>
+                <a href="https://r-knott.surrey.ac.uk/runsums/triNbProof.html"></a>
             </div>
             <div id="3-3">
                 <br><h2>3.3: Graph Theory <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Vertex, Edge</p>
+                <p>Simple vs. Multigraph</p>
+                <p>Undirected vs. Directed</p>
+                <p>Adjacency Matrix, Weights</p>
+                <p>Path, Walk</p>
+                <p>Circuit, Closed Walk</p>
+                <p>Connectedness</p>
+                <p>Planar Graphs (Circle Chord Method)</p>
+                <p>Isomorphism</p>
             </div>
             <div id="3-4">
                 <br><h2>3.4: Trees and Traversal <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Definition</p>
+                <p>Nodes: Root, Parent, Child, Sibling, Leaf</p>
+                <p>Properties (tree with n vertices has n - 1 edges</p>
+                <p>Forest</p>
+                <p>Binary Search Tree</p>
+                <p>Traversal</p>
             </div>
             <div id="3-5">
                 <br><h2>3.5: Probability Theory <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Probability of an event</p>
+                <p>Complement</p>
+                <p>Independence, Dependence</p>
+                <p>Intersection</p>
+                <p>Union</p>
+                <p>Inclusion Exclusion Principle</p>
+                <p>Conditional Probability</p>
+                <p>Bayes Theorem</p>
             </div>
             <div id="3-6">
                 <br><h2>3.6: Combinatorics <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Factorial Algebra</p>
+                <p>Permutations with repetition</p>
+                <p>Permutations without repetition</p>
+                <p>Combinations without repetition</p>
+                <p>Combinations with repetition</p>
+                <p>Binomial Theorem and Pascal's Triangle</p>
+                <a href="https://www.mathsisfun.com/combinatorics/combinations-permutations.html"></a>
             </div>
             <div id="3-7">
                 <br><h2>3.7: Set Theory <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Set membership</p>
+                <p>Complement</p>
+                <p>Union</p>
+                <p>Intersection</p>
+                <p>Difference</p>
+                <p>Symmetric Difference</p>
+                <a href="https://commons.wikimedia.org/wiki/File:Set_Theory_Operations.svg"></a>
             </div>
             <div id="3-8">
                 <br><h2>3.8: Functions <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <p>Definition of function</p>
+                <p>Domain, Target, Range</p>
+                <p>Injection (one-to-one)</p>
+                <p>Surjection (onto)</p>
+                <p>Bijection</p>
             </div>
             <div id="3-9">
-                <br><h2>3.9: Sorting Algorithms <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
-                <p>---</p>
+                <br><h2>3.9: Some Algorithms <br><a href="#all" class="small">(All Topics)</a></h2>
+                <p>Bubble Sort</p>
+                <p>Heap Sort</p>
+                <p>Merge Sort</p>
+                <p>Djikstra's Algorithm</p>
+                <p>Kruskal's Algorithm</p>
+                <p>BFS, DFS</p>
             </div>
         </div>
         <footer>
