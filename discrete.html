@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <!--MathJax Plugin-->
         <title>LearnMade | Discrete</title>
         <meta name="viewport" content="width=device-width, initial-scale=0.01">
         <link rel="icon" type="image/x-icon" href="images/learnmade_favicon.png">
@@ -12,7 +13,7 @@
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="jquery-night-mode-master/css/night-mode.css"/>
         <script src="jquery-night-mode-master/js/jquery.night.mode.js"></script>
-        <!--MathJax-->
+        <!--MathJax Plugin-->
         <script>MathJax = {tex: {inlineMath: [['@@', '@@'], ['\\(', '\\)']]}};</script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     </head>
@@ -827,9 +828,7 @@
                 <ul>
                     <li class="math">\(x\equiv a_1\:(mod\:n_1)\)</li>
                     <li class="math">\(x\equiv a_2\:(mod\:n_2)\)</li>
-                    <li>.</li>
-                    <li>.</li>
-                    <li>.</li>
+                    <li>@@\vdots@@</li>
                     <li class="math">\(x\equiv a_k\:(mod\:n_k)\)</li>
                 </ul>
                 <p class="math"><span class="math-def-h">Where \(n_1,n_2,...,n_k\) are pairwise <a href="#1-7">coprime </a> integers, then<br>
@@ -1335,67 +1334,396 @@
                     <li class="math">◦ <strong>Xnor</strong>: Output is @@0@@ if one input is @@1@@ and the other is @@0@@, @@1@@ otherwise</li>
                 </ul>
                 <img src="images/logic-gates2.png" alt="Logic Gates">
-                <p>Just like Formal Logic, Boolean Algebra uses expressions. A Boolean expression...</p>
-                <p>Laws</p>
-                <p>Minterm (1, SOP), Maxterm (0, POS)</p>
+                <p>Just like Formal Logic, Boolean Algebra uses expressions. A Boolean expression consists of several components that have individual truth values which can be evaluated by a compound expression.
+                    Below are some standard laws which can be applied in a similar fashion to the Laws of Propositional Logic to reduce an expression:</p>
+                <img src="images/bool-law.png" alt="Boolean Laws">
+                <p><strong>Minterm</strong>: The Sum of Products (SoP) where the output value is 1</p>
+                <p><strong>Maxterm</strong>: The Product of Sums (PoS) where the output value is 0</p>
+                <img src="images/SOP-example-table.jpg" alt="min/maxterm">
+                <ul>
+                    <li class="math">◦ <strong>Minterm</strong>: @@A'B'C'+A'BC'+A'BC+ABC'+ABC@@</li>
+                    <li class="math">◦ <strong>Maxterm</strong>: @@(A'+B'+C)(A+B'+C')(A+B'+C)@@</li>
+                </ul>
             </div>
             <div id="2-2">
                 <br><h2>2.2: Coordinate Systems <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Cartesian</p>
-                <p>Polar</p>
-                <p>Cubic</p>
-                <p>Cylindrical</p>
-                <p>Spherical</p>
-                <p>Custom</p>
+                <h3>2-Dimensional</h3>
+                <p><strong>Cartesian</strong>: @@(x,y)@@ "rectangular system"</p>
+                <img src="images/xy-coord.png" alt="2D Cartesian" width="25%">
+                <p><strong>Polar</strong>: @@(r,\theta )@@ "circular system"</p>
+                <img src="images/polar-coordspng.png" alt="Polar" width="25%">
+                <p><strong>Convert from Cartesian to Polar</strong>:</p>
+                <p class="footnote">Jacobian: @@r@@</p>
+                <ul>
+                    <li class="math">◦ @@x=rcos\theta@@</li>
+                    <li class="math">◦ @@x=rsin\theta@@</li>
+                    <li class="math">◦ @@r^2=x^2+y^2@@</li>
+                </ul>
+                <h3>3-Dimensional</h3>
+                <p><strong>Cartesian</strong>: @@(x,y,z)@@ "cubic system"</p>
+                <img src="images/3D-Cartesian.png" alt="3D Cartesian" width="25%">
+                <p><strong>Cylindrical</strong>: @@(r,\theta , z)@@ "A cylindrical system"</p>
+                <img src="images/cylinder.png" alt="Cylindrical" width="25%">
+                <p><strong>Convert from Cartesian to Cylindrical</strong>: </p>
+                <p class="footnote">Jacobian: @@r@@</p>
+                <ul>
+                    <li class="math">◦ @@x=rcos\theta@@</li>
+                    <li class="math">◦ @@x=rsin\theta@@</li>
+                    <li class="math">◦ @@z=z@@</li>
+                    <li class="math">◦ @@r^2=x^2+y^2@@</li>
+                </ul>
+                <p><strong>Spherical</strong>: @@(\rho,\theta , \phi)@@ "spherical system"</p>
+                <img src="images/Sphere.png" alt="Spherical" width="25%">
+                <p><strong>Convert from Cartesian to Spherical</strong>: </p>
+                <p class="footnote">Jacobian: @@\rho ^2sin\phi@@</p>
+                <ul>
+                    <li class="math">◦ @@x=\rho sin\phi cos\theta@@</li>
+                    <li class="math">◦ @@y=\rho sin\phi sin\theta@@</li>
+                    <li class="math">◦ @@z=\rho cos\phi@@</li>
+                    <li class="math">◦ @@\rho ^2=x^2+y^2+z^2@@</li>
+                </ul>
             </div>
             <div id="2-3">
                 <br><h2>2.3: Vector Notation <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Tuples</p>
-                <p>n-dimensional vector</p>
-                <p>Euclidean vector spaces</p>
+                <p>To begin covering vectors, we must first discuss what a Tuple is. A tuple behaves like coordinates in the sense that it is a collection of ordered elements.
+                However, it can have an arbitrary number of elements, unlike how the coordinates of our specific systems are limited to 2 or 3 entries based on the dimension</p>
+                <p><strong>Tuple</strong>: An ordered collection of @@n@@ elements, looks like @@(x_1, x_2,...,x_n)@@ and is said to be a @@n@@-tuple where @@n \in \mathbb{Z}@@</p>
+                <p class="footnote">*Note we can think of these @@n@@-tuples as "something living in @@n@@-dimensional space," which is better phrased as "a @@n@@-dimensional vector"</p>
+                <p><strong>Vector</strong>: An ordered collection (tuple) of @@n@@ elements, denoted @@\vec{x}=\small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small@@ and is said to be a @@n@@-dimensional vector where @@n \in \mathbb{Z}@@</p>
+                <p class="footnote">*Note any general vector can be denoted by an overhead arrow as shown above</p>
+                <p><strong>Zero Vector</strong>: A vector in which every component is @@0@@, denoted by @@\vec{0}@@</p>
+                <p class="footnote">*Note the entries/elements of a vector are called its components</p>
+                <p>A popular place to use vectors is the @@n@@-dimensional Euclidean Vector Space, @@\mathbb{R}^n@@, where @@n \in \mathbb{Z}@@ and the space is defined by @@\mathbb{R}^n=\small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small@@
+                where @@x_1,x_2,...,x_n \in \mathbb{R}@@</p>
+                <p>A Euclidean Vector Space has several powerful properties. Given @@\vec{u},\vec{v},\vec{w} \in \mathbb{R}^n@@ and @@a,b\in \mathbb{R}@@</p>
+                <ul>
+                    <li class="math">◦ Closure under vector addition: @@\vec{u}+\vec{v} \in \mathbb{R}^n@@</li>
+                    <li class="math">◦ Closure under scalar multiplication: @@a\vec{u} \in \mathbb{R}^n@@</li>
+                    <li class="math">◦ Commutativity of addition: @@\vec{u}+\vec{v}=\vec{v}+\vec{u}@@</li>
+                    <li class="math">◦ Associativity of addition: @@\vec{u}+(\vec{v}+\vec{w})=(\vec{u}+\vec{v})+\vec{w}@@</li>
+                    <li class="math">◦ Additive identity: @@\vec{0}\in \mathbb{R}^n@@ such that @@\vec{u}+\vec{0}=\vec{u}\: \forall u \in \mathbb{R}^n@@</li>
+                    <li class="math">◦ Additive inverse: A unique @@-\vec{u}\in \mathbb{R}^n@@ exists such that @@\vec{u}+(-\vec{u})=\vec{0}\: \forall u \in \mathbb{R}^n@@</li>
+                    <li class="math">◦ Associativity of scalar multiplication: @@a(b\vec{u})=(ab)\vec{u}@@</li>
+                    <li class="math">◦ @@1@@ is the scalar identity: @@1\vec{u}=\vec{u}@@</li>
+                    <li class="math">◦ Distributivity of scalars under vector addition: @@a(\vec{u}+\vec{v})=a\vec{u}+a\vec{v}@@</li>
+                    <li class="math">◦ Distributivity of vectors under scalar addition: @@(a+b)\vec{u}=a\vec{u}+b\vec{u}@@</li>
+                </ul>
+                <p class="footnote">*Note For an operation to be closed, its output must also be a member of the set its inputs are. We will cover the other operations in the next section</p>
+                <p><strong>Standard Basis Vectors</strong>: The unit vectors @@\hat{i},\hat{j},\hat{k}@@ are the standard basis vectors in @@\mathbb{R}^3@@ and defined by
+                @@\hat{i}=\small\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\small ,\:\hat{j}=\small\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\small ,\:\hat{k}=\small\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\small @@</p>
+                <p class="footnote">*Note these vectors are essential for taking the cross product of two vectors in @@\mathbb{R}^3@@</p>
             </div>
             <div id="2-4">
                 <br><h2>2.4: Vector Operations <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>addition</p>
-                <p>subtraction (addition)</p>
-                <p>scalar multiplication</p>
-                <p>dot product</p>
-                <p>cross product (3D)</p>
+                <p><strong>Vector Addition</strong>: Defined component-wise for vectors of the same dimension; the sum of corresponding entries</p>
+                <ul>
+                    <li>@@\small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small + \small\begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix}\small = \small\begin{bmatrix} x_1+y_1 \\ x_2+y_2 \\ \vdots \\ x_n+y_n \end{bmatrix}\small@@</li>
+                </ul>
+                <p><strong>Vector Subtraction</strong>: Defined component-wise for vectors of the same dimension; the sum of corresponding entries (can be expressed as @@\vec{u}+(-\vec{v}))@@</p>
+                <ul>
+                    <li>@@\small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small - \small\begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix}\small = \small\begin{bmatrix} x_1-y_1 \\ x_2-y_2 \\ \vdots \\ x_n-y_n \end{bmatrix}\small@@</li>
+                </ul>
+                <p><strong>Scalar Multiplication</strong>: Defined by "scaling" every component of the vector by the scalar</p>
+                <ul>
+                    <li>@@a\small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small = \small\begin{bmatrix} ax_1 \\ ax_2 \\ \vdots \\ ax_n \end{bmatrix}\small@@</li>
+                </ul>
+                <p><strong>Dot Product</strong>: <span class="math">Given @@\vec{u},\vec{v}\in \mathbb{R}^n@@ then @@\vec{u}\cdot \vec{v}=\sum_{i=1}^n a_ib_i@@ "The sum of the products of the corresponding components of two vectors of the same dimension" (the result is a scalar value, not a vector)</span></p>
+                <ul>
+                    <li>@@\small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small \cdot \small\begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix}\small = x_1y_1+x_2y_2+...+x_ny_n@@</li>
+                </ul>
+                <p><strong>Cross Product</strong>: <span class="math">Given @@\vec{u},\vec{v}\in \mathbb{R}^3@@ then @@\vec{u}\times \vec{v}=\small\begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ x_1 & x_2 & x_3 \\ y_1 & y_2 & y_3 \end{vmatrix}\small=
+                \small\begin{vmatrix} x_2 & x_3 \\ y_2 & y_3 \end{vmatrix}\small\hat{i}-\small\begin{vmatrix} x_1 & x_3 \\ y_1 & y_3 \end{vmatrix}\small\hat{j}+\small\begin{vmatrix} x_1 & x_2 \\ y_1 & y_2 \end{vmatrix}\small\hat{k}=
+                \small\begin{bmatrix} x_2y_3-x_3y_2 \\ -(x_1y_3-x_3y_1) \\ x_1y_2-x_2y_1 \end{bmatrix}\small@@</span></p>
+                <p class="footnote">*Note the cross product is computed by applying Cofactor Expansion along the first row <a href="#2-7">(Determinants)</a></p>
+                <ul>
+                    <li class="math">◦ When a vector is scaled, the result is said to be a scalar multiple of the original vector</li>
+                    <li class="math">◦ The cross product of two vectors finds the vector perpendicular to both vectors</li>
+                    <li class="math">◦ The cross product is not commutative: @@\vec{u}\times \vec{v}\ne \vec{v}\times \vec{u}@@</li>
+                    <li class="math">◦ The dot product can be conceptualized as a directional product</li>
+                    <li class="math">◦ The dot product is commutative: @@\vec{u}\cdot \vec{v}=\vec{v}\cdot \vec{u}@@</li>
+                </ul>
             </div>
             <div id="2-5">
                 <br><h2>2.5: Matrix Notation <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>SLE's</p>
-                <p>Collection of vectors</p>
-                <p>nxn matrix</p>
-                <p>Identity matrix</p>
-                <p>Matrix Equation</p>
-                <p>Row Echelon</p>
+                <p>Before we discuss anything much about matrices, let's consider vectors for a moment. A <span class="math">@@n@@-dimensional vector can be thought of as a @@n\times 1@@ Matrix.
+                Essentially, what this means is that a vector has @@n@@ rows and @@1@@ column. Now, what if we put two @@n@@-dimensional vectors together? We now have a collection of two vectors;
+                namely, a matrix with @@n@@ rows and @@2@@ columns.</span></p>
+                <p><span class="math">What if we do this procedure @@n@@ times? Well, then we have a a collection of @@n@@ vectors; namely, a matrix with @@n@@ rows and @@n@@ columns.
+                For the sake of notation, let us denote the number of rows by @@m@@, and the number of columns by @@n@@</span></p>
+                <p><strong>Collection of Vectors</strong>: <span class="math">Interpretation of a matrix where the number of rows is how many dimensions the vectors are (think @@\mathbb{R}^n@@) and the number of columns is the number of vectors in the collection</span></p>
+                <p><strong>Example</strong>: <span class="math">Consider three vectors @@\small\begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_n \end{bmatrix}\small ,\small\begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}\small ,\small\begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix}\small ,@@
+                where @@a_1,...,a_n;\: b_1,...,b_n;\: c_1,...,c_n@@ are scalar values. Then the equivalent collection of vectors (coefficient matrix) is given by
+                </span>@@\small\begin{bmatrix} a_1 & b_1 & c_1 \\ a_2 & b_2 & c_2 \\ \vdots & \vdots & \vdots \\ a_m & b_m & c_m \end{bmatrix}\small@@ (@@m\times 3@@ matrix)</p>
+                <p><strong>Finding an Element of a Matrix</strong>: <span class="math">Given a matrix, @@A@@ then an entry in @@A@@, @@a_{ij}@@ is the element at the @@i@@th row and the @@j@@th column
+                </span>@@A=\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1j} \\ a_{21} & a_{22} & \cdots & a_{2j} \\ \vdots & \vdots & \ddots & \vdots \\ a_{i1} & a_{i2} & \cdots & a_{ij} \end{bmatrix}\small@@</p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Find the element</p>
+                <p class="math">Consider @@A=\small\begin{bmatrix} 1 & 2 & 3 & 4 \\ 5 & 6 & 7 & 8 \\ 9 & 10 & 11 & 12 \\ 13 & 14 & 15 & 16 \end{bmatrix}\small@@</p>
+                <p>1. Determine @@a_{34}@@</p>
+                <input type="radio" id="d2_5x1a" name="part1" value="3">
+                <label for="d2_5x1a" class="math"> 3</label><br>
+                <input type="radio" id="d2_5x1b" name="part1" value="4">
+                <label for="d2_5x1b" class="math"> 4</label><br>
+                <input type="radio" id="d2_5x1c" name="part1" value="12">
+                <label for="d2_5x1c" class="math"> 12</label><br>
+                <input type="radio" id="d2_5x1d" name="part1" value="15">
+                <label for="d2_5x1d" class="math"> 15</label><br><br>
+                <input type="button" id="d2_5x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d2_5x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d2_5x1_y1' class='math'></span></td>
+                            <td><span class='math'>12</span></td>
+                            <td id='d2_5x1_r1'></td>
+                        </tr>
+                    </table>
+                </div>
+                <p><strong>Square Matrix</strong>: <span class="math">A Matrix is said to be Square iff. it has the same number of rows and columns; namely, it is a @@n\times n@@ matrix</span></p>
+                <p>@@\small[2\times 2]=\begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix}\small,\: [3\times 3]=\small\begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{bmatrix}\small,\:
+                [n\times n]=\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} \end{bmatrix}\small@@</p>
+                <p><strong>Identity Matrix</strong>: <span class="math"> A Square Matrix denoted by @@[I]_n@@ where @@n@@ is the number of rows and columns such that the entries where the row and column are equal (the main diagonal) are @@1@@ and every other entry is @@0@@</span></p>
+                <p>@@\small[I]_2=\begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}\small,\: [I]_3=\small\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}\small,\:
+                    [I]_n=\small\begin{bmatrix} 1 & 0 & \cdots & 0 \\ 0 & 1 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 \end{bmatrix}\small@@</p>
+                <p class="footnote">*Note the identity matrix acts like a multiplicative identity, it is in RREF, can be used to find inverse matrices, and has many other properties</p>
+                <p>Before we consider Matrix Equations, we must learn about Systems of Linear Equations. A System of Linear Equations (SLE's) is a system containing one or more
+                linear (degree of at most 1 for any given variable) equations with an arbitrary number of variables. The importance of SLE's lies within the ability to translate back and forth between SLE form and Matrix form</p>
+                <p><strong>System of Linear Equations</strong>: <span class="math">Consider @@m@@ is the number of equations; @@n@@ is the number of variables; @@a_{11},...,a_{mn}@@ are scalar coefficients, @@x_1,x_2,...,x_n@@ are variables, and @@b_1,b_2,...,b_m@@ are constants</span></p>
+                <ul>
+                    <li>@@a_{11}x_{1}+a_{12}x_{2}+...+a_{1n}x_{n}=b_1@@</li>
+                    <li>@@a_{21}x_{1}+a_{22}x_{2}+...+a_{2n}x_{n}=b_2@@</li>
+                    <li>@@\vdots@@</li>
+                    <li>@@a_{m1}x_{1}+a_{m2}x_{2}+...+a_{mn}x_{n}=b_m@@</li>
+                </ul>
+                <p>Then the equivalent <strong>Matrix Equation</strong> is given by @@A\vec{x}=\vec{b}@@, where @@A@@ is the coefficient matrix, @@\vec{x}@@ is the variable vector, and @@\vec{b}@@ is the constant vector:
+                @@\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}\small \small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small = \small\begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}\small@@</p>
+                <p>And the equivalent <strong>Augmented Matrix</strong> is given by @@\small\begin{bmatrix}
+                    a_{11}x & a_{12}x & \cdots & a_{1n} &| & b_{1} \\
+                    a_{21}x & a_{22}x & \cdots & a_{2n} &| & b_{2} \\
+                    \vdots & \vdots & \ddots & \vdots &| & \vdots \\
+                    a_{m1}x & a_{m2}x & \cdots & a_{mn} &| & b_{n}
+                    \end{bmatrix}\small@@</p>
+                <p>Finally, the equivalent <strong>Vector Equation</strong> is given by @@x_1\small\begin{bmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{bmatrix}+x_2\small\begin{bmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{bmatrix}+\cdots +x_n\small\begin{bmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix}\small@@</p>
+                <h3>TFAE:</h3>
+                <ul>
+                    <li>@@a_{11}x_{1}+a_{12}x_{2}+...+a_{1n}x_{n}=b_1@@</li>
+                    <li>@@a_{21}x_{1}+a_{22}x_{2}+...+a_{2n}x_{n}=b_2@@</li>
+                    <li>@@\vdots@@</li>
+                    <li>@@a_{m1}x_{1}+a_{m2}x_{2}+...+a_{mn}x_{n}=b_m@@</li>
+                </ul><br>
+                <ul>
+                    <li>@@\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}\small \small\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{bmatrix}\small = \small\begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix}\small@@</li>
+                </ul><br>
+                <ul>
+                    <li>@@\small\begin{bmatrix}
+                        a_{11}x & a_{12}x & \cdots & a_{1n} &| & b_{1} \\
+                        a_{21}x & a_{22}x & \cdots & a_{2n} &| & b_{2} \\
+                        \vdots & \vdots & \ddots & \vdots &| & \vdots \\
+                        a_{m1}x & a_{m2}x & \cdots & a_{mn} &| & b_{n}
+                        \end{bmatrix}\small@@</li>
+                </ul><br>
+                <ul>
+                    <li>@@\small x_1\begin{bmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{bmatrix}+x_2\small\begin{bmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{bmatrix}+\cdots +x_n\small\begin{bmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix}\small@@</li>
+                </ul><br>
+                <p><strong>Echelon Form (REF)</strong>: A matrix is in echelon form if the matrix has the following properties: </p>
+                <ul>
+                    <li>1. Any zero rows are below all nonzero rows</li>
+                    <li>2. The leading nonzero entry (pivot) of each row is to the right of the leading entries in the rows above</li>
+                    <li>3. The entries below each pivot are 0</li>
+                </ul>
+                <p>A @@3\times 3@@ matrix in REF: @@\small\begin{bmatrix} * & \cdot & \cdot \\ 0 & * & \cdot \\ 0 & 0 & * \end{bmatrix}\small@@ <span class="footnote">(where @@*@@ are the pivots)</span></p>
+                <p><strong>Reduced Echelon Form (RREF)</strong>: A matrix is in reduced echelon form if the matrix has the following properties: </p>
+                <ul>
+                    <li>1. Any zero rows are below all nonzero rows</li>
+                    <li>2. The leading nonzero entry (pivot) of each row is to the right of the leading entries in the rows above</li>
+                    <li>3. Each pivot in reduced echelon form is 1</li>
+                    <li>4. The entries above and below each pivot are 0</li>
+                </ul>
+                <p>A @@3\times 3@@ matrix in RREF: @@\small\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix}\small@@</p>
+                <p class="footnote">*Note to get to an echelon form we use the three elementary row operations</p>
             </div>
             <div id="2-6">
                 <br><h2>2.6: Matrix Operations <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Addition</p>
-                <p>subtraction (addition)</p>
-                <p>Scalar multiplication</p>
-                <p>Matrix multiplication</p>
-                <p>Row operations</p>
+                <p><strong>Matrix Addition</strong>: Defined component-wise for matrices of the same dimensions; the sum of corresponding entries</p>
+                <ul>
+                    <li>@@\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}\small+
+                        \small\begin{bmatrix} b_{11} & b_{12} & \cdots & b_{1n} \\ b_{21} & b_{22} & \cdots & b_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ b_{m1} & b_{m2} & \cdots & b_{mn} \end{bmatrix}\small=
+                        \small\begin{bmatrix} a_{11}+b_{11} & a_{12}+b_{12} & \cdots & a_{1n}+b_{1n} \\ a_{21}+b_{21} & a_{22}+b_{22} & \cdots & a_{2n}+b_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1}+b_{m1} & a_{m2}+b_{m2} & \cdots & a_{mn}+b_{mn} \end{bmatrix}\small@@</li>
+                </ul><p><strong>Matrix Subtraction</strong>: Defined component-wise for matrices of the same dimensions; the difference of corresponding entries</p>
+                <ul>
+                    <li>@@\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}\small-
+                        \small\begin{bmatrix} b_{11} & b_{12} & \cdots & b_{1n} \\ b_{21} & b_{22} & \cdots & b_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ b_{m1} & b_{m2} & \cdots & b_{mn} \end{bmatrix}\small=
+                        \small\begin{bmatrix} a_{11}-b_{11} & a_{12}-b_{12} & \cdots & a_{1n}-b_{1n} \\ a_{21}-b_{21} & a_{22}-b_{22} & \cdots & a_{2n}-b_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1}-b_{m1} & a_{m2}-b_{m2} & \cdots & a_{mn}-b_{mn} \end{bmatrix}\small@@</li>
+                </ul>
+                <p><strong>Scalar Multiplication</strong>: Defined by "scaling" every component of the vector by the scalar</p>
+                <ul>
+                    <li>@@\small k\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}\small=
+                        \small\begin{bmatrix} ka_{11} & ka_{12} & \cdots & ka_{1n} \\ ka_{21} & ka_{22} & \cdots & ka_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ ka_{m1} & ka_{m2} & \cdots & ka_{mn} \end{bmatrix}\small@@</li>
+                </ul>
+                <p><strong>Matrix Multiplication</strong>: Given two matrices @@A\times B@@ is defined iff. the number of columns in the left matrix are equal to the number of rows in the right matrix. Then, the dimensions of the resulting matrix is
+                the number of rows in the left matrix and the number of columns in the right matrix;<br><br>namely, @@A\times B@@ is defined iff. @@A@@ is a @@m\times n@@ matrix and @@B@@ is a @@n\times p@@ matrix then @@A\times B@@ is a @@m\times p@@ matrix, and is computed as follows:</p>
+                <p class="footnote">*Note matrix multiplication is essentially like foiling with dot products</p>
+                <ul>
+                    <li class="math">1. Take the first row of the left matrix and take the dot product with the first column of the right matrix; this is the entry @@p_11@@ in the product matrix</li>
+                    <li class="math">2. Proceed by taking the dot product with the same row and all sequential columns of the right vector; this will be the rest of the first row of the product matrix</li>
+                    <li class="math">3. Go to the next row of the left matrix and repeat step 2, this will be the second row of the product matrix</li>
+                    <li class="math">4. Keep applying this procedure until completing the dot products of the last row of the left matrix and the last column of the right matrix</li>
+                    <li class="math">5. Then the resulting product matrix has been obtained</li>
+                </ul>
+                <p>The product of a @@m\times n@@ matrix and a @@n\times p@@ matrix:
+                    @@\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} \\ a_{21} & a_{22} & \cdots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \cdots & a_{mn} \end{bmatrix}\small\times
+                    \small\begin{bmatrix} b_{11} & b_{12} & \cdots & b_{1p} \\ b_{21} & b_{22} & \cdots & b_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ b_{n1} & b_{n2} & \cdots & b_{np} \end{bmatrix}\small@@<br><br>
+                    @@=\small\begin{bmatrix} a_{11}b_{11}+a_{12}b_{21}+\cdots+a_{1n}b_{n1} & a_{11}b_{12}+a_{12}b_{22}+\cdots+a_{1n}b_{n2} & \cdots & a_{11}b_{1p}+a_{12}b_{2p}+\cdots+a_{1n}b_{np}
+                    \\ a_{21}b_{11}+a_{22}b_{21}+\cdots+a_{2n}b_{n1} & a_{21}b_{12}+a_{22}b_{22}+\cdots+a_{2n}b_{n2} & \cdots & a_{21}b_{1p}+a_{22}b_{2p}+\cdots+a_{2n}b_{np}
+                    \\ \vdots & \vdots & \ddots & \vdots
+                    \\ a_{m1}b_{11}+a_{m2}b_{21}+\cdots+a_{mn}b_{n1} & a_{m1}b_{12}+a_{m2}b_{22}+\cdots+a_{mn}b_{n2} & \cdots & a_{m1}b_{1p}+a_{m2}b_{2p}+\cdots+a_{mn}b_{np} \end{bmatrix}\small@@</p>
+                <p><strong>Elemetary Row Operations</strong>: Operations that affect the entries of a matrix and are primarily used to get a matrix into echelon form via Elimination; there are three elementary row operations:</p>
+                <ul>
+                    <li class="math">◦ <strong>Row Swap</strong>: swaps Row @@i@@ and Row @@j@@, denoted by @@R_i \leftrightarrow R_j@@ </li>
+                    <li class="math">◦ <strong>Row Scale</strong>: scales Row @@i@@ by @@c@@, denoted by @@cR_i \rightarrow R_i@@ </li>
+                    <li class="math">◦ <strong>Row Sum</strong>: adds a scalar multiple of Row @@i@@ to Row @@j@@, denoted by @@cR_i + R_j \rightarrow R_j@@ </li>
+                </ul>
+                <p><strong>Gaussian Elimination</strong>: An algorithm to get a matrix into echelon form. Below are its steps:</p>
+                <ul>
+                    <li class="math">1. Find the current pivot of the first column. The current pivot is the first nonzero entry in a matrix column</li>
+                    <li class="math">2. If the current pivot is not in the first row, switch the first row with the row that contains the current pivot</li>
+                    <li class="math">3. Perform elementary row operations using the current pivot so that all entries below the current pivot are zeros</li>
+                    <li class="math">4. Repeat steps 1-3 for the submatrix containing all entries below and to the right of the current pivot</li>
+                    <li class="math">5. Stop when the entries below each pivot are zero</li>
+                </ul>
+                <p><strong>Example</strong>: REF@@(\small\begin{bmatrix} 0&1&2&7 \\ 4&-1&6&9 \\ 8&2&3&-5 \end{bmatrix}\small)@@</p>
+                <ul>
+                    <li> @@\small\begin{bmatrix} 0&1&2&7 \\ 4&-1&6&9 \\ 8&2&3&-5 \end{bmatrix}\small R_1 \leftrightarrow R_2 \small\begin{bmatrix} 4&-1&6&9 \\ 0&1&2&7 \\ 8&2&3&-5 \end{bmatrix}\small@@</li>
+                    <li> @@\small\begin{bmatrix} 4&-1&6&9 \\ 0&1&2&7 \\ 8&2&3&-5 \end{bmatrix}\small -2R_1 + R_3 \rightarrow R_3 \small\begin{bmatrix} 4&-1&6&9 \\ 0&1&2&7 \\ 0&4&-9&-23 \end{bmatrix}\small@@</li>
+                    <li> @@\small\begin{bmatrix} 4&-1&6&9 \\ 0&1&2&7 \\ 0&4&-9&-23 \end{bmatrix}\small -4R_2 + R_3 \rightarrow R_3 \small\begin{bmatrix} 4&-1&6&9 \\ 0&1&2&7 \\ 0&0&-17&-51 \end{bmatrix}\small@@</li>
+                    <li><span class="math">Thus, </span>@@\small\begin{bmatrix} 0&1&2&7 \\ 4&-1&6&9 \\ 8&2&3&-5 \end{bmatrix}\small\tilde{}\small\begin{bmatrix} 4&-1&6&9 \\ 0&1&2&7 \\ 0&0&-17&-51 \end{bmatrix}\small@@</li>
+                </ul>
+                <p class="footnote">*Note  @@\tilde{}@@  denotes row equivalence</p>
+                <ul>
+                    <li class="math">◦ Matrix multiplication is not commutative: @@A\times B\ne B\times A@@</li>
+                    <li class="math">◦ A matrix is row equivalent to another matrix if both can reduce to each other via arithmetic procedures</li>
+                    <li class="math">◦ The reduced echelon form of any square matrix is the identity matrix of its size</li>
+                </ul>
             </div>
             <div id="2-7">
                 <br><h2>2.7: Determinants <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Definition</p>
-                <p>1x1</p>
-                <p>2x2</p>
-                <p>3x3 (cofactor expansion)</p>
-                <p>4x4</p>
-                <p>nxn</p>
-                <p>Properties (row operations)</p>
+                <p>The determinant of a (square) matrix is a powerful general-purpose metric that can be applied to determine various characteristics of structures. It has many applications in linear algebra and multivariate calculus</p>
+                <h3>Computing the Determinant</h3>
+                <br><p>@@1\times 1@@ Matrices: The entry itself</p>
+                <p class="math">Let @@A=\small\begin{bmatrix} a \end{bmatrix}\small@@, then @@det(A)=\small\begin{vmatrix} a \end{vmatrix}\small= a@@</p>
+                <br><p>@@2\times 2@@ Matrices: The difference of the product of the diagonals</p>
+                <p class="math">Let @@A=\small\begin{bmatrix} a&b \\ c&d \end{bmatrix}\small@@, then @@det(A)=\small\begin{vmatrix} a&b \\ c&d \end{vmatrix}\small= ad-bc@@</p>
+                <br><p>@@3\times 3@@ Matrices: The sum of the product of the Minor, Cofactor, and Entry when eliminating along a row and column</p>
+                <p class="math">Let @@A=\small\begin{bmatrix} a_{11}&a_{12}&a_{13} \\ a_{21}&a_{22}&a_{23} \\ a_{31}&a_{32}&a_{33} \end{bmatrix}\small@@, then @@det(A)=\small\begin{bmatrix} a_{11}&a_{12}&a_{13} \\ a_{21}&a_{22}&a_{23} \\ a_{31}&a_{32}&a_{33} \end{bmatrix}\small@@<br><br>@@
+                =\small\begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix}\small a_{11}-\small\begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix}\small a_{12}+\small\begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix}\small a_{13}@@</p>
+                <p class="footnote">*Note the above definition uses Laplace (Cofactor) Expansion along the first row</p>
+                <br><p><strong>Minor</strong>: The determinant of a submatrix formed by eliminating a row and column, denoted @@M_{ij}@@</p>
+                <p><strong>Cofactor</strong>: @@M_{ij}(-1)^{i+j}@@, where @@i@@ and @@j@@ are the row and column (respectively) that are eliminated to form the submatrix, denoted by @@C_{ij}@@</p>
+                <p><strong>Laplace (Cofactor) Expansion</strong>: Recursive algorithm to compute the determinant of a @@n\times n@@ matrix, @@A@@; there are two versions</p>
+                <div class="indent">
+                    <p><strong>Row Span</strong>: Expansion along a fixed row and each column
+                    <ul>
+                        <li>◦ @@det(A)=\sum_{j=1}^n a_{ij}C_{ij}@@</li>
+                    </ul>
+                    <p><strong>Column Span</strong>: Expansion along a fixed column and each row
+                    <ul>
+                        <li>◦ @@det(A)=\sum_{i=1}^n a_{ij}C_{ij}@@</li>
+                    </ul>
+                </div>
+                <p><strong>Example</strong>: @@det(\small\begin{bmatrix} 2&1&2&2 \\ 1&3&5&3 \\ 1&1&2&2 \\ 7&4&2&2 \end{bmatrix}\small)=\small\begin{vmatrix} 2&1&2&2 \\ 1&3&5&3 \\ 1&1&2&2 \\ 7&4&2&2 \end{vmatrix}\small=@@</p>
+                <p class="footnote">(Applying Laplace Expansion along row @@1@@)</p>
+                <div class="indent">
+                    <p>
+                        @@\small2\begin{vmatrix} 3&5&3 \\ 1&2&2 \\ 4&2&2 \end{vmatrix}(-1)^{1+1}\small+
+                        \small1\begin{vmatrix} 1&5&3 \\ 1&2&2 \\ 7&2&2 \end{vmatrix}(-1)^{1+2}\small+
+                        \small2\begin{vmatrix} 1&3&3 \\ 1&1&2 \\ 7&4&2 \end{vmatrix}(-1)^{1+3}\small+
+                        \small2\begin{vmatrix} 1&3&5 \\ 1&1&2 \\ 7&4&2 \end{vmatrix}(-1)^{1+4}\small=@@
+                    </p>
+                    <p>
+                        @@\small2(3\begin{vmatrix} 2&2 \\ 2&2 \end{vmatrix}(-1)^{1+1}+
+                        5\begin{vmatrix} 1&2 \\ 4&2 \end{vmatrix}(-1)^{1+2}+
+                        3\begin{vmatrix} 1&2 \\ 4&2 \end{vmatrix}(-1)^{1+3})\small-@@<br>
+                        @@\small1(1\begin{vmatrix} 2&2 \\ 2&2 \end{vmatrix}(-1)^{1+1}+
+                        5\begin{vmatrix} 1&2 \\ 7&2 \end{vmatrix}(-1)^{1+2}+
+                        3\begin{vmatrix} 1&2 \\ 7&2 \end{vmatrix}(-1)^{1+3})\small+@@<br>
+                        @@\small2(1\begin{vmatrix} 1&2 \\ 4&2 \end{vmatrix}(-1)^{1+1}+
+                        3\begin{vmatrix} 1&2 \\ 7&2 \end{vmatrix}(-1)^{1+2}+
+                        3\begin{vmatrix} 1&1 \\ 7&4 \end{vmatrix}(-1)^{1+3})\small-@@<br>
+                        @@\small2(1\begin{vmatrix} 1&2 \\ 4&2 \end{vmatrix}(-1)^{1+1}+
+                        3\begin{vmatrix} 1&2 \\ 7&2 \end{vmatrix}(-1)^{1+2}+
+                        5\begin{vmatrix} 1&1 \\ 7&4 \end{vmatrix}(-1)^{1+3})\small=@@
+                    </p>
+                    <p>
+                        @@\small2(3(2*2-2*2)-
+                        5(1*2-2*4)+
+                        3(1*2-2*4))\small-@@<br>
+                        @@\small((2*2-2*2)-
+                        5(1*2-2*7)+
+                        3(1*2-2*7))\small+@@<br>
+                        @@\small2((1*2-2*4)-
+                        3(1*2-2*7)+
+                        3(1*4-1*7))\small-@@<br>
+                        @@\small2((1*2-2*4)-
+                        3(1*2-2*7)+
+                        5(1*4-1*7))\small=@@
+                    </p>
+                    <p>
+                        @@\small2(3(0)-
+                        5(-6)+
+                        3(-6))\small-@@<br>
+                        @@\small((0)-
+                        5(-12)+
+                        3(-12))\small+@@<br>
+                        @@\small2((-6)-
+                        3(-12)+
+                        3(-3))\small-@@<br>
+                        @@\small2((-6)-
+                        3(-12)+
+                        5(-3))\small=@@
+                    </p>
+                    <p>
+                        @@\small2(12)\small-@@
+                        @@\small(24)\small+@@
+                        @@\small2(21)\small-@@
+                        @@\small2(15)=12\small@@
+                    </p>
+                </div>
+                <p><span class="math">Thus, </span>@@\small\begin{vmatrix} 2&1&2&2 \\ 1&3&5&3 \\ 1&1&2&2 \\ 7&4&2&2 \end{vmatrix}\small=12@@</p>
+                <p><strong>Transpose</strong>: The transpose of a matrix, @@A@@, denoted @@A^T@@ is given by making the rows columns and making the columns rows</p>
+                <p><strong>Example</strong>: @@A=\small\begin{bmatrix} 1&2&3&4 \\ 5&6&7&8 \end{bmatrix}\small \Rightarrow A^T=\small\begin{bmatrix} 1&5 \\ 2&6 \\ 3&7 \\ 4&8 \end{bmatrix}\small@@</p>
+                <p><strong>Cofactor Matrix</strong>: The matrix containing the cofactors of each entry, denoted by @@cof(A)@@, for some matrix @@A@@
+                @@\small\begin{bmatrix} C_{11} & C_{12} & \cdots & C_{1n} \\ C_{21} & C_{22} & \cdots & C_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ C_{n1} & C_{n2} & \cdots & C_{nn} \end{bmatrix}\small@@</p>
+                <p><strong>Adjoint Matrix</strong>: The transpose of the cofactor matrix, denoted by @@adj(A)@@, for some matrix @@A@@
+                @@\small\begin{bmatrix} C_{11} & C_{21} & \cdots & C_{n1} \\ C_{12} & C_{22} & \cdots & C_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ C_{1n} & C_{2n} & \cdots & C_{nn} \end{bmatrix}\small@@</p>
+                <p><strong>Properties of the Determinant</strong>:</p>
+                <ul>
+                    <li class="math">◦ Row swap causes the sign of the determinant to change</li>
+                    <li class="math">◦ Row scale causes the determinant to be scaled by the scalar</li>
+                    <li class="math">◦ Row sum doesn't change the determinant</li>
+                    <li class="math">◦ Taking the transpose doesn't change the determinant</li>
+                    <li class="math">◦ If there exists a zero row or column the determinant is @@0@@</li>
+                    <li class="math">◦ If there exists a row or column that is a scalar multiple of another row or column the determinant is @@0@@</li>
+                    <li class="math">◦ The product of a triangular matrix is the product of the main diagonal</li>
+                </ul>
+                <p class="footnote">*Note a triangular matrix is square and has either all @@0@@ entries above the main diagonal (lower triangular) or below it (upper triangular)</p>
             </div>
             <div id="2-8">
                 <br><h2>2.8: Invertibility<br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>1x1</p>
-                <p>2x2</p>
-                <p>3x3</p>
-                <p>nxn</p>
-                <p>Invertible Matrix Theorem</p>
+                <p>Definition</p>
+                <h3>Computing the Inverse</h3>
+                <br><p>@@1\times 1@@ Matrices: The reciprocal of the entry</p>
+                <br><p>@@2\times 2@@ Matrices: The reciprocal of the determinant times the matrix obtained by swapping (a and d) and changing the sign of (b and c)</p>
+                <br><p>@@3\times 3@@ Matrices: @@[A|I]@@ or @@A^{-1}=\frac{1}{det(A)}adj(A)@@</p>
+                <br><p>@@n\times n@@ Matrices: @@[A|I]@@ or @@A^{-1}=\frac{1}{det(A)}adj(A)@@</p>
+                <br><p>Invertible Matrix Theorem</p>
             </div>
             <div id="2-9">
                 <br><h2>2.9: Solving Systems <br><a href="#all" class="small">(All Topics)</a></h2>

@@ -27,6 +27,7 @@ window.onload = function()
     _("d1_7x1").onclick = d1_7x1;
     _("d1_8x1").onclick = d1_8x1;
     _("d1_9x1").onclick = d1_9x1;
+    _("d2_5x1").onclick = d2_5x1;
 
     /* discrete interactive */
 
@@ -451,6 +452,38 @@ window.onload = function()
     // 2.3
     // 2.4
     // 2.5
+    // Activity 1
+    function d2_5x1() {
+        document.getElementById("d2_5x1_result").style.display = "block";
+
+        var d2_5x1_a = document.getElementById("d2_5x1a").checked;
+        var d2_5x1_b = document.getElementById("d2_5x1b").checked;
+        var d2_5x1_c = document.getElementById("d2_5x1c").checked;
+        var d2_5x1_d = document.getElementById("d2_5x1d").checked;
+
+        // placeholder values
+        var d2_5x1_v1;
+        if (d2_5x1_a) {d2_5x1_v1 = document.getElementById("d2_5x1a").value;}
+        if (d2_5x1_b) {d2_5x1_v1 = document.getElementById("d2_5x1b").value;}
+        if (d2_5x1_c) {d2_5x1_v1 = document.getElementById("d2_5x1c").value;}
+        if (d2_5x1_d) {d2_5x1_v1 = document.getElementById("d2_5x1d").value;}
+
+        // determine if answers are correct
+        var d2_5x1_user = [d2_5x1_v1];
+        var d2_5x1_key = [12];
+        var d2_5x1_bool = [false];
+        for (i = 0; i < d2_5x1_key.length; i++) {
+            if (d2_5x1_user[i] == d2_5x1_key[i]) {d2_5x1_bool[i] = true;}
+        }
+
+        document.getElementById("d2_5x1_y1").innerHTML = d2_5x1_v1;
+
+        // if incorrect
+        if (!d2_5x1_bool[0]) {document.getElementById("d2_5x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d2_5x1_r1").innerHTML = "incorrect";}
+
+        // if correct
+        if (d2_5x1_bool[0]) {document.getElementById("d2_5x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_5x1_r1").innerHTML = "correct";}
+    }
     // 2.6
     // 2.7
     // 2.8
