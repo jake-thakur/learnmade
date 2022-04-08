@@ -1511,7 +1511,7 @@
                     \vdots & \vdots & \ddots & \vdots &| & \vdots \\
                     a_{m1}x & a_{m2}x & \cdots & a_{mn} &| & b_{n}
                     \end{bmatrix}\small@@</p>
-                <p>Finally, the equivalent <strong>Vector Equation</strong> is given by @@x_1\small\begin{bmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{bmatrix}+x_2\small\begin{bmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{bmatrix}+\cdots +x_n\small\begin{bmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix}\small@@</p>
+                <p>Finally, the equivalent <strong>Vector Equation</strong> is given by @@x_1\small\begin{bmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{bmatrix}+x_2\small\begin{bmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{bmatrix}+\cdots +x_n\small\begin{bmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix}=\begin{bmatrix} b_{1} \\ b_{2} \\ \vdots \\ b_{n} \end{bmatrix}\small@@</p>
                 <h3>TFAE:</h3>
                 <ul>
                     <li>@@a_{11}x_{1}+a_{12}x_{2}+...+a_{1n}x_{n}=b_1@@</li>
@@ -1531,7 +1531,7 @@
                         \end{bmatrix}\small@@</li>
                 </ul><br>
                 <ul>
-                    <li>@@\small x_1\begin{bmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{bmatrix}+x_2\small\begin{bmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{bmatrix}+\cdots +x_n\small\begin{bmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix}\small@@</li>
+                    <li>@@\small x_1\begin{bmatrix} a_{11} \\ a_{21} \\ \vdots \\ a_{m1} \end{bmatrix}+x_2\small\begin{bmatrix} a_{12} \\ a_{22} \\ \vdots \\ a_{m2} \end{bmatrix}+\cdots +x_n\small\begin{bmatrix} a_{1n} \\ a_{2n} \\ \vdots \\ a_{mn} \end{bmatrix}=\begin{bmatrix} b_{1} \\ b_{2} \\ \vdots \\ b_{n} \end{bmatrix}\small@@</li>
                 </ul><br>
                 <p><strong>Echelon Form (REF)</strong>: A matrix is in echelon form if the matrix has the following properties: </p>
                 <ul>
@@ -1717,19 +1717,39 @@
             </div>
             <div id="2-8">
                 <br><h2>2.8: Invertibility<br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Definition</p>
+                <p>The inverse of a matrix works is the same concept as the inverse of a real number. Imagine we wanted to solve @@3x=2@@, what we do is multiply both sides of the equality by
+                @@\frac{1}{3}@@; namely, the inverse of @@3@@ to solve for the unknown. However, with matrices, we have to do a little more work to find the inverse (to later solve matrix equations)</p>
                 <h3>Computing the Inverse</h3>
                 <br><p>@@1\times 1@@ Matrices: The reciprocal of the entry</p>
+                <p class="math">Let @@A=\small\begin{bmatrix} a \end{bmatrix}\small@@, then @@A^{-1}=\small\begin{bmatrix} \frac{1}{a} \end{bmatrix}\small@@</p>
                 <br><p>@@2\times 2@@ Matrices: The reciprocal of the determinant times the matrix obtained by swapping (a and d) and changing the sign of (b and c)</p>
-                <br><p>@@3\times 3@@ Matrices: @@[A|I]@@ or @@A^{-1}=\frac{1}{det(A)}adj(A)@@</p>
-                <br><p>@@n\times n@@ Matrices: @@[A|I]@@ or @@A^{-1}=\frac{1}{det(A)}adj(A)@@</p>
-                <br><p>Invertible Matrix Theorem</p>
+                <p class="math">Let @@A=\small\begin{bmatrix} a&b \\ c&d \end{bmatrix}\small@@, then @@A^{-1}=\frac{1}{det(A)}\small\begin{bmatrix} d&-b \\ -c&a \end{bmatrix}\small@@</p>
+                <br><p>@@n\times n@@ Matrices: Row Reduction method or Determinant method@@[A|I]@@ or @@A^{-1}=\frac{1}{det(A)}adj(A)@@</p>
+                <p><strong>Row Reduction Method</strong>: Augment the matrix with the identity matrix of its size and row reduce until the identity matrix is on the LHS; the matrix on the RHS is the inverse</p>
+                <p>@@\small\begin{bmatrix} a_{11} & a_{12} & \cdots & a_{1n} & | & 1 & 0 & \cdots & 0 \\ a_{21} & a_{22} & \cdots & a_{2n} & | & 0 & 1 & \cdots & 0  \\ \vdots & \vdots & \ddots & \vdots & | & \vdots & \vdots & \ddots & \vdots \\ a_{n1} & a_{n2} & \cdots & a_{nn} & | & 0 & 0 & \cdots & 1 \end{bmatrix}\small@@~
+                    @@\small\begin{bmatrix} 1 & 0 & \cdots & 0 & | & a^{-1}_{11} & a^{-1}_{12} & \cdots & a^{-1}_{1n} \\ 0 & 1 & \cdots & 0 & | & a^{-1}_{21} & a^{-1}_{22} & \cdots & a^{-1}_{2n} \\ \vdots & \vdots & \ddots & \vdots & | & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 & | & a^{-1}_{n1} & a^{-1}_{n2} & \cdots & a^{-1}_{nn} \end{bmatrix}\small@@</p>
+                <p><strong>Determinant Method</strong>: Multiply the adjoint matrix by the reciprocal of the determinant</p>
+                <p>@@A^{-1}=\frac{1}{det(A)}adj(A)=\frac{1}{det(A)}\small\begin{bmatrix} C_{11} & C_{21} & \cdots & C_{n1} \\ C_{12} & C_{22} & \cdots & C_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ C_{1n} & C_{2n} & \cdots & C_{nn} \end{bmatrix}\small@@</p>
+                <br><p><strong>Invertible Matrix Theorem (IMT)</strong>: Let @@A@@ be a @@n\times n@@ square matrix; TFAE</p>
+                <ul>
+                    <li class="math">◦ @@A@@ is invertible</li>
+                    <li class="math">◦ @@det(A) \ne 0@@</li>
+                    <li class="math">◦ @@A@@ is row equivalent to @@[I_n]@@</li>
+                    <li class="math">◦ @@A@@ has @@n@@ pivots</li>
+                    <li class="math">◦ @@Ax=0@@ has only the trivial solution @@x=0@@</li>
+                    <li class="math">◦ @@A^T@@ is invertible</li>
+                    <li class="math">◦ There exists a @@n\times n@@ matrix, @@B@@ such that @@BA=I_n@@</li>
+                    <li class="math">◦ There exists a @@n\times n@@ matrix, @@D@@ such that @@AD=I_n@@</li>
+                </ul>
             </div>
             <div id="2-9">
                 <br><h2>2.9: Solving Systems <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Substitution</p>
-                <p>RREF method</p>
-                <p>Inverse method</p>
+                <p>So now what can we do with all of these techniques? Solve systems; while there are many ways, we will look at two</p>
+                <p><strong>Echelon Form Method</strong>: When a matrix is in REF, we can make equations in terms of the variables and solve up by substituting in values</p>
+                <p><strong>Example</strong>: @@\small\begin{bmatrix} 1 & 3 &|&5 \\ 2 & 4 &|& 6\end{bmatrix}\small@@~@@\small\begin{bmatrix} 2 & 4 &|&6 \\ 0 & 1 &|& 2\end{bmatrix}\small\Rightarrow 2x_1=6-4x_2@@ and @@x_2=2\Rightarrow 2x_1=6-4(2)\Rightarrow\vec{x}=\small\begin{bmatrix} -1 \\ 2 \end{bmatrix}\small@@</p>
+                <p><strong>Inverse Matrix Method</strong>: Just like in algebra, we multiply both sides of an equality by an inverse matrix to solve the system</p>
+                <p><strong>Example</strong>: @@A=\small\begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}\small\vec{x} = \small\begin{bmatrix} 5 \\ 6 \end{bmatrix}\small\Rightarrow A^{-1}=\frac{1}{1*4-3*2}\small\begin{bmatrix} 4 & -3 \\ -2 & 1 \end{bmatrix}\small
+                    = \small\begin{bmatrix} -2 & \frac{3}{2} \\1 & -\frac{1}{2}  \end{bmatrix}\small\Rightarrow\vec{x}=\small\begin{bmatrix} -2 & \frac{3}{2} \\1 & -\frac{1}{2}  \end{bmatrix}\begin{bmatrix} 5 \\ 6 \end{bmatrix}\small=\small\begin{bmatrix} -1 \\ 2 \end{bmatrix}\small@@</p>
             </div>
             <div id="3-1">
                 <br><h2>3.1: Summation and Product <br><a href="#all" class="small">(All Topics)</a></h2>
