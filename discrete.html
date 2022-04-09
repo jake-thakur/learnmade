@@ -919,7 +919,7 @@
                 <p><strong>Example 3</strong>: The prime factorization of @@1188 = 1*2^2*3^3*11@@ (composite)</p>
                 <p><strong>Example 4</strong>: The prime factorization of @@593 = 1*593@@ (prime)</p>
                 <p><strong>Example 5</strong>: Are @@21@@ and @@8@@ relatively prime? @@GCD(21,8)=1\Rightarrow 21@@ and @@8@@ are relatively prime</p>
-                <img src="images/even_spiral_10000.png" alt="Prime Spiral" width="25%" height="25%">
+                <img src="images/even_spiral_10000.png" alt="Prime Spiral" class="quarter2">
                 <p class="footnote">A Prime Phyllotaxis Spiral <a href="https://maxwelldemon.com/2012/03/18/prime-phyllotaxis-spirals/">(source)</a></p>
                 <p><strong>Resources</strong> (Regarding the development in primes): <a href="https://en.wikipedia.org/wiki/Largest_known_prime_number">Current Largest Prime</a>, <a href="https://prime-numbers.info/list/primes">List of Primes</a></p>
                 <p class="activity-header">Activity 1) Properties</p>
@@ -1349,9 +1349,9 @@
                 <br><h2>2.2: Coordinate Systems <br><a href="#all" class="small">(All Topics)</a></h2>
                 <h3>2-Dimensional</h3>
                 <p><strong>Cartesian</strong>: @@(x,y)@@ "rectangular system"</p>
-                <img src="images/xy-coord.png" alt="2D Cartesian" width="25%">
+                <img src="images/xy-coord.png" alt="2D Cartesian" class="quarter">
                 <p><strong>Polar</strong>: @@(r,\theta )@@ "circular system"</p>
-                <img src="images/polar-coordspng.png" alt="Polar" width="25%">
+                <img src="images/polar-coordspng.png" alt="Polar" class="quarter">
                 <p><strong>Convert from Cartesian to Polar</strong>:</p>
                 <p class="footnote">Jacobian: @@r@@</p>
                 <ul>
@@ -1361,9 +1361,9 @@
                 </ul>
                 <h3>3-Dimensional</h3>
                 <p><strong>Cartesian</strong>: @@(x,y,z)@@ "cubic system"</p>
-                <img src="images/3D-Cartesian.png" alt="3D Cartesian" width="25%">
+                <img src="images/3D-Cartesian.png" alt="3D Cartesian" class="quarter">
                 <p><strong>Cylindrical</strong>: @@(r,\theta , z)@@ "A cylindrical system"</p>
-                <img src="images/cylinder.png" alt="Cylindrical" width="25%">
+                <img src="images/cylinder.png" alt="Cylindrical" class="quarter">
                 <p><strong>Convert from Cartesian to Cylindrical</strong>: </p>
                 <p class="footnote">Jacobian: @@r@@</p>
                 <ul>
@@ -1373,7 +1373,7 @@
                     <li class="math">◦ @@r^2=x^2+y^2@@</li>
                 </ul>
                 <p><strong>Spherical</strong>: @@(\rho,\theta , \phi)@@ "spherical system"</p>
-                <img src="images/Sphere.png" alt="Spherical" width="25%">
+                <img src="images/Sphere.gif" alt="Spherical" class="quarter">
                 <p><strong>Convert from Cartesian to Spherical</strong>: </p>
                 <p class="footnote">Jacobian: @@\rho ^2sin\phi@@</p>
                 <ul>
@@ -1730,7 +1730,7 @@
                     @@\small\begin{bmatrix} 1 & 0 & \cdots & 0 & | & a^{-1}_{11} & a^{-1}_{12} & \cdots & a^{-1}_{1n} \\ 0 & 1 & \cdots & 0 & | & a^{-1}_{21} & a^{-1}_{22} & \cdots & a^{-1}_{2n} \\ \vdots & \vdots & \ddots & \vdots & | & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \cdots & 1 & | & a^{-1}_{n1} & a^{-1}_{n2} & \cdots & a^{-1}_{nn} \end{bmatrix}\small@@</p>
                 <p><strong>Determinant Method</strong>: Multiply the adjoint matrix by the reciprocal of the determinant</p>
                 <p>@@A^{-1}=\frac{1}{det(A)}adj(A)=\frac{1}{det(A)}\small\begin{bmatrix} C_{11} & C_{21} & \cdots & C_{n1} \\ C_{12} & C_{22} & \cdots & C_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ C_{1n} & C_{2n} & \cdots & C_{nn} \end{bmatrix}\small@@</p>
-                <br><p><strong>Invertible Matrix Theorem (IMT)</strong>: Let @@A@@ be a @@n\times n@@ square matrix; TFAE</p>
+                <br><p><strong>Invertible Matrix Theorem (IMT)</strong>: Let @@A@@ be a @@n\times n@@ square matrix; <strong>TFAE</strong>:</p>
                 <ul>
                     <li class="math">◦ @@A@@ is invertible</li>
                     <li class="math">◦ @@det(A) \ne 0@@</li>
@@ -1753,38 +1753,170 @@
             </div>
             <div id="3-1">
                 <br><h2>3.1: Summation and Product <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Finite Sum</p>
-                <p>Infinite Sum theory (converge, diverge)</p>
-                <p>Finite Product</p>
-                <p>Infinite Sum theory (converge, diverge)</p>
+                <p>Given @@i@@ is the index, @@n@@ is some constant lower bound, @@k@@ is some constant upper bound, and @@f(i)@@ is some function that may take values of @@i@@</p>
+                <p><strong>Finite Sum</strong>: Using (capital Greek letter) Sigma notation, the sum of an expression from a finite lower bound to a finite upper bound may be expressed</p>
+                <p class="indent">@@\sum_{i=n}^{k}f(i)@@</p>
+                <p><strong>Infinite Sum</strong>: Using Sigma notation, the sum of an expression containing an infinite bound (or two) may be expressed</p>
+                <div class="indent"><p>@@\sum_{i=n}^{\infty}f(i)@@</p><p>@@\sum_{i=-\infty}^{k}f(i)@@</p><p>@@\sum_{i=-\infty}^{\infty}f(i)@@</p></div>
+                <p>Called an infinite series, it is said to either</p>
+                <ul>
+                    <li class="math">◦ <strong>Converge</strong>: When the sum starts to approach some finite upper bound (limit)</li>
+                    <li class="math">◦ <strong>Diverge</strong>: When the sum does not seem to approach some finite upper bound (limit)</li>
+                </ul>
+                <img src="images/harmonic.png" alt="Convergent and Divergent Series">
+                <p class="footnote">(An illustration of a convergent and divergent (harmonic) series)</p>
+                <p><strong>Finite Product</strong>: Using (capital Greek letter) Pi notation, the product of an expression from a finite lower bound to a finite upper bound may be expressed</p>
+                <p class="indent">@@\prod_{i=n}^{k}f(i)@@</p>
+                <p><strong>Infinite Product</strong>: Using (capital Greek letter) Pi notation, the product of an expression containing an infinite bound (or two)  may be expressed; it is said that the product either converges or diverges</p>
+                <div class="indent"><p>@@\prod_{i=n}^{\infty}f(i)@@</p><p>@@\prod_{i=-\infty}^{k}f(i)@@</p><p>@@\prod_{i=-\infty}^{\infty}f(i)@@</p></div>
+                <p>Called an infinite product, it is said to either converge or diverge when</p>
+                <ul>
+                    <li class="math">◦ <strong>Converge</strong>: When the product starts to approach some finite upper bound (limit)</li>
+                    <li class="math">◦ <strong>Diverge</strong>: When the product does not seem to approach some finite upper bound (limit)</li>
+                </ul>
+                <p><strong>Example</strong>: @@\sum_{i=0}^{4}i+1@@</p>
+                <ul>
+                    <li class="math">◦ @@i=0\Rightarrow (0)+1=1@@</li>
+                    <li class="math">◦ @@i=1\Rightarrow (1)+1=2@@</li>
+                    <li class="math">◦ @@i=2\Rightarrow (2)+1=3@@</li>
+                    <li class="math">◦ @@i=3\Rightarrow (3)+1=4@@</li>
+                    <li class="math">◦ @@i=4\Rightarrow (4)+1=5@@</li>
+                    <li class="math">◦ @@\sum_{i=0}^{4}i+1=1+2+3+4+5=15@@</li>
+                </ul>
+                <p><strong>Example</strong>: @@\prod_{i=0}^{4}i+1@@</p>
+                <ul>
+                    <li class="math">◦ @@i=0\Rightarrow (0)+1=1@@</li>
+                    <li class="math">◦ @@i=1\Rightarrow (1)+1=2@@</li>
+                    <li class="math">◦ @@i=2\Rightarrow (2)+1=3@@</li>
+                    <li class="math">◦ @@i=3\Rightarrow (3)+1=4@@</li>
+                    <li class="math">◦ @@i=4\Rightarrow (4)+1=5@@</li>
+                    <li class="math">◦ @@\prod_{i=0}^{4}i+1=1*2*3*4*5=120@@</li>
+                </ul>
+                <p class="footnote">*Note these can be thought of like for loops in programming</p>
             </div>
             <div id="3-2">
                 <br><h2>3.2: Proof by Mathematical Induction <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Procedure</p>
-                <p>Example: Triangular Number</p>
-                <p>Example: Fibonacci Sequence</p>
-                <a href="https://r-knott.surrey.ac.uk/runsums/triNbProof.html"></a>
+                <p>To prove something is mathematically true, we have to show that it <strong>always</strong> is true; just because it works for some things doesn't mean that it works for all things<br>@@\exists x: f(x)=T \not\Rightarrow \forall x: f(x)=T@@</p>
+                <p>However, to prove something is false, all we need is a contradiction; namely, one statement that shows the expression is not true @@\exists x: f(x)=F \Rightarrow \neg\forall x: f(x)=T@@</p>
+                <p>One technique we can use to prove a mathematical statement is true for all cases is <strong>Mathematical Induction</strong>:</p>
+                <p><strong>Weak Induction</strong>:</p>
+                <ul>
+                    <li class="math">1. <strong>Basis</strong>: show that the statement is true for the first case</li>
+                    <li class="math">2. <strong>Inductive Step</strong>: assume @@n=k@@ is true, show @@n=k+1@@ is also true</li>
+                </ul>
+                <p><strong>Strong Induction</strong>:</p>
+                <ul>
+                    <li class="math">1. <strong>Basis</strong>: show that the statement is true for the first case</li>
+                    <li class="math">2. <strong>Inductive Step</strong>: assume @@n=k_0,k_1,...k@@ are true, show @@n=k+1@@ is also true
+                    </li>
+                </ul>
+                <p><strong>Example</strong>: Triangular Numbers</p>
+                <p class="math">Prove @@T_n=\sum_{i=1}^{k}n=\frac{n(n+1)}{2}@@</p>
+                <div class="indent">
+                    <p><strong>Basis</strong>: let @@n=k=1\Rightarrow \sum_{i=1}^{1}n=\frac{1(1+1)}{2}\Rightarrow 1=1@@</p>
+                    <p><strong>Inductive Step</strong>: let @@n=k@@, assume @@\frac{n(n+1)}{2}@@, show @@n=k+1\Rightarrow\frac{(n+1)((n+1)+1)}{2}\Rightarrow\frac{(n+1)(n+2)}{2}@@</p>
+                    <div class="indent">
+                        <p>@@\sum_{i=1}^{k+1}n=(\sum_{i=1}^{k})+(n+1)@@</p>
+                        <p>@@\sum_{i=1}^{k+1}n=(\frac{n(n+1)}{2})+(n+1)@@, by induction</p>
+                        <p>@@\sum_{i=1}^{k+1}n=\frac{(n+1)(n+2)}{2}@@, by algebra</p>
+                    </div>
+                </div>
+                <p class="math">Thus, @@T_n=\sum_{i=1}^{k}n=\frac{n(n+1)}{2}@@</p>
+                <a href="https://r-knott.surrey.ac.uk/runsums/triNbProof.html" class="footnote">(Triangular Number)</a>
             </div>
             <div id="3-3">
                 <br><h2>3.3: Graph Theory <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Vertex, Edge</p>
-                <p>Simple vs. Multigraph</p>
-                <p>Undirected vs. Directed</p>
-                <p>Adjacency Matrix, Weights</p>
-                <p>Path, Walk</p>
-                <p>Circuit, Closed Walk</p>
-                <p>Connectedness</p>
-                <p>Planar Graphs (Circle Chord Method)</p>
-                <p>Isomorphism</p>
+                <p>Graphs can be used to represent many relationships between entities; an entity is a vertex (node) and a relationship between entities is an edge (line)</p>
+                <p><strong>Vertex</strong>: A node, represents an entity in a graph</p>
+                <p><strong>Edge</strong>: A line, represents a relationship between entities in a graph</p>
+                <p><strong>Graph Equation</strong>: @@G=(V,E)@@, where @@V@@ is the set of vertices and @@E@@ is the set of edges</p>
+                <p><strong>Undirected Graph</strong>: A graph where direction doesn't matter and if an edge connects two vertices they are said to have a relationship</p>
+                <p><strong>Undirected Graph</strong>: A graph where direction matters and if an edge connects to another vertex it is said that vertex implies the other</p>
+                <p><strong>Example</strong>: An undirected graph, @@G=(V,E): V=\{1,2,3,4\}, E=\{1-2, 2-3, 3-4, 4-1\}@@</p>
+                <img src="images/G1.png" alt="Undirected Graph" class="graph">
+                <p><strong>Example</strong>: A directed graph, @@G=(V,E): V=\{1,2,3,4\}, E=\{1\rightarrow2, 2\rightarrow3, 3\rightarrow4, 4\rightarrow1\}@@</p>
+                <img src="images/G2.png" alt="Directed Graph" class="graph">
+                <p><strong>Multigraph</strong>: A graph with multiple (bidirectional) edges and self loops</p>
+                <p><strong>Example</strong>: A directed multigraph, @@G=(V,E): V=\{1,2,3,4\}, E=\{1\rightarrow2, 2\leftrightarrow2, 2\rightarrow3, 3\rightarrow4, 4\rightarrow1, 1\rightarrow4\}@@</p>
+                <img src="images/G3.png" alt="Directed Multigraph" class="graph">
+                <p><strong>Adjacency Matrix</strong>: A @@n\times n@@ matrix, where the number of vertices in the graph is @@n@@, with entries of @@0@@'s and @@1@@'s, where an entry of @@0@@ denotes no edge between vertices and an entry of @@1@@ denotes an edge between vertices</p>
+                <p><strong>Example</strong>: Adjacency matrix for the above graph: @@\small\begin{bmatrix} 0&1&0&1 \\ 0&1&1&0 \\ 0&0&0&1 \\ 1&0&0&0 \end{bmatrix}\small@@</p>
+                <p class="footnote">*Note if there are edge weights where there are @@1@@'s in the adjacency matrix there should be values of the corresponding cost</p>
+                <p><strong>Edge Weights</strong>: A cost attached to an edge, can be a numeric value</p>
+                <p><strong>Example</strong>: An undirected graph, @@G=(V,E): V=\{1,2,3,4\}, E=\{1-2, 2-3, 3-4, 4-1\}@@</p>
+                <img src="images/G4.png" alt="Undirected Weighted Graph" class="graph"><span>@@\small\begin{bmatrix} 0&3&0&11 \\ 3&0&5&0 \\ 0&5&0&7 \\ 11&0&7&0 \end{bmatrix}\small@@</span>
+                <p><strong>Path</strong>: Any given vertex @@V_i@@ is adjacent to @@V_{i+1}@@ with @@1\le i\le n@@ can be visited without repetition (of an edge or vertex)</p>
+                <p><strong>Example</strong>: A path, @@G=(V,E): V=\{1,2,3\}, E=\{1-2, 2-3\}@@</p>
+                <img src="images/G5.png" alt="Undirected Path" class="graph">
+                <p><strong>Walk</strong>: Any given vertex @@V_i@@ is adjacent to @@V_{i+1}@@ with @@1\le i\le n@@ can be visited with repetition (of an edge or vertex)</p>
+                <p><strong>Example</strong>: A walk, @@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-2, 2-3, 3-4, 4-5, 5-3, 6-4\}@@</p>
+                <img src="images/G6.png" alt="Undirected Walk" class="graph">
+                <p><strong>Circuit</strong>: A path where the vertices visited are @@(V_1, V_2,...,V_n, V_1)@@, where @@V_n-V_1@@ is the only repetition allowed (closed path)</p>
+                <p><strong>Example</strong>: A circuit, @@G=(V,E): V=\{1,2,3,4\}, E=\{1-2, 2-3, 3-4, 4-1\}@@</p>
+                <img src="images/G7.png" alt="Undirected Circuit" class="graph">
+                <p><strong>Closed Walk</strong>: A walk where the vertices visited are @@(V_1, V_2,...,V_n, V_1)@@, where any repetition is allowed</p>
+                <p><strong>Example</strong>: A closed walk, @@G=(V,E): V=\{1,2,3,4,5\}, E=\{1-2, 2-3, 3-4, 3-5, 5-4, 4-1\}@@</p>
+                <img src="images/G8.png" alt="Undirected Closed Walk" class="graph">
+                <p><strong>Connectedness</strong>: A graph is connected when there is a way to get from one vertex in the graph to any other vertex via edge traversal</p>
+                <p><strong>Example</strong>: A connected graph, @@G=(V,E): V=\{1,2,3,4\}, E=\{1-2,1-3,1-4,2-3,2-4,3-4\}@@</p>
+                <img src="images/G9.png" alt="Connected Graph" class="graph">
+                <p><strong>Disconnectedness</strong>: A graph is disconnected if there is a vertex in the graph that cannot be reached via edge traversal</p>
+                <p><strong>Example</strong>: A disconnected graph, @@G=(V,E): V=\{1,2,3,4,5\}, E=\{1-2,1-3,1-4,2-3,2-4,3-4\}@@</p>
+                <img src="images/G10.png" alt="Disconnected Graph" class="graph">
+                <p><strong>Completeness</strong>: A graph is complete if every vertex in the graph is adjacent to every other vertex in the graph. @@K_n@@ denotes the complete graph with @@n@@ vertices</p>
+                <p class="footnote">*Note the adjacency matrix of a complete graph has @@0@@'s along the main diagonal and @@1@@'s everywhere else (the opposite of the identity matrix). @@K_n:
+                    \small\begin{bmatrix} 0 & 1 & \cdots & 1 \\ 1 & 0 & \cdots & 1 \\ \vdots & \vdots & \ddots & \vdots \\ 1 & 1 & \cdots & 0 \end{bmatrix}\small@@</p>
+                <p><strong>Example</strong>: @@K_5@@</p>
+                <img src="images/K_5.png" alt="Complete Graph (5)" class="graph"><span>@@\small\begin{bmatrix} 0&1&1&1&1 \\ 1&0&1&1&1 \\ 1&1&0&1&1 \\ 1&1&1&0&1 \\ 1&1&1&1&0 \end{bmatrix}\small@@</span>
+                <p><strong>Example</strong>: @@K_8@@</p>
+                <img src="images/K_8.png" alt="Complete Graph (8)" class="graph"><span>@@\small\begin{bmatrix} 0&1&1&1&1&1&1&1 \\ 1&0&1&1&1&1&1&1 \\ 1&1&0&1&1&1&1&1 \\ 1&1&1&0&1&1&1&1 \\ 1&1&1&1&0&1&1&1 \\ 1&1&1&1&1&0&1&1 \\ 1&1&1&1&1&1&0&1 \\ 1&1&1&1&1&1&1&0 \end{bmatrix}\small@@</span>
+                <p><strong>Planar Graph</strong>: A graph is planar if it can be embedded in the plane in such a way that no edges intersect except at vertices</p>
+                <p><strong>Example</strong>: A planar graph, @@G=(V,E): V=\{1,2,3,4,5\}, E=\{1-2,1-3,1-5,2-5,2-4,3-5,3-4\}@@</p>
+                <img src="images/G11.png" alt="Planar Graph" class="graph">
+                <p class="footnote">*Note graphs may not look planar at first; they can be redrawn in a way that makes planarity more obvious</p>
+                <p><strong>Kuratowski's Theorem</strong>: A graph is planar if it contains no subdivisions of @@K_5@@ or @@K_{3,3}@@</p>
+                <span class="footnote">*Note @@K_{3,3}@@ is the complete <a href="https://en.wikipedia.org/wiki/Bipartite_graph">bipartite</a> graph with @@3@@ vertices</span><img src="images/K_33.png" alt="Complete Bipartite Graph (3)" class="graph">
+                <p><strong>Euler's Formula</strong>: For planar graphs @@V-E+R=2@@, where @@V@@ is the number of vertices, @@E@@ is the number of edges, and @@R@@ is the number of regions (closed areas and the infinite exterior)</p>
+                <p class="footnote">*Note the above graph has 6 vertices, 11 edges, and 7 regions</p>
+                <p><strong>Isomorphism</strong>: Two graphs are said to be isomorphic if they both preserve the same data structure; namely, the edge mappings, number of vertices, and other properties</p>
+                <img src="images/isomorphism.png" alt="Isomorphic Graphs"><p class="footnote">*Note @@G@@ and @@G'@@ are isomorphic</p>
             </div>
             <div id="3-4">
                 <br><h2>3.4: Trees and Traversal <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Definition</p>
-                <p>Nodes: Root, Parent, Child, Sibling, Leaf</p>
-                <p>Properties (tree with n vertices has n - 1 edges</p>
-                <p>Forest</p>
-                <p>Binary Search Tree</p>
-                <p>Traversal</p>
+                <p>A tree is a connected graph with no closed paths. <strong>TFAE</strong>:</p>
+                <ul>
+                    <li class="math">◦ The graph is a tree</li>
+                    <li class="math">◦ The graph is minimally connected; the removal of any edge will disconnect the graph</li>
+                    <li class="math">◦ The graph is connected and circuit free</li>
+                    <li class="math">◦ There is a unique path between any pair of distinct vertices in the graph</li>
+                </ul>
+                <h3>Terminology</h3>
+                <ul>
+                    <li class="math">◦ <strong>Root</strong>: The topmost node of the tree</li>
+                    <li class="math">◦ <strong>Parent</strong>: A node that is connected to a node below it (the lower node is its child)</li>
+                    <li class="math">◦ <strong>Child</strong>: A node that is connected to a node above it (the higher node is its parent)</li>
+                    <li class="math">◦ <strong>Sibling</strong>: A node that has the same parent as another node and is on the same level</li>
+                    <li class="math">◦ <strong>Leaf</strong>: A node that has no child (the bottom-most nodes of the tree)</li>
+                    <li class="math">◦ <strong>Depth</strong>: The level of the tree at which nodes reside; starting at a depth of @@0@@ from the root, increasing by @@1@@ with each lower level</li>
+                    <li>&nbsp;<img src="images/tree-term.png" alt="Tree Terminology Diagram"></li>
+                </ul>
+                <p class="footnote">*Note a tree with @@n@@ vertices has @@n-1@@ edges</p>
+                <p><strong>Forest</strong>: A group of one or more disjoint trees, where each component of forest is a tree itself</p>
+                <img src="images/forest.png" alt="Forest">
+                <p><strong>Binary Search Tree (BST)</strong>: A tree where the values of the child nodes to the left and right of their parent node are less than and greater than their parent's value, respectively</p>
+                <img src="images/BST.png" alt="BST">
+                <h3>Traversal</h3>
+                <ul>
+                    <li class="math">◦ <strong>In-order</strong>: Left subtree, Root, Right subtree</li>
+                    <li class="math">◦ <strong>Pre-order</strong>: Root, Left subtree, Right subtree</li>
+                    <li class="math">◦ <strong>Post-order</strong>: Left subtree, Right subtree, Root</li>
+                </ul>
+                <img src="images/traversal.png" alt="Traversal Tree">
+                <ul>
+                    <li class="math">◦ <strong>In-order Traversal</strong>: @@(D,B,E,A,F,C,G)@@</li>
+                    <li class="math">◦ <strong>Pre-order Traversal</strong>: @@(A,B,D,E,C,F,G)@@</li>
+                    <li class="math">◦ <strong>Post-order Traversal</strong>: @@(D,E,B,A,F,G,C)@@</li>
+                </ul>
             </div>
             <div id="3-5">
                 <br><h2>3.5: Probability Theory <br><a href="#all" class="small">(All Topics)</a></h2>

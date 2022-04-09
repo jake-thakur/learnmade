@@ -237,6 +237,21 @@ table th {
     text-decoration: 4px overline;
 }
 
+.graph {
+    width: 12.5%;
+}
+
+.quarter {
+    width: 25%;
+}
+
+.quarter2 {
+    width: 25%;
+    height: 25%;
+}
+
+
+
 /* list stuff */
 
 ol {
