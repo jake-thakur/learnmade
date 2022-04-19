@@ -1021,7 +1021,7 @@
                     <li class="math">3. The decimal number = @@d_{n-1}*k^{n-1}+...+d_2*k^2+d_1*k^1+d_0*k^0@@</li>
                 </ul>
                 <p>Below is a chart with the 16 standard conversions between binary, decimal, and hexadecimal:</p>
-                <img src="images/bin-dec-hex.png" alt="bin-dec-hex chart" height="555">
+                <img src="images/bin-dec-hex.png" alt="bin-dec-hex chart" class="dbh">
                 <p><strong>Notation</strong>:</p>
                 <ul>
                     <li class="math">◦ Binary (base 2) is denoted by a subscript of 2; e.x., @@1001101_2@@</li>
@@ -1175,14 +1175,6 @@
                     <li class="math">◦ "Nobody that watches One Piece dislikes One Piece" @@\equiv \neg \exists x:P(x)\rightarrow \neg Q(x)@@</li>
                 </ul>
                 <a class="footnote" href="https://en.wikipedia.org/wiki/One_Piece_(TV_series)">(One Piece)</a>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Logical 2</p>
                 <p>1. Is <span class="math">"LearnMade contains thousands of lines of code" a proposition?</span></p>
@@ -1344,6 +1336,30 @@
                     <li class="math">◦ <strong>Minterm</strong>: @@A'B'C'+A'BC'+A'BC+ABC'+ABC@@</li>
                     <li class="math">◦ <strong>Maxterm</strong>: @@(A'+B'+C)(A+B'+C')(A+B'+C)@@</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Table Terms</p>
+                <p>Consider the truth table</p>
+                <p>@@\small\begin{matrix}
+                    A & B & C & D & | & Output \\
+                    1 & 1 & 1 & 1 & | & 1 \\
+                    1 & 1 & 1 & 0 & | & 1 \\
+                    1 & 1 & 0 & 1 & | & 0 \\
+                    1 & 1 & 0 & 0 & | & 0 \\
+                    1 & 0 & 1 & 1 & | & 0 \\
+                    1 & 0 & 1 & 0 & | & 1 \\
+                    1 & 0 & 0 & 1 & | & 0 \\
+                    1 & 0 & 0 & 0 & | & 1 \\
+                    0 & 1 & 1 & 1 & | & 1 \\
+                    0 & 1 & 1 & 0 & | & 1 \\
+                    0 & 1 & 0 & 1 & | & 1 \\
+                    0 & 1 & 0 & 0 & | & 0 \\
+                    0 & 0 & 1 & 1 & | & 1 \\
+                    0 & 0 & 1 & 0 & | & 0 \\
+                    0 & 0 & 0 & 1 & | & 0 \\
+                    0 & 0 & 0 & 0 & | & 1
+                    \end{matrix}\small@@</p>
+                <p>1. What is the minterm? ANS: ABCD + ABCD' + AB'CD' + AB'C'D' + A'BCD + A'BCD' + A'BC'D + A'B'CD + A'B'C'D'</p>
+                <p>2. What is the maxterm? ANS: (A+B+C'+D)(A+B+C'+D')(A+B'+C+D)(A+B'+C'+D)(A'+B+C'+D')(A'+B'+C+D')(A'+B'+C'+D)</p>
             </div>
             <div id="2-2">
                 <br><h2>2.2: Coordinate Systems <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1356,7 +1372,7 @@
                 <p class="footnote">Jacobian: @@r@@</p>
                 <ul>
                     <li class="math">◦ @@x=rcos\theta@@</li>
-                    <li class="math">◦ @@x=rsin\theta@@</li>
+                    <li class="math">◦ @@y=rsin\theta@@</li>
                     <li class="math">◦ @@r^2=x^2+y^2@@</li>
                 </ul>
                 <h3>3-Dimensional</h3>
@@ -1368,7 +1384,7 @@
                 <p class="footnote">Jacobian: @@r@@</p>
                 <ul>
                     <li class="math">◦ @@x=rcos\theta@@</li>
-                    <li class="math">◦ @@x=rsin\theta@@</li>
+                    <li class="math">◦ @@y=rsin\theta@@</li>
                     <li class="math">◦ @@z=z@@</li>
                     <li class="math">◦ @@r^2=x^2+y^2@@</li>
                 </ul>
@@ -1382,6 +1398,11 @@
                     <li class="math">◦ @@z=\rho cos\phi@@</li>
                     <li class="math">◦ @@\rho ^2=x^2+y^2+z^2@@</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Translation</p>
+                <p>1. Convert @@\small\begin{bmatrix} 5x+y^3-1 \\ \sqrt{2}+16(x^2+y^2) \end{bmatrix}\small@@ to Polar ANS: @@\small\begin{bmatrix} 5rcos\theta+r^3sin^3\theta-1 \\ \sqrt{2}+16r^2 \end{bmatrix}\small@@</p>
+                <p>2. Convert @@\small\begin{bmatrix} 27x^3+z^7 \\ y+xln(z) \\ z\sqrt{x^2+y^2} \end{bmatrix}\small@@ to Cylindrical ANS: @@\small\begin{bmatrix} 27r^3cos^3\theta+z^7 \\ rsin\theta+rcos\theta*ln(z) \\ rz \end{bmatrix}\small@@</p>
+                <p>3. Convert @@\small\begin{bmatrix} 27x^3+z^7 \\ y+xln(z) \\ z\sqrt{x^2+y^2+z^2} \end{bmatrix}\small@@ to Spherical ANS: @@\small\begin{bmatrix} 27\rho^3sin^3\phi cos^3\theta+\rho^7cos^7\phi \\ \rho sin\phi sin\theta+\rho sin\phi cos\theta*ln(\rho cos\theta) \\ \rho^3cos\phi \end{bmatrix}\small@@</p>
             </div>
             <div id="2-3">
                 <br><h2>2.3: Vector Notation <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1442,6 +1463,14 @@
                     <li class="math">◦ The dot product can be conceptualized as a directional product</li>
                     <li class="math">◦ The dot product is commutative: @@\vec{u}\cdot \vec{v}=\vec{v}\cdot \vec{u}@@</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Operation</p>
+                <p>Let @@\vec{a}=\small\begin{bmatrix} 1 \\ 3 \\ 5 \end{bmatrix}\small@@ and @@\vec{b}=\small\begin{bmatrix} 2 \\ 4 \\ 6 \end{bmatrix}\small@@</p>
+                <p>1. Compute @@14\vec{a}+\vec{b}@@ ANS: @@\small\begin{bmatrix} 16 \\ 46 \\ 76 \end{bmatrix}\small@@</p>
+                <p>2. Compute @@\vec{b}-2\vec{a}@@ ANS: @@\small\begin{bmatrix} 0 \\ -2 \\ -4 \end{bmatrix}\small@@</p>
+                <p>3. Compute @@19(\vec{a}\cdot\vec{b})@@ ANS: @@836@@</p>
+                <p>4. Compute @@\vec{a}\times\vec{b}@@ ANS: @@\small\begin{bmatrix} -2 \\ 4 \\ -2 \end{bmatrix}\small@@</p>
+                <p>5. Compute @@\vec{b}\times\vec{a}@@ ANS: @@\small\begin{bmatrix} 2 \\ -4 \\ 2 \end{bmatrix}\small@@</p>
             </div>
             <div id="2-5">
                 <br><h2>2.5: Matrix Notation <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1612,6 +1641,11 @@
                     <li class="math">◦ A matrix is row equivalent to another matrix if both can reduce to each other via arithmetic procedures</li>
                     <li class="math">◦ The reduced echelon form of any square matrix is the identity matrix of its size</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Operation 2</p>
+                <p>Let @@A=\small\begin{bmatrix} 3&7 \\ 12&16 \end{bmatrix}\small@@ and @@B=\small\begin{bmatrix} 1&2 \\ 3&4 \end{bmatrix}\small@@</p>
+                <p>1. Compute @@2B-A@@ ANS: @@\small\begin{bmatrix} -1&-3 \\ -6&-8 \end{bmatrix}\small@@</p>
+                <p>2. Compute @@AB@@ ANS: @@\small\begin{bmatrix} 24&34 \\ 60&88 \end{bmatrix}\small@@</p>
             </div>
             <div id="2-7">
                 <br><h2>2.7: Determinants <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1714,6 +1748,11 @@
                     <li class="math">◦ The product of a triangular matrix is the product of the main diagonal</li>
                 </ul>
                 <p class="footnote">*Note a triangular matrix is square and has either all @@0@@ entries above the main diagonal (lower triangular) or below it (upper triangular)</p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Operation 2</p>
+                <p>Let @@A=\small\begin{bmatrix} 16&11&0 \\ 1&2&3 \\ 72&0&19 \end{bmatrix}\small@@</p>
+                <p>1. Compute det@@(A)@@ ANS: 2775</p>
+                <p>2. Compute @@\small\begin{vmatrix} cosx&17y \\ 29e^{xy}&2 \end{vmatrix}\small@@ ANS: @@2cosx-493ye^{xy}@@</p>
             </div>
             <div id="2-8">
                 <br><h2>2.8: Invertibility<br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1920,51 +1959,97 @@
             </div>
             <div id="3-5">
                 <br><h2>3.5: Probability Theory <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Probability of an event</p>
-                <p>Complement</p>
-                <p>Independence, Dependence</p>
-                <p>Intersection</p>
-                <p>Union</p>
-                <p>Inclusion Exclusion Principle</p>
-                <p>Conditional Probability</p>
-                <p>Bayes Theorem</p>
+                <p>Probability can be defined as a ratio of outcomes that determines the likelihood of a desired event occurring</p>
+                <p><strong>Probability of an Event</strong>: Given an event @@A@@, the probability of @@A@@ occurring is denoted @@P(A)@@. Let @@X@@ be the number of desired outcomes and @@Y@@ be the number of possible outcomes,
+                then the probability of @@A@@ occurring is given by the ratio @@\frac{X}{Y}@@</p>
+                <p><strong>Example</strong>: The probability of getting a 3 when rolling a die is @@\frac{1}{6}@@ because the number of 3's on the die is 1, and the number of faces on the die is 6</p>
+                <p><strong>Complement</strong>: Let @@P@@ be the probability of an event occurring, then the complement of @@P@@, denoted @@P'@@ is given by @@1-P@@ and is the probability of @@P@@ not occurring.
+                Two events are said to be complementary if the sum of their probabilities is @@1@@</p>
+                <p><strong>Example</strong>: The complement of the probability of getting a 3 when rolling a die is @@1-\frac{1}{6}=\frac{5}{6}@@, and these events are complementary since @@\frac{1}{6}+\frac{5}{6}=1@@</p>
+                <p><strong>Independence</strong>: Two events are said to be independent if the probability of a given event occurring has no influence on the probability of the other event occurring</p>
+                <p><strong>Example</strong>: It is raining; people have to go to work <span class="footnote">(the event of it raining does not influence the event that people have to go to work)</span></p>
+                <p><strong>Dependence</strong>: Two events are said to be dependent if the probability of a given event occurring has an influence on the probability of the other event occurring</p>
+                <p><strong>Example</strong>: It is raining; people who have to go to work get wet <span class="footnote">(the event of it raining influences the event of people getting wet on the way to work)</span></p>
+                <p><strong>Mutually Exclusive</strong>: Two events are said to be mutually exclusive if they cannot occur at the same time</p>
+                <p><strong>Example</strong>: Rolling a 3 and a 4 on one die; only one of these can occur at a time</p>
+                <p><strong>Inclusive</strong>: Two events are said to be inclusive if they can occur at the same time</p>
+                <p><strong>Example</strong>: Rolling a 3 and a 4 on two dice; both of these can occur at the same time</p>
+                <p><strong>Intersection of Independent Events</strong>: The probability of two independent events occurring; let @@A@@ and @@B@@ be events, the probability of both @@A@@ <strong>and</strong> @@B@@ occurring is given by the intersection of @@A@@ and @@B@@.
+                Denoted @@P(A\cap B)@@ where @@P(A\cap B)=P(A)*P(B)@@</p>
+                <p><strong>Union of Mutually Exclusive Events</strong>: The probability of one of two mutually exclusive events occurring; let @@A@@ and @@B@@ be events, the probability of @@A@@ <strong>or</strong> @@B@@ occurring is given by the union of @@A@@ and @@B@@.
+                Denoted @@P(A\cup B)@@ where @@P(A\cup B)=P(A)+P(B)@@</p>
+                <p><strong>Conditional Probability</strong>: Let @@A@@ and @@B@@ be events, the probability of @@A@@ occurring <strong>given</strong> @@B@@, denoted @@P(A|B)@@
+                is given by @@P(A|B)=\frac{P(A\cap B)}{P(B)}@@</p>
+                <p><strong>Intersection of Dependent Events</strong>: The probability of two inclusive events occurring; let @@A@@ and @@B@@ be events and @@C@@ be the condition that @@A@@ has already occurred,
+                the probability of both @@A@@ <strong>and</strong> @@B@@ occurring is given by @@P(A\cap B)@@ where @@P(A\cap B)=P(A)*P(B|C)@@</p>
+                <p><strong>Union of Inclusive Events</strong>: The probability of one of two inclusive events occurring; let @@A@@ and @@B@@ be event, the probability of @@A@@ <strong>or</strong> @@B@@ occurring is given by the inclusion exclusion principle,
+                @@P(A\cup B)@@ where @@P(A\cup B)=P(A)+P(B)-P(A\cap B)@@</p>
+                <p><strong>Bayes Theorem</strong>: Let @@A@@ and @@B@@ be events, then @@P(A|B)@@ is given by @@P(A|B)=\frac{P(B|A)*P(A)}{P(B)}@@</p>
             </div>
             <div id="3-6">
                 <br><h2>3.6: Combinatorics <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Factorial Algebra</p>
-                <p>Permutations with repetition</p>
-                <p>Permutations without repetition</p>
-                <p>Combinations without repetition</p>
-                <p>Combinations with repetition</p>
-                <p>Binomial Theorem and Pascal's Triangle</p>
-                <a href="https://www.mathsisfun.com/combinatorics/combinations-permutations.html"></a>
+                <p>Combinatorics is the field of mathematics related to counting and combinations</p>
+                <p><strong>Factorial</strong>: The product of @@n@@ consecutive integers, given by @@n!=1*2*\cdots*(n-1)=n(n-1)(n-2)\cdots(n-k)!\:@@ where @@(n-k)>0@@</p>
+                <p class="footnote">*Note @@0!=1@@ <a href="https://www.chilimath.com/lessons/intermediate-algebra/zero-factorial/">(proof)</a></p>
+                <p>Permutations are a way to count more specifically when order is important, and Combinations are a way to count more specifically when order isn't important.
+                Given @@n@@ is the number of options and @@r@@ is how many of which are being chosen:</p>
+                <p><strong>Permutations With Repetition</strong>: @@n^r@@</p>
+                <p><strong>Example</strong>: Assume we have a lock with a 4 digit @@(0,1,2,3,4,5,6,7,8,9)@@ combination where the numbers can repeat; e.x., 4444 is allowed, then the number of possible combinations for the lock is @@10^4=10000@@</p>
+                <p><strong>Permutations Without Repetition</strong>: @@\frac{n!}{(n-r)!}@@</p>
+                <p><strong>Example</strong>: Assume we have a lock with a 4 digit @@(0,1,2,3,4,5,6,7,8,9)@@ combination where the numbers cannot repeat; e.x., 4444 is not allowed, then the number of possible combinations for the lock is @@\frac{10!}{(10-4)!}=\frac{10!}{6!}=5040@@</p>
+                <p><strong>Combinations Without Repetition</strong>: @@\frac{n!}{r!(n-r)!}=\small\begin{pmatrix} n \\ r \end{pmatrix}\small@@</p>
+                <p><strong>Example</strong>: Assume we have 4 digits @@(0,1,2,3,4,5,6,7,8,9)@@ where the numbers cannot repeat; e.x., 4444 is not allowed, then the number of possible combinations of these numbers is @@\frac{10!}{4!(10-4)!}=\frac{10!}{4!6!}=210@@</p>
+                <p><strong>Combinations With Repetition</strong>: @@\frac{(r+n-1)!}{r!(n-1)!}=\small\begin{pmatrix} r+n-1 \\ r \end{pmatrix}\small=\small\begin{pmatrix} r+n-1 \\ n-1 \end{pmatrix}\small@@</p>
+                <p><strong>Example</strong>: Assume we have 4 digits @@(0,1,2,3,4,5,6,7,8,9)@@ where the numbers can repeat; e.x., 4444 is allowed, then the number of possible combinations of these numbers is @@\frac{(4+10-1)!}{6!(10-1)!}=\frac{13!}{4!9!}=715@@</p>
+                <p><strong>Binomial Theorem</strong>: @@(a+b)^n=\small\begin{pmatrix} n\\0 \end{pmatrix}a^{n}b^{0}+\begin{pmatrix} n\\1 \end{pmatrix}a^{n-1}b^{1}+\begin{pmatrix} n\\2 \end{pmatrix}a^{n-2}b^{2}+\cdots+\begin{pmatrix} n\\n-1 \end{pmatrix}a^{1}b^{n-1}+\begin{pmatrix} n\\n \end{pmatrix}a^{0}b^{n}=\sum_{k=0}^n\begin{pmatrix} n\\k \end{pmatrix}a^{n-k}b^{k}@@</p>
+                <p><strong>Pascal's Triangle</strong>: A consequence of the Binomial Theorem which yields the coefficients given by binomial expansion. Below is the triangle up to @@n=17@@ (with coefficients divisible by 3 partitioned): </p><img src="images/pascal-3.png" alt="Pascal's Triangle" class="quarter3">
+                <!--https://www.mathsisfun.com/combinatorics/combinations-permutations.html-->
             </div>
             <div id="3-7">
                 <br><h2>3.7: Set Theory <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Set membership</p>
-                <p>Complement</p>
-                <p>Union</p>
-                <p>Intersection</p>
-                <p>Difference</p>
-                <p>Symmetric Difference</p>
-                <a href="https://commons.wikimedia.org/wiki/File:Set_Theory_Operations.svg"></a>
+                <p><strong>Set Membership</strong>: An element is a member of a set if it is in the set; e.x., let @@S=\{0,2,w,44,x\}@@ so @@w\in S\Rightarrow w@@ is a member of @@S@@</p>
+                <p><strong>Empty Set</strong>: A set with no elements, denoted @@\{\}=\emptyset@@</p>
+                <p><strong>Complement</strong>: A set with everything except the elements of a set, @@A@@, denoted @@A'@@</p>
+                <p><strong>Union</strong>: The elements from the sets @@A@@ or @@B@@, denoted @@A\cup B@@</p>
+                <p><strong>Intersection</strong>: The elements from the sets @@A@@ and @@B@@, denoted @@A\cap B@@</p>
+                <p><strong>Difference</strong>: The elements in one set that are not in the other, for two sets @@A@@ and @@B@@, denoted @@A\setminus B@@ are the elements in @@A@@ but not in @@B@@</p>
+                <p><strong>Symmetric Difference</strong>: The elements from the sets @@A@@, @@B@@, that don't overlap (intersect), denoted @@A\Delta B@@</p>
+                <p><strong>Superset</strong>: A parent set that has all the elements being considered</p>
+                <p><strong>Subset</strong>: A child set (partition) that contains some elements (part of) the superset, denoted by @@s\subseteq S@@ where @@s@@ is a subset of @@S@@</p>
+                <img src="images/set-theory.png" alt="Set Theory Graphic">
+                <p><strong>Example</strong>: Consider the superset, @@S=\{0,1,2,3,4,5,6,7,8,9\}@@ and the subsets @@X=\{0,1,2,4,6,8\}@@ and @@Y=\{0,1,3,5,7,9\}@@</p>
+                <ul>
+                    <li class="math">◦ @@S'=\{\}=\emptyset@@</li>
+                    <li class="math">◦ @@X'=\{1,3,5,7,9\}=Y@@</li>
+                    <li class="math">◦ @@Y'=\{0,2,4,6,8\}=X@@</li>
+                    <li class="math">◦ @@X\cup Y=\{0,1,2,3,4,5,6,7,8,9\}=S@@</li>
+                    <li class="math">◦ @@X\cap Y=\{0,1\}@@</li>
+                    <li class="math">◦ @@X\setminus Y=\{2,4,6,8\}@@</li>
+                    <li class="math">◦ @@Y\setminus X=\{3,5,7,9\}@@</li>
+                    <li class="math">◦ @@X\Delta Y=\{2,3,4,5,6,7,8,9\}@@</li>
+                </ul>
+                <!--https://commons.wikimedia.org/wiki/File:Set_Theory_Operations.svg-->
             </div>
             <div id="3-8">
                 <br><h2>3.8: Functions <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Definition of function</p>
-                <p>Domain, Target, Range</p>
-                <p>Injection (one-to-one)</p>
-                <p>Surjection (onto)</p>
-                <p>Bijection</p>
+                <p><strong>Function</strong>: An equation or set map where for any input there is exactly one output</p>
+                <p class="footnote">*Note the vertical line test can be used to determine if an equation is a function or not</p>
+                <p><strong>Domain</strong>: The set of all possible inputs</p>
+                <p><strong>Codomain</strong>: The set of all possible outputs (also known as the target)</p>
+                <p><strong>Range</strong>: The set of all actual outputs (also known as the image)</p>
+                <p><strong>Injection</strong>: A function is injective (one-to-one) if there is at most one mapping to any given element of the codomain</p>
+                <p><strong>Surjection</strong>: A function is surjective (onto) if the every element of the codomain is mapped to</p>
+                <p><strong>Bijection</strong>: A function is bijective if it is both injective and surjective</p>
+                <img src="images/functions.jpg" alt="Function Mapping">
             </div>
             <div id="3-9">
                 <br><h2>3.9: Some Algorithms <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>Bubble Sort</p>
-                <p>Heap Sort</p>
-                <p>Merge Sort</p>
-                <p>Djikstra's Algorithm</p>
-                <p>Kruskal's Algorithm</p>
-                <p>BFS, DFS</p>
+                <a href="https://en.wikipedia.org/wiki/Bubble_sort"><strong>Bubble Sort</strong></a><br>
+                <a href="https://en.wikipedia.org/wiki/Heapsort"><strong>Heap Sort</strong></a><br>
+                <a href="https://en.wikipedia.org/wiki/Merge_sort"><strong>Merge Sort</strong></a><br>
+                <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"><strong>Djikstra's Algorithm</strong></a><br>
+                <a href="https://en.wikipedia.org/wiki/Kruskal%27s_algorithm"><strong>Kruskal's Algorithm</strong></a><br>
+                <a href="https://en.wikipedia.org/wiki/Breadth-first_search"><strong>BFS</strong></a>, <a href="https://en.wikipedia.org/wiki/Depth-first_search"><strong>DFS</strong></a>
             </div>
         </div>
         <footer>

@@ -250,8 +250,13 @@ table th {
     height: 25%;
 }
 
+.quarter3 {
+    height: 25%;
+}
 
-
+.dbh {
+    height: 555px;
+}
 /* list stuff */
 
 ol {
