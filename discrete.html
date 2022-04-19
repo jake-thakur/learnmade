@@ -114,7 +114,7 @@
             <!-- lessons -->
             <div id="1-1">
                 <br><h2>1.1: Numbers and Their Sets <br><a href="#all" class="small">(All Topics)</a></h2>
-                <p>To understand the sets of numbers, we must begin with some basic set theory
+                <p>To understand the sets of numbers, we must begin with some basic set theory.
                     A set is a group that contains elements, denoted by set braces and interior comma separated values (CSV) called elements;
                     for example, <span class="math">{@@x, y, z@@}</span> is a set containing elements @@x, y,@@ and @@z@@</p>
                 <p>Writing out an entire set each time we want to refer to it can be tedious, even more so when the set is large; so, it is standard to name sets
@@ -316,8 +316,8 @@
                 <p class="footnote">@@2 &ne; 3@@ (2 does not equal 3)</p>
                 <p class="footnote">@@4 &equiv; 1\: (mod\: 3)@@ (4 is congruent to 1 when divided by 3; namely, the remainder is 1)</p>
                 <p class="footnote">@@3 &#8739; 6@@ (3 divides 6)</p>
-                <p class="footnote">@@3 &#8739; 7@@ (3 does not divide 7)</p>
-                <p class="footnote">@@3 &ge; @@ (3 is greater than or equal to 2)</p>
+                <p class="footnote">@@3 &#8740; 7@@ (3 does not divide 7)</p>
+                <p class="footnote">@@3 &ge; 2@@ (3 is greater than or equal to 2)</p>
                 <p class="footnote">@@2 &le; 3@@ (2 is less than or equal to 3)</p>
                 <p class="footnote">@@1.1 &asymp; 1.11@@ (1.1 is approximately equal to 1.11)</p>
                 <p>There are many more symbols and notations that will be used in this website, but they will be introduced with their
@@ -1749,7 +1749,7 @@
                 </ul>
                 <p class="footnote">*Note a triangular matrix is square and has either all @@0@@ entries above the main diagonal (lower triangular) or below it (upper triangular)</p>
                 <!-- Activity 1 -->
-                <p class="activity-header">Activity 1) Operation 2</p>
+                <p class="activity-header">Activity 1) Measurements</p>
                 <p>Let @@A=\small\begin{bmatrix} 16&11&0 \\ 1&2&3 \\ 72&0&19 \end{bmatrix}\small@@</p>
                 <p>1. Compute det@@(A)@@ ANS: 2775</p>
                 <p>2. Compute @@\small\begin{vmatrix} cosx&17y \\ 29e^{xy}&2 \end{vmatrix}\small@@ ANS: @@2cosx-493ye^{xy}@@</p>
@@ -1780,6 +1780,10 @@
                     <li class="math">◦ There exists a @@n\times n@@ matrix, @@B@@ such that @@BA=I_n@@</li>
                     <li class="math">◦ There exists a @@n\times n@@ matrix, @@D@@ such that @@AD=I_n@@</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Inversion</p>
+                <p>1. Find the inverse of @@\small\begin{bmatrix} 16&11&0 \\ 1&2&3 \\ 72&0&19 \end{bmatrix}\small@@
+                ANS: @@\small\begin{bmatrix} \frac{38}{2775}&-\frac{209}{2775}&\frac{11}{925} \\ \frac{197}{2775}&\frac{304}{2775}&-\frac{16}{925} \\ -\frac{48}{925}&\frac{264}{925}&\frac{7}{925} \end{bmatrix}\small@@</p>
             </div>
             <div id="2-9">
                 <br><h2>2.9: Solving Systems <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1789,6 +1793,15 @@
                 <p><strong>Inverse Matrix Method</strong>: Just like in algebra, we multiply both sides of an equality by an inverse matrix to solve the system</p>
                 <p><strong>Example</strong>: @@A=\small\begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}\small\vec{x} = \small\begin{bmatrix} 5 \\ 6 \end{bmatrix}\small\Rightarrow A^{-1}=\frac{1}{1*4-3*2}\small\begin{bmatrix} 4 & -3 \\ -2 & 1 \end{bmatrix}\small
                     = \small\begin{bmatrix} -2 & \frac{3}{2} \\1 & -\frac{1}{2}  \end{bmatrix}\small\Rightarrow\vec{x}=\small\begin{bmatrix} -2 & \frac{3}{2} \\1 & -\frac{1}{2}  \end{bmatrix}\begin{bmatrix} 5 \\ 6 \end{bmatrix}\small=\small\begin{bmatrix} -1 \\ 2 \end{bmatrix}\small@@</p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Solutions</p>
+                <p>1. Solve the following system ANS: @@\small\begin{bmatrix} 0 \\ \frac{173}{148} \\ -\frac{3}{148} \end{bmatrix}\small@@</p>
+                <ul>
+                    <li>@@x+7y+9z=8@@</li>
+                    <li>@@12x+18y+2z=21@@</li>
+                    <li>@@166x=0@@</li>
+                </ul>
+                <p>2. Solve @@\small\begin{bmatrix} 1&2&|&5 \\ 3&4&|&10 \end{bmatrix}\small@@ ANS: @@\small\begin{bmatrix} 0 \\ \frac{5}{2} \end{bmatrix}\small@@</p>
             </div>
             <div id="3-1">
                 <br><h2>3.1: Summation and Product <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1832,6 +1845,10 @@
                     <li class="math">◦ @@\prod_{i=0}^{4}i+1=1*2*3*4*5=120@@</li>
                 </ul>
                 <p class="footnote">*Note these can be thought of like for loops in programming</p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) += and *=</p>
+                <p>1. Calculate @@\sum_{k=7}^{16}12k+\sqrt{2}@@ ANS: @@1380+10\sqrt{2}@@</p>
+                <p>2. Calculate @@\prod_{k=6}^{9}k^2+1@@ ANS: @@9860500@@</p>
             </div>
             <div id="3-2">
                 <br><h2>3.2: Proof by Mathematical Induction <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1919,6 +1936,11 @@
                 <p class="footnote">*Note the above graph has 6 vertices, 11 edges, and 7 regions</p>
                 <p><strong>Isomorphism</strong>: Two graphs are said to be isomorphic if they both preserve the same data structure; namely, the edge mappings, number of vertices, and other properties</p>
                 <img src="images/isomorphism.png" alt="Isomorphic Graphs"><p class="footnote">*Note @@G@@ and @@G'@@ are isomorphic</p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Graphing</p>
+                <p>Consider the graph</p><span><img src="images/G12.png" alt="Activity Graph"></span>
+                <p>1. What is the adjacency matrix? ANS: @@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&0&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@</p>
+                <p>2. What is the graph equation? ANS: @@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-3, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@</p>
             </div>
             <div id="3-4">
                 <br><h2>3.4: Trees and Traversal <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1956,6 +1978,12 @@
                     <li class="math">◦ <strong>Pre-order Traversal</strong>: @@(A,B,D,E,C,F,G)@@</li>
                     <li class="math">◦ <strong>Post-order Traversal</strong>: @@(D,E,B,A,F,G,C)@@</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Roots and Leaves</p>
+                <p>Consider the tree</p><span><img src="images/G13.png" alt="Activity Tree"></span>
+                <p>1. Which node is the root? ANS: @@A@@</p>
+                <p>2. Which nodes are leaves? ANS: @@X,Y,Z,P,Q@@</p>
+                <p>3. What is the depth? ANS: @@4@@</p>
             </div>
             <div id="3-5">
                 <br><h2>3.5: Probability Theory <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -1985,6 +2013,14 @@
                 <p><strong>Union of Inclusive Events</strong>: The probability of one of two inclusive events occurring; let @@A@@ and @@B@@ be event, the probability of @@A@@ <strong>or</strong> @@B@@ occurring is given by the inclusion exclusion principle,
                 @@P(A\cup B)@@ where @@P(A\cup B)=P(A)+P(B)-P(A\cap B)@@</p>
                 <p><strong>Bayes Theorem</strong>: Let @@A@@ and @@B@@ be events, then @@P(A|B)@@ is given by @@P(A|B)=\frac{P(B|A)*P(A)}{P(B)}@@</p>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Probably</p>
+                <p>Given two mutually exclusive and independent events, @@A,B,@@ with @@P(A)=0.3, P(B)=P(A')@@</p>
+                <p>1. What is @@P(B)?@@ ANS: @@0.7@@</p>
+                <p>2. What is @@P(A\cup B)?@@ ANS: @@1@@</p>
+                <p>3. What is @@P(A\cap B)?@@ ANS: @@0.21@@</p>
+                <p>Given two inclusive but independent events, @@A,B,@@ with @@P(A)=0.23, P(B)=0.77@@</p>
+                <p>4. What is @@P(A\cup B)?@@ ANS: @@0.8229@@</p>
             </div>
             <div id="3-6">
                 <br><h2>3.6: Combinatorics <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -2003,6 +2039,9 @@
                 <p><strong>Example</strong>: Assume we have 4 digits @@(0,1,2,3,4,5,6,7,8,9)@@ where the numbers can repeat; e.x., 4444 is allowed, then the number of possible combinations of these numbers is @@\frac{(4+10-1)!}{6!(10-1)!}=\frac{13!}{4!9!}=715@@</p>
                 <p><strong>Binomial Theorem</strong>: @@(a+b)^n=\small\begin{pmatrix} n\\0 \end{pmatrix}a^{n}b^{0}+\begin{pmatrix} n\\1 \end{pmatrix}a^{n-1}b^{1}+\begin{pmatrix} n\\2 \end{pmatrix}a^{n-2}b^{2}+\cdots+\begin{pmatrix} n\\n-1 \end{pmatrix}a^{1}b^{n-1}+\begin{pmatrix} n\\n \end{pmatrix}a^{0}b^{n}=\sum_{k=0}^n\begin{pmatrix} n\\k \end{pmatrix}a^{n-k}b^{k}@@</p>
                 <p><strong>Pascal's Triangle</strong>: A consequence of the Binomial Theorem which yields the coefficients given by binomial expansion. Below is the triangle up to @@n=17@@ (with coefficients divisible by 3 partitioned): </p><img src="images/pascal-3.png" alt="Pascal's Triangle" class="quarter3">
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Binomial Expansion</p>
+                <p>1. Using the binomial theorem, expand @@(2x+1)^3@@ ANS: @@8x^3+12x^2+6x+1@@</p>
                 <!--https://www.mathsisfun.com/combinatorics/combinations-permutations.html-->
             </div>
             <div id="3-7">
@@ -2028,6 +2067,16 @@
                     <li class="math">◦ @@Y\setminus X=\{3,5,7,9\}@@</li>
                     <li class="math">◦ @@X\Delta Y=\{2,3,4,5,6,7,8,9\}@@</li>
                 </ul>
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Sets</p>
+                <p>Consider the superset, @@S=\{A,B,C,1,2,3,X,Y,Z\}@@ and the subsets @@M=\{A,B,C,1,2,3\}@@ and @@N=\{1,2,3,X,Y,Z\}@@</p>
+                <p>1. Find @@M'@@ ANS: @@\{X,Y,Z\}@@</p>
+                <p>2. Find @@N'@@ ANS: @@\{A,B,C\}@@</p>
+                <p>3. Find @@M\cup N@@ ANS: @@S@@</p>
+                <p>4. Find @@M\cap N@@ ANS: @@\{1,2,3\}@@</p>
+                <p>5. Find @@M\setminus N@@ ANS: @@\{A,B,C\}@@</p>
+                <p>6. Find @@N\setminus M@@ ANS: @@\{X,Y,Z\}@@</p>
+                <p>7. Find @@M\Delta N@@ ANS: @@\{A,B,C,X,Y,Z\}@@</p>
                 <!--https://commons.wikimedia.org/wiki/File:Set_Theory_Operations.svg-->
             </div>
             <div id="3-8">
@@ -2041,6 +2090,17 @@
                 <p><strong>Surjection</strong>: A function is surjective (onto) if the every element of the codomain is mapped to</p>
                 <p><strong>Bijection</strong>: A function is bijective if it is both injective and surjective</p>
                 <img src="images/functions.jpg" alt="Function Mapping">
+                <!-- Activity 1 -->
+                <p class="activity-header">Activity 1) Function?</p>
+                <p>1. Is @@f(x)=2x+1, x\in\mathbb{R}@@ a function? ANS: Yes</p>
+                <p>Consider the set map</p><span><img src="images/G14.png" alt="Activity Function"></span>
+                <p>2. Is this a function? ANS: Yes</p>
+                <p>3. What is the domain? ANS: @@\{A,B,C\}@@</p>
+                <p>4. What is the codomain? ANS: @@\{X_1,X_2,X_3,X_4\}@@</p>
+                <p>5. What is the range? ANS: @@\{X_1,X_2,X_3\}@@</p>
+                <p>6. Is this a injection? ANS: Yes</p>
+                <p>7. Is this a surjection? ANS: No</p>
+                <p>8. Is this a bijection? ANS: No</p>
             </div>
             <div id="3-9">
                 <br><h2>3.9: Some Algorithms <br><a href="#all" class="small">(All Topics)</a></h2>

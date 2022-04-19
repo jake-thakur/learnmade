@@ -448,9 +448,12 @@ window.onload = function()
         if (d1_9x1_bool[7]) {document.getElementById("d1_9x1_r8").style.backgroundColor = "#739E5B"; document.getElementById("d1_9x1_r8").innerHTML = "correct";}
     }
     // 2.1
+    function d2_1x1() {}
     // 2.2
+    function d2_2x1() {}
     // 2.3
     // 2.4
+    function d2_4x1() {}
     // 2.5
     // Activity 1
     function d2_5x1() {
@@ -485,17 +488,28 @@ window.onload = function()
         if (d2_5x1_bool[0]) {document.getElementById("d2_5x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_5x1_r1").innerHTML = "correct";}
     }
     // 2.6
+    function d2_6x1() {}
     // 2.7
+    function d2_7x1() {}
     // 2.8
+    function d2_8x1() {}
     // 2.9
+    function d2_9x1() {}
     // 3.1
+    function d3_1x1() {}
     // 3.2
     // 3.3
+    function d3_2x1() {}
     // 3.4
+    function d3_4x1() {}
     // 3.5
+    function d3_5x1() {}
     // 3.6
+    function d3_6x1() {}
     // 3.7
+    function d3_7x1() {}
     // 3.8
+    function d3_8x1() {}
     // 3.9
     /* discrete interactive */
 }
