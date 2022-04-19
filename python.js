@@ -35,7 +35,7 @@ window.onload = function() {
             p1_1x1_bool[0] = true;
         }
 
-        document.getElementById("p1_1x1_y1").innerHTML = p1_1x1_v1;
+        if(p1_1x1_v1 != "") document.getElementById("p1_1x1_y1").innerHTML = p1_1x1_v1;
         if (!p1_1x1_bool[0]) {
             document.getElementById("p1_1x1_r1").style.backgroundColor = "#B5534F";
             document.getElementById("p1_1x1_r1").innerHTML = "incorrect";
@@ -78,8 +78,8 @@ window.onload = function() {
             if (p1_1x2_user[i] == p1_1x2_key[i]) {p1_1x2_bool[i] = true;}
         }
 
-        document.getElementById("p1_1x2_y1").innerHTML = p1_1x2_v1;
-        document.getElementById("p1_1x2_y2").innerHTML = p1_1x2_v2;
+           document.getElementById("p1_1x2_y1").innerHTML = p1_1x2_v1;
+           document.getElementById("p1_1x2_y2").innerHTML = p1_1x2_v2;
 
         // if incorrect
         if (!p1_1x2_bool[0]) {document.getElementById("p1_1x2_r1").style.backgroundColor = "#B5534F"; document.getElementById("p1_1x2_r1").innerHTML = "incorrect";}
