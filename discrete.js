@@ -528,7 +528,7 @@ window.onload = function()
         document.getElementById("d2_2x1_y1").innerHTML = d2_2x1_v1;
         document.getElementById("d2_2x1_y2").innerHTML = d2_2x1_v2;
         document.getElementById("d2_2x1_y3").innerHTML = d2_2x1_v3;
-        if(d2_2x1_v3 != undefined){document.getElementById("d2_2x1_y3").style = "font-size: 26px";}
+        if(d2_2x1_v3 != undefined){document.getElementById("d2_2x1_y3").setAttribute("class", "math-2");}
         MathJax.typeset()
 
         // if incorrect
@@ -540,7 +540,6 @@ window.onload = function()
         if (d2_2x1_bool[0]) {document.getElementById("d2_2x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_2x1_r1").innerHTML = "correct";}
         if (d2_2x1_bool[1]) {document.getElementById("d2_2x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d2_2x1_r2").innerHTML = "correct";}
         if (d2_2x1_bool[2]) {document.getElementById("d2_2x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d2_2x1_r3").innerHTML = "correct";}
-
     }
     // 2.3
     // 2.4
@@ -645,18 +644,144 @@ window.onload = function()
     // 2.6
     function d2_6x1() {
         document.getElementById("d2_6x1_result").style.display = "block";
+
+        var d2_6x1_a = document.getElementById("d2_6x1a").checked;
+        var d2_6x1_b = document.getElementById("d2_6x1b").checked;
+        var d2_6x1_c = document.getElementById("d2_6x1c").checked;
+        var d2_6x1_d = document.getElementById("d2_6x1d").checked;
+        var d2_6x1_e = document.getElementById("d2_6x1e").checked;
+        var d2_6x1_f = document.getElementById("d2_6x1f").checked;
+
+        var d2_6x1_v1, d2_6x1_v2;
+        if (d2_6x1_a) {d2_6x1_v1 = document.getElementById("d2_6x1a").value;}
+        if (d2_6x1_b) {d2_6x1_v1 = document.getElementById("d2_6x1b").value;}
+        if (d2_6x1_c) {d2_6x1_v1 = document.getElementById("d2_6x1c").value;}
+        if (d2_6x1_d) {d2_6x1_v2 = document.getElementById("d2_6x1d").value;}
+        if (d2_6x1_e) {d2_6x1_v2 = document.getElementById("d2_6x1e").value;}
+        if (d2_6x1_f) {d2_6x1_v2 = document.getElementById("d2_6x1f").value;}
+
+        // determine if answers are correct
+        var d2_6x1_user = [d2_6x1_v1, d2_6x1_v2];
+        var d2_6x1_key = ["@@\\small\\begin{bmatrix} -1&-3 \\\\ -6&-8 \\end{bmatrix}\\small@@","@@\\small\\begin{bmatrix} 24&34 \\\\ 60&88 \\end{bmatrix}\\small@@"];
+        var d2_6x1_bool = [false, false];
+        for (i = 0; i < d2_6x1_key.length; i++) {
+            if (d2_6x1_user[i] == d2_6x1_key[i]) {d2_6x1_bool[i] = true;}
+        }
+
+        document.getElementById("d2_6x1_y1").innerHTML = d2_6x1_v1;
+        document.getElementById("d2_6x1_y2").innerHTML = d2_6x1_v2;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d2_6x1_bool[0]) {document.getElementById("d2_6x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d2_6x1_r1").innerHTML = "incorrect";}
+        if (!d2_6x1_bool[1]) {document.getElementById("d2_6x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d2_6x1_r2").innerHTML = "incorrect";}
+
+        // if correct
+        if (d2_6x1_bool[0]) {document.getElementById("d2_6x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_6x1_r1").innerHTML = "correct";}
+        if (d2_6x1_bool[1]) {document.getElementById("d2_6x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d2_6x1_r2").innerHTML = "correct";}
     }
     // 2.7
     function d2_7x1() {
         document.getElementById("d2_7x1_result").style.display = "block";
+
+        var d2_7x1_b = document.getElementById("d2_7x1b").checked;
+        var d2_7x1_c = document.getElementById("d2_7x1c").checked;
+
+        // placeholder values
+        var d2_7x1_v2;
+        var d2_7x1_v1 = document.getElementById("d2_7x1a").value;
+        if (d2_7x1_b) {d2_7x1_v2 = document.getElementById("d2_7x1b").value;}
+        if (d2_7x1_c) {d2_7x1_v2 = document.getElementById("d2_7x1c").value;}
+
+        // determine if answers are correct
+        var d2_7x1_user = [d2_7x1_v1, d2_7x1_v2];
+        var d2_7x1_key = ["2775","@@2cosx-493ye^{xy}@@"];
+        var d2_7x1_bool = [false, false];
+        for (i = 0; i < d2_7x1_key.length; i++) {
+            if (d2_7x1_user[i] == d2_7x1_key[i]) {d2_7x1_bool[i] = true;}
+        }
+
+        document.getElementById("d2_7x1_y1").innerHTML = "@@"+d2_7x1_v1+"@@";
+        document.getElementById("d2_7x1_y2").innerHTML = d2_7x1_v2;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d2_7x1_bool[0]) {document.getElementById("d2_7x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d2_7x1_r1").innerHTML = "incorrect";}
+        if (!d2_7x1_bool[1]) {document.getElementById("d2_7x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d2_7x1_r2").innerHTML = "incorrect";}
+
+        // if correct
+        if (d2_7x1_bool[0]) {document.getElementById("d2_7x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_7x1_r1").innerHTML = "correct";}
+        if (d2_7x1_bool[1]) {document.getElementById("d2_7x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d2_7x1_r2").innerHTML = "correct";}
     }
     // 2.8
     function d2_8x1() {
         document.getElementById("d2_8x1_result").style.display = "block";
+
+        var d2_8x1_a = document.getElementById("d2_8x1a").checked;
+        var d2_8x1_b = document.getElementById("d2_8x1b").checked;
+        var d2_8x1_c = document.getElementById("d2_8x1c").checked;
+
+        // placeholder values
+        var d2_8x1_v1;
+        if (d2_8x1_a) {d2_8x1_v1 = document.getElementById("d2_8x1a").value;}
+        if (d2_8x1_b) {d2_8x1_v1 = document.getElementById("d2_8x1b").value;}
+        if (d2_8x1_c) {d2_8x1_v1 = document.getElementById("d2_8x1c").value;}
+
+        // determine if answers are correct
+        var d2_8x1_user = [d2_8x1_v1];
+        var d2_8x1_key = ["@@\\small\\begin{bmatrix} \\frac{38}{2775}&-\\frac{209}{2775}&\\frac{11}{925} \\\\ \\frac{197}{2775}&\\frac{304}{2775}&-\\frac{16}{925} \\\\ -\\frac{48}{925}&\\frac{264}{925}&\\frac{7}{925} \\end{bmatrix}\\small@@"];
+        var d2_8x1_bool = [false];
+        for (i = 0; i < d2_8x1_key.length; i++) {
+            if (d2_8x1_user[i] == d2_8x1_key[i]) {d2_8x1_bool[i] = true;}
+        }
+
+        document.getElementById("d2_8x1_y1").innerHTML = d2_8x1_v1
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d2_8x1_bool[0]) {document.getElementById("d2_8x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d2_8x1_r1").innerHTML = "incorrect";}
+
+        // if correct
+        if (d2_8x1_bool[0]) {document.getElementById("d2_8x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_8x1_r1").innerHTML = "correct";}
     }
     // 2.9
     function d2_9x1() {
         document.getElementById("d2_9x1_result").style.display = "block";
+
+        var d2_9x1_a = document.getElementById("d2_9x1a").checked;
+        var d2_9x1_b = document.getElementById("d2_9x1b").checked;
+        var d2_9x1_c = document.getElementById("d2_9x1c").checked;
+        var d2_9x1_d = document.getElementById("d2_9x1d").checked;
+        var d2_9x1_e = document.getElementById("d2_9x1e").checked;
+        var d2_9x1_f = document.getElementById("d2_9x1f").checked;
+
+        var d2_9x1_v1, d2_9x1_v2;
+        if (d2_9x1_a) {d2_9x1_v1 = document.getElementById("d2_9x1a").value;}
+        if (d2_9x1_b) {d2_9x1_v1 = document.getElementById("d2_9x1b").value;}
+        if (d2_9x1_c) {d2_9x1_v1 = document.getElementById("d2_9x1c").value;}
+        if (d2_9x1_d) {d2_9x1_v2 = document.getElementById("d2_9x1d").value;}
+        if (d2_9x1_e) {d2_9x1_v2 = document.getElementById("d2_9x1e").value;}
+        if (d2_9x1_f) {d2_9x1_v2 = document.getElementById("d2_9x1f").value;}
+
+        // determine if answers are correct
+        var d2_9x1_user = [d2_9x1_v1, d2_9x1_v2];
+        var d2_9x1_key = ["@@\\small\\begin{bmatrix} 0 \\\\ \\frac{173}{148} \\\\ -\\frac{3}{148} \\end{bmatrix}\\small@@","@@\\small\\begin{bmatrix} 0 \\\\ \\frac{5}{2} \\end{bmatrix}\\small@@"];
+        var d2_9x1_bool = [false, false];
+        for (i = 0; i < d2_9x1_key.length; i++) {
+            if (d2_9x1_user[i] == d2_9x1_key[i]) {d2_9x1_bool[i] = true;}
+        }
+
+        document.getElementById("d2_9x1_y1").innerHTML = d2_9x1_v1;
+        document.getElementById("d2_9x1_y2").innerHTML = d2_9x1_v2;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d2_9x1_bool[0]) {document.getElementById("d2_9x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d2_9x1_r1").innerHTML = "incorrect";}
+        if (!d2_9x1_bool[1]) {document.getElementById("d2_9x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d2_9x1_r2").innerHTML = "incorrect";}
+
+        // if correct
+        if (d2_9x1_bool[0]) {document.getElementById("d2_9x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d2_9x1_r1").innerHTML = "correct";}
+        if (d2_9x1_bool[1]) {document.getElementById("d2_9x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d2_9x1_r2").innerHTML = "correct";}
     }
     // 3.1
     function d3_1x1() {

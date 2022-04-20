@@ -195,6 +195,13 @@ table th {
     color: black;
 }
 
+.math-2 {
+    font-size: 26px;
+    font-family: "Cambria Math", serif;
+    font-weight: 500;
+    color: black;
+}
+
 .math-def-h {
     font-size: 40px;
     font-family: "Cambria Math", serif;
