@@ -2124,8 +2124,45 @@
                 <p class="footnote">*Note these can be thought of like for loops in programming</p>
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) += and *=</p>
-                <p>1. Calculate @@\sum_{k=7}^{16}12k+\sqrt{2}@@ ANS: @@1380+10\sqrt{2}@@</p>
-                <p>2. Calculate @@\prod_{k=6}^{9}k^2+1@@ ANS: @@9860500@@</p>
+                <p>1. Calculate @@\sum_{k=7}^{16}12k+\sqrt{2}@@</p>
+                <input type="radio" id="d3_1x1a" name="part1" value="@@1380@@">
+                <label for="d3_1x1a" class="math">@@1380@@</label><br>
+                <input type="radio" id="d3_1x1b" name="part1" value="@@1380+\sqrt{2}@@">
+                <label for="d3_1x1b" class="math">@@1380+\sqrt{2}@@</label><br>
+                <input type="radio" id="d3_1x1c" name="part1" value="@@1380+10\sqrt{2}@@">
+                <label for="d3_1x1c" class="math">@@1380+10\sqrt{2}@@</label><br>
+                <p>2. Calculate @@\prod_{k=6}^{9}k^2+1@@</p>
+                <input type="radio" id="d3_1x1d" name="part2" value="@@3024@@">
+                <label for="d3_1x1d" class="math">@@3024@@</label><br>
+                <input type="radio" id="d3_1x1e" name="part2" value="@@9860500@@">
+                <label for="d3_1x1e" class="math">@@9860500@@</label><br>
+                <input type="radio" id="d3_1x1f" name="part2" value="@@230@@">
+                <label for="d3_1x1f" class="math">@@230@@</label><br><br>
+                <input type="button" id="d3_1x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_1x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_1x1_y1' class='math'></span></td>
+                            <td><span class='math'></span>@@1380+10\sqrt{2}@@</td>
+                            <td id='d3_1x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d3_1x1_y2' class='math'></span></td>
+                            <td><span class='math'></span>@@9860500@@</td>
+                            <td id='d3_1x1_r2'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="3-2">
                 <br><h2>3.2: Proof by Mathematical Induction <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -2216,8 +2253,45 @@
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Graphing</p>
                 <p>Consider the graph</p><span><img src="images/G12.png" alt="Activity Graph"></span>
-                <p>1. What is the adjacency matrix? ANS: @@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&0&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@</p>
-                <p>2. What is the graph equation? ANS: @@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-3, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@</p>
+                <p>1. What is the adjacency matrix?</p>
+                <input type="radio" id="d3_3x1a" name="part1" value="@@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&0&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@">
+                <label for="d3_3x1a" class="math">@@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&0&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@</label><br>
+                <br><input type="radio" id="d3_3x1b" name="part1" value="@@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&3&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@">
+                <label for="d3_3x1b" class="math">@@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&3&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@</label><br>
+                <br><input type="radio" id="d3_3x1c" name="part1" value="@@\small\begin{bmatrix} 0&0&1&0&1&1 \\ 0&0&0&1&0&0 \\ 1&1&0&0&0&0 \\ 0&1&0&0&0&0 \\ 1&0&0&0&0&1 \\ 1&0&0&0&1&0 \end{bmatrix}\small@@">
+                <label for="d3_3x1c" class="math">@@\small\begin{bmatrix} 0&0&1&0&1&1 \\ 0&0&0&1&0&0 \\ 1&1&0&0&0&0 \\ 0&1&0&0&0&0 \\ 1&0&0&0&0&1 \\ 1&0&0&0&1&0 \end{bmatrix}\small@@</label><br>
+                <p>2. What is the graph equation?</p>
+                <input type="radio" id="d3_3x1d" name="part2" value="@@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-3, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@">
+                <label for="d3_3x1d" class="math">@@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-3, 1-5, 1-6, 3-2, 2-4, 5-6\}@@</label><br>
+                <br><input type="radio" id="d3_3x1e" name="part2" value="@@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-2, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@">
+                <label for="d3_3x1e" class="math">@@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-2, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@</label><br>
+                <br><input type="radio" id="d3_3x1f" name="part2" value="@@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-3, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@">
+                <label for="d3_3x1f" class="math">@@G=(V,E): V=\{1,2,3,4,5,6\}, E=\{1-3, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@</label><br><br>
+                <input type="button" id="d3_3x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_3x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_3x1_y1' class='math'></span></td>
+                            <td><span class='math'></span>@@\small\begin{bmatrix} 0&0&1&0&1&5 \\ 0&0&0&33&0&0 \\ 1&3&0&0&0&0 \\ 0&33&0&0&0&0 \\ 1&0&0&0&0&55 \\ 5&0&0&0&55&0 \end{bmatrix}\small@@</td>
+                            <td id='d3_3x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d3_3x1_y2' class='math'></span></td>
+                            <td><span class='math'></span>@@G=(V,E): V=\{1,2,3,4,5,6\},@@<br>@@E=\{1-3, 1-5, 1-6, 3\rightarrow2, 2-4, 5-6\}@@</td>
+                            <td id='d3_3x1_r2'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="3-4">
                 <br><h2>3.4: Trees and Traversal <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -2258,9 +2332,48 @@
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Roots and Leaves</p>
                 <p>Consider the tree</p><span><img src="images/G13.png" alt="Activity Tree"></span>
-                <p>1. Which node is the root? ANS: @@A@@</p>
-                <p>2. Which nodes are leaves? ANS: @@X,Y,Z,P,Q@@</p>
-                <p>3. What is the depth? ANS: @@4@@</p>
+                <p>1. Which node is the root?</p>
+                <label for="d3_4x1a" class="math"></label>Node: <input id="d3_4x1a" size="1"><br>
+                <p>2. Which nodes are leaves?</p>
+                <input type="radio" id="d3_4x1b" name="part1" value="@@X,Y,Z,P,Q@@">
+                <label for="d3_4x1b" class="math">@@X,Y,Z,P,Q@@</label><br>
+                <input type="radio" id="d3_4x1c" name="part1" value="@@X,D,B,M,O,P@@">
+                <label for="d3_4x1c" class="math">@@X,D,B,M,O,P@@</label><br>
+                <input type="radio" id="d3_4x1d" name="part1" value="@@C,N@@">
+                <label for="d3_4x1d" class="math">@@C,N@@</label><br>
+                <p>3. What is the depth?</p>
+                <label for="d3_4x1e" class="math"></label>Depth: <input id="d3_4x1e" size="1"><br><br>
+                <input type="button" id="d3_4x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_4x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_4x1_y1' class='math'></span></td>
+                            <td><span class='math'></span>@@A@@</td>
+                            <td id='d3_4x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d3_4x1_y2' class='math'></span></td>
+                            <td><span class='math'></span>@@X,Y,Z,P,Q@@</td>
+                            <td id='d3_4x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d3_4x1_y3' class='math'></span></td>
+                            <td><span class='math'></span>@@4@@</td>
+                            <td id='d3_4x1_r3'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="3-5">
                 <br><h2>3.5: Probability Theory <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -2293,11 +2406,52 @@
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Probably</p>
                 <p>Given two mutually exclusive and independent events, @@A,B,@@ with @@P(A)=0.3, P(B)=P(A')@@</p>
-                <p>1. What is @@P(B)?@@ ANS: @@0.7@@</p>
-                <p>2. What is @@P(A\cup B)?@@ ANS: @@1@@</p>
-                <p>3. What is @@P(A\cap B)?@@ ANS: @@0.21@@</p>
+                <p>1. What is @@P(B)?@@</p>
+                <label for="d3_5x1a" class="math"></label>@@P(B)=@@ <input id="d3_5x1a" size="1"><br>
+                <p>2. What is @@P(A\cup B)?@@</p>
+                <label for="d3_5x1b" class="math"></label>@@P(A\cup B)=@@ <input id="d3_5x1b" size="1"><br>
+                <p>3. What is @@P(A\cap B)?@@</p>
+                <label for="d3_5x1c" class="math"></label>@@P(A\cap B)=@@ <input id="d3_5x1c" size="1"><br>
                 <p>Given two inclusive but independent events, @@A,B,@@ with @@P(A)=0.23, P(B)=0.77@@</p>
-                <p>4. What is @@P(A\cup B)?@@ ANS: @@0.8229@@</p>
+                <p>4. What is @@P(A\cup B)?@@</p>
+                <label for="d3_5x1d" class="math"></label>@@P(A\cup B)=@@ <input id="d3_5x1d" size="1"><br><br>
+                <input type="button" id="d3_5x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_5x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_5x1_y1' class='math'></span></td>
+                            <td><span class='math'></span>@@0.7@@</td>
+                            <td id='d3_5x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d3_5x1_y2' class='math'></span></td>
+                            <td><span class='math'></span>@@1@@</td>
+                            <td id='d3_5x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d3_5x1_y3' class='math'></span></td>
+                            <td><span class='math'></span>@@0.21@@</td>
+                            <td id='d3_5x1_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><span id='d3_5x1_y4' class='math'></span></td>
+                            <td><span class='math'></span>@@0.8229@@</td>
+                            <td id='d3_5x1_r4'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="3-6">
                 <br><h2>3.6: Combinatorics <br><a href="#all" class="small">(All Topics)</a></h2>
@@ -2318,7 +2472,34 @@
                 <p><strong>Pascal's Triangle</strong>: A consequence of the Binomial Theorem which yields the coefficients given by binomial expansion. Below is the triangle up to @@n=17@@ (with coefficients divisible by 3 partitioned): </p><img src="images/pascal-3.png" alt="Pascal's Triangle" class="quarter3">
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Binomial Expansion</p>
-                <p>1. Using the binomial theorem, expand @@(2x+1)^3@@ ANS: @@8x^3+12x^2+6x+1@@</p>
+                <p>1. Using the binomial theorem, expand @@(2x+1)^3@@</p>
+                <input type="radio" id="d3_6x1a" name="part1" value="@@8x^3+18x+1@@">
+                <label for="d3_6x1a" class="math">@@8x^3+18x+1@@</label><br>
+                <input type="radio" id="d3_6x1b" name="part1" value="@@8x^3+12x^2+6x+1@@">
+                <label for="d3_6x1b" class="math">@@8x^3+12x^2+6x+1@@</label><br>
+                <input type="radio" id="d3_6x1c" name="part1" value="@@8x^3+12x^2+6x@@">
+                <label for="d3_6x1c" class="math">@@8x^3+12x^2+6x@@</label><br>
+                <input type="radio" id="d3_6x1d" name="part1" value="@@8x^3+1@@">
+                <label for="d3_6x1d" class="math">@@8x^3+1@@</label><br><br>
+                <input type="button" id="d3_6x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_6x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_6x1_y1' class='math'></span></td>
+                            <td><span class='math'>@@8x^3+12x^2+6x+1@@</span></td>
+                            <td id='d3_6x1_r1'></td>
+                        </tr>
+                    </table>
+                </div>
                 <!--https://www.mathsisfun.com/combinatorics/combinations-permutations.html-->
             </div>
             <div id="3-7">
@@ -2347,13 +2528,96 @@
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Sets</p>
                 <p>Consider the superset, @@S=\{A,B,C,1,2,3,X,Y,Z\}@@ and the subsets @@M=\{A,B,C,1,2,3\}@@ and @@N=\{1,2,3,X,Y,Z\}@@</p>
-                <p>1. Find @@M'@@ ANS: @@\{X,Y,Z\}@@</p>
-                <p>2. Find @@N'@@ ANS: @@\{A,B,C\}@@</p>
-                <p>3. Find @@M\cup N@@ ANS: @@S@@</p>
-                <p>4. Find @@M\cap N@@ ANS: @@\{1,2,3\}@@</p>
-                <p>5. Find @@M\setminus N@@ ANS: @@\{A,B,C\}@@</p>
-                <p>6. Find @@N\setminus M@@ ANS: @@\{X,Y,Z\}@@</p>
-                <p>7. Find @@M\Delta N@@ ANS: @@\{A,B,C,X,Y,Z\}@@</p>
+                <p>1. Find @@M'@@</p>
+                <input type="radio" id="d3_7x1a" name="part1" value="@@\{X,Y,Z\}@@">
+                <label for="d3_7x1a" class="math">@@\{X,Y,Z\}@@</label><br>
+                <input type="radio" id="d3_7x1b" name="part1" value="@@\{A,B,C\}@@">
+                <label for="d3_7x1b" class="math">@@\{A,B,C\}@@</label><br>
+                <p>2. Find @@N'@@</p>
+                <input type="radio" id="d3_7x1c" name="part2" value="@@\{X,Y,Z\}@@">
+                <label for="d3_7x1c" class="math">@@\{X,Y,Z\}@@</label><br>
+                <input type="radio" id="d3_7x1d" name="part2" value="@@\{A,B,C\}@@">
+                <label for="d3_7x1d" class="math">@@\{A,B,C\}@@</label><br>
+                <p>3. Find @@M\cup N@@</p>
+                <input type="radio" id="d3_7x1e" name="part3" value="@@\{A,B,C,X,Y,Z\}@@">
+                <label for="d3_7x1e" class="math">@@\{A,B,C,X,Y,Z\}@@</label><br>
+                <input type="radio" id="d3_7x1f" name="part3" value="@@S@@">
+                <label for="d3_7x1f" class="math">@@S@@</label><br>
+                <p>4. Find @@M\cap N@@</p>
+                <input type="radio" id="d3_7x1g" name="part4" value="@@\emptyset@@">
+                <label for="d3_7x1g" class="math">@@\emptyset@@</label><br>
+                <input type="radio" id="d3_7x1h" name="part4" value="@@\{1,2,3\}@@">
+                <label for="d3_7x1h" class="math">@@\{1,2,3\}@@</label><br>
+                <p>5. Find @@M\setminus N@@</p>
+                <input type="radio" id="d3_7x1i" name="part5" value="@@\{A,B,C\}@@">
+                <label for="d3_7x1i" class="math">@@\{A,B,C\}@@</label><br>
+                <input type="radio" id="d3_7x1j" name="part5" value="@@\{X,Y,Z\}@@">
+                <label for="d3_7x1j" class="math">@@\{X,Y,Z\}@@</label><br>
+                <p>6. Find @@N\setminus M@@</p>
+                <input type="radio" id="d3_7x1k" name="part6" value="@@\{A,B,C\}@@">
+                <label for="d3_7x1k" class="math">@@\{A,B,C\}@@</label><br>
+                <input type="radio" id="d3_7x1l" name="part6" value="@@\{X,Y,Z\}@@">
+                <label for="d3_7x1l" class="math">@@\{X,Y,Z\}@@</label><br>
+                <p>7. Find @@M\Delta N@@</p>
+                <input type="radio" id="d3_7x1m" name="part7" value="@@\{A,B,C,X,Y,Z\}@@">
+                <label for="d3_7x1m" class="math">@@\{A,B,C,X,Y,Z\}@@</label><br>
+                <input type="radio" id="d3_7x1n" name="part7" value="@@\{1,2,3\}@@">
+                <label for="d3_7x1n" class="math">@@\{1,2,3\}@@</label><br><br>
+                <input type="button" id="d3_7x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_7x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_7x1_y1' class='math'></span></td>
+                            <td><span class='math'></span>@@\{X,Y,Z\}@@</td>
+                            <td id='d3_7x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d3_7x1_y2' class='math'></span></td>
+                            <td><span class='math'></span>@@\{A,B,C\}@@</td>
+                            <td id='d3_7x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d3_7x1_y3' class='math'></span></td>
+                            <td><span class='math'></span>@@S@@</td>
+                            <td id='d3_7x1_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><span id='d3_7x1_y4' class='math'></span></td>
+                            <td><span class='math'></span>@@\{1,2,3\}@@</td>
+                            <td id='d3_7x1_r4'></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td><span id='d3_7x1_y5' class='math'></span></td>
+                            <td><span class='math'></span>@@\{A,B,C\}@@</td>
+                            <td id='d3_7x1_r5'></td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td><span id='d3_7x1_y6' class='math'></span></td>
+                            <td><span class='math'></span>@@\{X,Y,Z\}@@</td>
+                            <td id='d3_7x1_r6'></td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td><span id='d3_7x1_y7' class='math'></span></td>
+                            <td><span class='math'></span>@@\{A,B,C,X,Y,Z\}@@</td>
+                            <td id='d3_7x1_r7'></td>
+                        </tr>
+                    </table>
+                </div>
                 <!--https://commons.wikimedia.org/wiki/File:Set_Theory_Operations.svg-->
             </div>
             <div id="3-8">
@@ -2369,15 +2633,114 @@
                 <img src="images/functions.jpg" alt="Function Mapping">
                 <!-- Activity 1 -->
                 <p class="activity-header">Activity 1) Function?</p>
-                <p>1. Is @@f(x)=2x+1, x\in\mathbb{R}@@ a function? ANS: Yes</p>
+                <p>1. Is @@f(x)=2x+1, x\in\mathbb{R}@@ a function?</p>
+                <input type="radio" id="d3_8x1a" name="part1" value="Yes">
+                <label for="d3_8x1a" class="math">Yes</label><br>
+                <input type="radio" id="d3_8x1b" name="part1" value="No">
+                <label for="d3_8x1b" class="math">No</label><br>
                 <p>Consider the set map</p><span><img src="images/G14.png" alt="Activity Function"></span>
-                <p>2. Is this a function? ANS: Yes</p>
-                <p>3. What is the domain? ANS: @@\{A,B,C\}@@</p>
-                <p>4. What is the codomain? ANS: @@\{X_1,X_2,X_3,X_4\}@@</p>
-                <p>5. What is the range? ANS: @@\{X_1,X_2,X_3\}@@</p>
-                <p>6. Is this a injection? ANS: Yes</p>
-                <p>7. Is this a surjection? ANS: No</p>
-                <p>8. Is this a bijection? ANS: No</p>
+                <p>2. Is this a function?</p>
+                <input type="radio" id="d3_8x1c" name="part2" value="Yes">
+                <label for="d3_8x1c" class="math">Yes</label><br>
+                <input type="radio" id="d3_8x1d" name="part2" value="No">
+                <label for="d3_8x1d" class="math">No</label><br>
+                <p>3. What is the domain?</p>
+                <input type="radio" id="d3_8x1e" name="part3" value="@@\{X_1,X_2,X_3,X_4\}@@">
+                <label for="d3_8x1e" class="math">@@\{X_1,X_2,X_3,X_4\}@@</label><br>
+                <input type="radio" id="d3_8x1f" name="part3" value="@@\{A,B,C\}@@">
+                <label for="d3_8x1f" class="math">@@\{A,B,C\}@@</label><br>
+                <input type="radio" id="d3_8x1x" name="part3" value="@@\{X_1,X_2,X_4\}@@">
+                <label for="d3_8x1x" class="math">@@\{X_1,X_2,X_4\}@@</label><br>
+                <p>4. What is the codomain?</p>
+                <input type="radio" id="d3_8x1g" name="part4" value="@@\{X_1,X_2,X_3,X_4\}@@">
+                <label for="d3_8x1g" class="math">@@\{X_1,X_2,X_3,X_4\}@@</label><br>
+                <input type="radio" id="d3_8x1h" name="part4" value="@@\{A,B,C\}@@">
+                <label for="d3_8x1h" class="math">@@\{A,B,C\}@@</label><br>
+                <input type="radio" id="d3_8x1y" name="part4" value="@@\{X_1,X_2,X_4\}@@">
+                <label for="d3_8x1y" class="math">@@\{X_1,X_2,X_4\}@@</label><br>
+                <p>5. What is the range?</p>
+                <input type="radio" id="d3_8x1i" name="part5" value="@@\{X_1,X_2,X_3,X_4\}@@">
+                <label for="d3_8x1i" class="math">@@\{X_1,X_2,X_3,X_4\}@@</label><br>
+                <input type="radio" id="d3_8x1j" name="part5" value="@@\{A,B,C\}@@">
+                <label for="d3_8x1j" class="math">@@\{A,B,C\}@@</label><br>
+                <input type="radio" id="d3_8x1z" name="part5" value="@@\{X_1,X_2,X_4\}@@">
+                <label for="d3_8x1z" class="math">@@\{X_1,X_2,X_4\}@@</label><br>
+                <p>6. Is this an injection?</p>
+                <input type="radio" id="d3_8x1k" name="part6" value="Yes">
+                <label for="d3_8x1k" class="math">Yes</label><br>
+                <input type="radio" id="d3_8x1l" name="part6" value="No">
+                <label for="d3_8x1l" class="math">No</label><br>
+                <p>7. Is this a surjection?</p>
+                <input type="radio" id="d3_8x1m" name="part7" value="Yes">
+                <label for="d3_8x1m" class="math">Yes</label><br>
+                <input type="radio" id="d3_8x1n" name="part7" value="No">
+                <label for="d3_8x1n" class="math">No</label><br>
+                <p>8. Is this a bijection?</p>
+                <input type="radio" id="d3_8x1o" name="part8" value="Yes">
+                <label for="d3_8x1o" class="math">Yes</label><br>
+                <input type="radio" id="d3_8x1p" name="part8" value="No">
+                <label for="d3_8x1p" class="math">No</label><br><br>
+                <input type="button" id="d3_8x1" value="Verify" class="button-interact"/>
+                <div class="button-whitespace"></div>
+                <div id="d3_8x1_result" class="result-border">
+                    <h2 class='result-header'>Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Your answer</th>
+                            <th>Correct answer</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td><span id='d3_8x1_y1' class='math'></span></td>
+                            <td><span class='math'></span>Yes</td>
+                            <td id='d3_8x1_r1'></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><span id='d3_8x1_y2' class='math'></span></td>
+                            <td><span class='math'></span>Yes</td>
+                            <td id='d3_8x1_r2'></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><span id='d3_8x1_y3' class='math'></span></td>
+                            <td><span class='math'></span>@@\{A,B,C\}@@</td>
+                            <td id='d3_8x1_r3'></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><span id='d3_8x1_y4' class='math'></span></td>
+                            <td><span class='math'></span>@@\{X_1,X_2,X_3,X_4\}@@</td>
+                            <td id='d3_8x1_r4'></td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td><span id='d3_8x1_y5' class='math'></span></td>
+                            <td><span class='math'></span>@@\{X_1,X_2,X_4\}@@</td>
+                            <td id='d3_8x1_r5'></td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td><span id='d3_8x1_y6' class='math'></span></td>
+                            <td><span class='math'></span>Yes</td>
+                            <td id='d3_8x1_r6'></td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td><span id='d3_8x1_y7' class='math'></span></td>
+                            <td><span class='math'></span>No</td>
+                            <td id='d3_8x1_r7'></td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td><span id='d3_8x1_y8' class='math'></span></td>
+                            <td><span class='math'></span>No</td>
+                            <td id='d3_8x1_r8'></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div id="3-9">
                 <br><h2>3.9: Some Algorithms <br><a href="#all" class="small">(All Topics)</a></h2>

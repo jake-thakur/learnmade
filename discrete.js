@@ -35,6 +35,13 @@ window.onload = function()
     _("d2_7x1").onclick = d2_7x1;
     _("d2_8x1").onclick = d2_8x1;
     _("d2_9x1").onclick = d2_9x1;
+    _("d3_1x1").onclick = d3_1x1;
+    _("d3_3x1").onclick = d3_3x1;
+    _("d3_4x1").onclick = d3_4x1;
+    _("d3_5x1").onclick = d3_5x1;
+    _("d3_6x1").onclick = d3_6x1;
+    _("d3_7x1").onclick = d3_7x1;
+    _("d3_8x1").onclick = d3_8x1;
 
     /* discrete interactive */
 
