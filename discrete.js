@@ -793,26 +793,337 @@ window.onload = function()
     // 3.1
     function d3_1x1() {
         document.getElementById("d3_1x1_result").style.display = "block";
+
+        var d3_1x1_a = document.getElementById("d3_1x1a").checked;
+        var d3_1x1_b = document.getElementById("d3_1x1b").checked;
+        var d3_1x1_c = document.getElementById("d3_1x1c").checked;
+        var d3_1x1_d = document.getElementById("d3_1x1d").checked;
+        var d3_1x1_e = document.getElementById("d3_1x1e").checked;
+        var d3_1x1_f = document.getElementById("d3_1x1f").checked;
+
+        var d3_1x1_v1, d3_1x1_v2;
+        if (d3_1x1_a) {d3_1x1_v1 = document.getElementById("d3_1x1a").value;}
+        if (d3_1x1_b) {d3_1x1_v1 = document.getElementById("d3_1x1b").value;}
+        if (d3_1x1_c) {d3_1x1_v1 = document.getElementById("d3_1x1c").value;}
+        if (d3_1x1_d) {d3_1x1_v2 = document.getElementById("d3_1x1d").value;}
+        if (d3_1x1_e) {d3_1x1_v2 = document.getElementById("d3_1x1e").value;}
+        if (d3_1x1_f) {d3_1x1_v2 = document.getElementById("d3_1x1f").value;}
+
+        // determine if answers are correct
+        var d3_1x1_user = [d3_1x1_v1, d3_1x1_v2];
+        var d3_1x1_key = ["@@1380+10\\sqrt{2}@@","@@9860500@@"];
+        var d3_1x1_bool = [false, false];
+        for (i = 0; i < d3_1x1_key.length; i++) {
+            if (d3_1x1_user[i] == d3_1x1_key[i]) {d3_1x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_1x1_y1").innerHTML = d3_1x1_v1;
+        document.getElementById("d3_1x1_y2").innerHTML = d3_1x1_v2;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_1x1_bool[0]) {document.getElementById("d3_1x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_1x1_r1").innerHTML = "incorrect";}
+        if (!d3_1x1_bool[1]) {document.getElementById("d3_1x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d3_1x1_r2").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_1x1_bool[0]) {document.getElementById("d3_1x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_1x1_r1").innerHTML = "correct";}
+        if (d3_1x1_bool[1]) {document.getElementById("d3_1x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d3_1x1_r2").innerHTML = "correct";}
     }
     // 3.2
     // 3.3
     function d3_3x1() {
-        document.getElementById("d3_3x1_result").style.display = "block";}
+        document.getElementById("d3_3x1_result").style.display = "block";
+
+        var d3_3x1_a = document.getElementById("d3_3x1a").checked;
+        var d3_3x1_b = document.getElementById("d3_3x1b").checked;
+        var d3_3x1_c = document.getElementById("d3_3x1c").checked;
+        var d3_3x1_d = document.getElementById("d3_3x1d").checked;
+        var d3_3x1_e = document.getElementById("d3_3x1e").checked;
+        var d3_3x1_f = document.getElementById("d3_3x1f").checked;
+
+        var d3_3x1_v1, d3_3x1_v2;
+        if (d3_3x1_a) {d3_3x1_v1 = document.getElementById("d3_3x1a").value;}
+        if (d3_3x1_b) {d3_3x1_v1 = document.getElementById("d3_3x1b").value;}
+        if (d3_3x1_c) {d3_3x1_v1 = document.getElementById("d3_3x1c").value;}
+        if (d3_3x1_d) {d3_3x1_v2 = document.getElementById("d3_3x1d").value;}
+        if (d3_3x1_e) {d3_3x1_v2 = document.getElementById("d3_3x1e").value;}
+        if (d3_3x1_f) {d3_3x1_v2 = document.getElementById("d3_3x1f").value;}
+
+        // determine if answers are correct
+        var d3_3x1_user = [d3_3x1_v1, d3_3x1_v2];
+        var d3_3x1_key = ["@@\\small\\begin{bmatrix} 0&0&1&0&1&5 \\\\ 0&0&0&33&0&0 \\\\ 1&3&0&0&0&0 \\\\ 0&33&0&0&0&0 \\\\ 1&0&0&0&0&55 \\\\ 5&0&0&0&55&0 \\end{bmatrix}\\small@@","@@G=(V,E): V=\\{1,2,3,4,5,6\\},@@<br>@@E=\\{1-3, 1-5, 1-6, 3\\rightarrow2, 2-4, 5-6\\}@@"];
+        var d3_3x1_bool = [false, false];
+        for (i = 0; i < d3_3x1_key.length; i++) {
+            if (d3_3x1_user[i] == d3_3x1_key[i]) {d3_3x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_3x1_y1").innerHTML = d3_3x1_v1;
+        document.getElementById("d3_3x1_y2").innerHTML = d3_3x1_v2;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_3x1_bool[0]) {document.getElementById("d3_3x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_3x1_r1").innerHTML = "incorrect";}
+        if (!d3_3x1_bool[1]) {document.getElementById("d3_3x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d3_3x1_r2").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_3x1_bool[0]) {document.getElementById("d3_3x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_3x1_r1").innerHTML = "correct";}
+        if (d3_3x1_bool[1]) {document.getElementById("d3_3x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d3_3x1_r2").innerHTML = "correct";}
+    }
+
     // 3.4
     function d3_4x1() {
-        document.getElementById("d3_4x1_result").style.display = "block";}
+        document.getElementById("d3_4x1_result").style.display = "block";
+
+        var d3_4x1_b = document.getElementById("d3_4x1b").checked;
+        var d3_4x1_c = document.getElementById("d3_4x1c").checked;
+        var d3_4x1_d = document.getElementById("d3_4x1d").checked;
+
+        var d3_4x1_v2;
+        var d3_4x1_v1 = "@@"+document.getElementById("d3_4x1a").value+"@@";
+        if (d3_4x1_b) {d3_4x1_v2 = document.getElementById("d3_4x1b").value;}
+        if (d3_4x1_c) {d3_4x1_v2 = document.getElementById("d3_4x1c").value;}
+        if (d3_4x1_d) {d3_4x1_v2 = document.getElementById("d3_4x1d").value;}
+        var d3_4x1_v3 = "@@"+document.getElementById("d3_4x1e").value+"@@";
+
+        // determine if answers are correct
+        var d3_4x1_user = [d3_4x1_v1, d3_4x1_v2, d3_4x1_v3];
+        var d3_4x1_key = ["@@A@@","@@X,Y,Z,P,Q@@","@@4@@"];
+        var d3_4x1_bool = [false, false, false];
+        for (i = 0; i < d3_4x1_key.length; i++) {
+            if (d3_4x1_user[i] == d3_4x1_key[i]) {d3_4x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_4x1_y1").innerHTML = d3_4x1_v1;
+        document.getElementById("d3_4x1_y2").innerHTML = d3_4x1_v2;
+        document.getElementById("d3_4x1_y3").innerHTML = d3_4x1_v3;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_4x1_bool[0]) {document.getElementById("d3_4x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_4x1_r1").innerHTML = "incorrect";}
+        if (!d3_4x1_bool[1]) {document.getElementById("d3_4x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d3_4x1_r2").innerHTML = "incorrect";}
+        if (!d3_4x1_bool[2]) {document.getElementById("d3_4x1_r3").style.backgroundColor = "#B5534F"; document.getElementById("d3_4x1_r3").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_4x1_bool[0]) {document.getElementById("d3_4x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_4x1_r1").innerHTML = "correct";}
+        if (d3_4x1_bool[1]) {document.getElementById("d3_4x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d3_4x1_r2").innerHTML = "correct";}
+        if (d3_4x1_bool[2]) {document.getElementById("d3_4x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d3_4x1_r3").innerHTML = "correct";}
+    }
     // 3.5
     function d3_5x1() {
-        document.getElementById("d3_5x1_result").style.display = "block";}
+        document.getElementById("d3_5x1_result").style.display = "block";
+
+        var d3_5x1_v1 = "@@"+document.getElementById("d3_5x1a").value+"@@";
+        var d3_5x1_v2 = "@@"+document.getElementById("d3_5x1b").value+"@@";
+        var d3_5x1_v3 = "@@"+document.getElementById("d3_5x1c").value+"@@";
+        var d3_5x1_v4 = "@@"+document.getElementById("d3_5x1d").value+"@@";
+
+        // determine if answers are correct
+        var d3_5x1_user = [d3_5x1_v1, d3_5x1_v2, d3_5x1_v3, d3_5x1_v4];
+        var d3_5x1_key = ["@@0.7@@","@@1@@","@@0.21@@","@@0.8229@@"];
+        var d3_5x1_bool = [false, false, false, false];
+        for (i = 0; i < d3_5x1_key.length; i++) {
+            if (d3_5x1_user[i] == d3_5x1_key[i]) {d3_5x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_5x1_y1").innerHTML = d3_5x1_v1;
+        document.getElementById("d3_5x1_y2").innerHTML = d3_5x1_v2;
+        document.getElementById("d3_5x1_y3").innerHTML = d3_5x1_v3;
+        document.getElementById("d3_5x1_y4").innerHTML = d3_5x1_v4;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_5x1_bool[0]) {document.getElementById("d3_5x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_5x1_r1").innerHTML = "incorrect";}
+        if (!d3_5x1_bool[1]) {document.getElementById("d3_5x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d3_5x1_r2").innerHTML = "incorrect";}
+        if (!d3_5x1_bool[2]) {document.getElementById("d3_5x1_r3").style.backgroundColor = "#B5534F"; document.getElementById("d3_5x1_r3").innerHTML = "incorrect";}
+        if (!d3_5x1_bool[3]) {document.getElementById("d3_5x1_r4").style.backgroundColor = "#B5534F"; document.getElementById("d3_5x1_r4").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_5x1_bool[0]) {document.getElementById("d3_5x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_5x1_r1").innerHTML = "correct";}
+        if (d3_5x1_bool[1]) {document.getElementById("d3_5x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d3_5x1_r2").innerHTML = "correct";}
+        if (d3_5x1_bool[2]) {document.getElementById("d3_5x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d3_5x1_r3").innerHTML = "correct";}
+        if (d3_5x1_bool[3]) {document.getElementById("d3_5x1_r4").style.backgroundColor = "#739E5B"; document.getElementById("d3_5x1_r4").innerHTML = "correct";}}
     // 3.6
     function d3_6x1() {
-        document.getElementById("d3_6x1_result").style.display = "block";}
+        document.getElementById("d3_6x1_result").style.display = "block";
+        var d3_6x1_a = document.getElementById("d3_6x1a").checked;
+        var d3_6x1_b = document.getElementById("d3_6x1b").checked;
+        var d3_6x1_c = document.getElementById("d3_6x1c").checked;
+        var d3_6x1_d = document.getElementById("d3_6x1d").checked;
+
+        var d3_6x1_v1;
+        if (d3_6x1_a) {d3_6x1_v1 = document.getElementById("d3_6x1a").value;}
+        if (d3_6x1_b) {d3_6x1_v1 = document.getElementById("d3_6x1b").value;}
+        if (d3_6x1_c) {d3_6x1_v1 = document.getElementById("d3_6x1c").value;}
+        if (d3_6x1_d) {d3_6x1_v1 = document.getElementById("d3_6x1d").value;}
+
+        // determine if answers are correct
+        var d3_6x1_user = [d3_6x1_v1];
+        var d3_6x1_key = ["@@8x^3+12x^2+6x+1@@"];
+        var d3_6x1_bool = [false];
+        for (i = 0; i < d3_6x1_key.length; i++) {
+            if (d3_6x1_user[i] == d3_6x1_key[i]) {d3_6x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_6x1_y1").innerHTML = d3_6x1_v1;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_6x1_bool[0]) {document.getElementById("d3_6x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_6x1_r1").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_6x1_bool[0]) {document.getElementById("d3_6x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_6x1_r1").innerHTML = "correct";}}
     // 3.7
     function d3_7x1() {
-        document.getElementById("d3_7x1_result").style.display = "block";}
+        document.getElementById("d3_7x1_result").style.display = "block";
+
+        var d3_7x1_a = document.getElementById("d3_7x1a").checked;
+        var d3_7x1_b = document.getElementById("d3_7x1b").checked;
+        var d3_7x1_c = document.getElementById("d3_7x1c").checked;
+        var d3_7x1_d = document.getElementById("d3_7x1d").checked;
+        var d3_7x1_e = document.getElementById("d3_7x1e").checked;
+        var d3_7x1_f = document.getElementById("d3_7x1f").checked;
+        var d3_7x1_g = document.getElementById("d3_7x1g").checked;
+        var d3_7x1_h = document.getElementById("d3_7x1h").checked;
+        var d3_7x1_i = document.getElementById("d3_7x1i").checked;
+        var d3_7x1_j = document.getElementById("d3_7x1j").checked;
+        var d3_7x1_k = document.getElementById("d3_7x1k").checked;
+        var d3_7x1_l = document.getElementById("d3_7x1l").checked;
+        var d3_7x1_m = document.getElementById("d3_7x1m").checked;
+        var d3_7x1_n = document.getElementById("d3_7x1n").checked;
+
+        var d3_7x1_v1, d3_7x1_v2, d3_7x1_v3, d3_7x1_v4, d3_7x1_v5, d3_7x1_v6, d3_7x1_v7;
+        if (d3_7x1_a) {d3_7x1_v1 = document.getElementById("d3_7x1a").value;}
+        if (d3_7x1_b) {d3_7x1_v1 = document.getElementById("d3_7x1b").value;}
+        if (d3_7x1_c) {d3_7x1_v2 = document.getElementById("d3_7x1c").value;}
+        if (d3_7x1_d) {d3_7x1_v2 = document.getElementById("d3_7x1d").value;}
+        if (d3_7x1_e) {d3_7x1_v3 = document.getElementById("d3_7x1e").value;}
+        if (d3_7x1_f) {d3_7x1_v3 = document.getElementById("d3_7x1f").value;}
+        if (d3_7x1_g) {d3_7x1_v4 = document.getElementById("d3_7x1g").value;}
+        if (d3_7x1_h) {d3_7x1_v4 = document.getElementById("d3_7x1h").value;}
+        if (d3_7x1_i) {d3_7x1_v5 = document.getElementById("d3_7x1i").value;}
+        if (d3_7x1_j) {d3_7x1_v5 = document.getElementById("d3_7x1j").value;}
+        if (d3_7x1_k) {d3_7x1_v6 = document.getElementById("d3_7x1k").value;}
+        if (d3_7x1_l) {d3_7x1_v6 = document.getElementById("d3_7x1l").value;}
+        if (d3_7x1_m) {d3_7x1_v7 = document.getElementById("d3_7x1m").value;}
+        if (d3_7x1_n) {d3_7x1_v7 = document.getElementById("d3_7x1n").value;}
+
+        // determine if answers are correct
+        var d3_7x1_user = [d3_7x1_v1, d3_7x1_v2, d3_7x1_v3, d3_7x1_v4, d3_7x1_v5, d3_7x1_v6, d3_7x1_v7];
+        var d3_7x1_key = ["@@\\{X,Y,Z\\}@@","@@\\{A,B,C\\}@@","@@S@@","@@\\{1,2,3\\}@@","@@\\{A,B,C\\}@@","@@\\{X,Y,Z\\}@@","@@\\{A,B,C,X,Y,Z\\}@@"];
+        var d3_7x1_bool = [false, false, false, false, false, false, false];
+        for (i = 0; i < d3_7x1_key.length; i++) {
+            if (d3_7x1_user[i] == d3_7x1_key[i]) {d3_7x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_7x1_y1").innerHTML = d3_7x1_v1;
+        document.getElementById("d3_7x1_y2").innerHTML = d3_7x1_v2;
+        document.getElementById("d3_7x1_y3").innerHTML = d3_7x1_v3;
+        document.getElementById("d3_7x1_y4").innerHTML = d3_7x1_v4;
+        document.getElementById("d3_7x1_y5").innerHTML = d3_7x1_v5;
+        document.getElementById("d3_7x1_y6").innerHTML = d3_7x1_v6;
+        document.getElementById("d3_7x1_y7").innerHTML = d3_7x1_v7;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_7x1_bool[0]) {document.getElementById("d3_7x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r1").innerHTML = "incorrect";}
+        if (!d3_7x1_bool[1]) {document.getElementById("d3_7x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r2").innerHTML = "incorrect";}
+        if (!d3_7x1_bool[2]) {document.getElementById("d3_7x1_r3").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r3").innerHTML = "incorrect";}
+        if (!d3_7x1_bool[3]) {document.getElementById("d3_7x1_r4").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r4").innerHTML = "incorrect";}
+        if (!d3_7x1_bool[4]) {document.getElementById("d3_7x1_r5").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r5").innerHTML = "incorrect";}
+        if (!d3_7x1_bool[5]) {document.getElementById("d3_7x1_r6").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r6").innerHTML = "incorrect";}
+        if (!d3_7x1_bool[6]) {document.getElementById("d3_7x1_r7").style.backgroundColor = "#B5534F"; document.getElementById("d3_7x1_r7").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_7x1_bool[0]) {document.getElementById("d3_7x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r1").innerHTML = "correct";}
+        if (d3_7x1_bool[1]) {document.getElementById("d3_7x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r2").innerHTML = "correct";}
+        if (d3_7x1_bool[2]) {document.getElementById("d3_7x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r3").innerHTML = "correct";}
+        if (d3_7x1_bool[3]) {document.getElementById("d3_7x1_r4").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r4").innerHTML = "correct";}
+        if (d3_7x1_bool[4]) {document.getElementById("d3_7x1_r5").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r5").innerHTML = "correct";}
+        if (d3_7x1_bool[5]) {document.getElementById("d3_7x1_r6").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r6").innerHTML = "correct";}
+        if (d3_7x1_bool[6]) {document.getElementById("d3_7x1_r7").style.backgroundColor = "#739E5B"; document.getElementById("d3_7x1_r7").innerHTML = "correct";}
+    }
     // 3.8
     function d3_8x1() {
-        document.getElementById("d3_8x1_result").style.display = "block";}
+        document.getElementById("d3_8x1_result").style.display = "block";
+        var d3_8x1_a = document.getElementById("d3_8x1a").checked;
+        var d3_8x1_b = document.getElementById("d3_8x1b").checked;
+        var d3_8x1_c = document.getElementById("d3_8x1c").checked;
+        var d3_8x1_d = document.getElementById("d3_8x1d").checked;
+        var d3_8x1_e = document.getElementById("d3_8x1e").checked;
+        var d3_8x1_f = document.getElementById("d3_8x1f").checked;
+        var d3_8x1_x = document.getElementById("d3_8x1x").checked;
+        var d3_8x1_g = document.getElementById("d3_8x1g").checked;
+        var d3_8x1_h = document.getElementById("d3_8x1h").checked;
+        var d3_8x1_y = document.getElementById("d3_8x1y").checked;
+        var d3_8x1_i = document.getElementById("d3_8x1i").checked;
+        var d3_8x1_j = document.getElementById("d3_8x1j").checked;
+        var d3_8x1_z = document.getElementById("d3_8x1z").checked;
+        var d3_8x1_k = document.getElementById("d3_8x1k").checked;
+        var d3_8x1_l = document.getElementById("d3_8x1l").checked;
+        var d3_8x1_m = document.getElementById("d3_8x1m").checked;
+        var d3_8x1_n = document.getElementById("d3_8x1n").checked;
+        var d3_8x1_o = document.getElementById("d3_8x1o").checked;
+        var d3_8x1_p = document.getElementById("d3_8x1p").checked;
+
+        var d3_8x1_v1, d3_8x1_v2, d3_8x1_v3, d3_8x1_v4, d3_8x1_v5, d3_8x1_v6, d3_8x1_v7, d3_8x1_v8;
+        if (d3_8x1_a) {d3_8x1_v1 = document.getElementById("d3_8x1a").value;}
+        if (d3_8x1_b) {d3_8x1_v1 = document.getElementById("d3_8x1b").value;}
+        if (d3_8x1_c) {d3_8x1_v2 = document.getElementById("d3_8x1c").value;}
+        if (d3_8x1_d) {d3_8x1_v2 = document.getElementById("d3_8x1d").value;}
+        if (d3_8x1_e) {d3_8x1_v3 = document.getElementById("d3_8x1e").value;}
+        if (d3_8x1_f) {d3_8x1_v3 = document.getElementById("d3_8x1f").value;}
+        if (d3_8x1_x) {d3_8x1_v3 = document.getElementById("d3_8x1x").value;}
+        if (d3_8x1_g) {d3_8x1_v4 = document.getElementById("d3_8x1g").value;}
+        if (d3_8x1_h) {d3_8x1_v4 = document.getElementById("d3_8x1h").value;}
+        if (d3_8x1_y) {d3_8x1_v4 = document.getElementById("d3_8x1y").value;}
+        if (d3_8x1_i) {d3_8x1_v5 = document.getElementById("d3_8x1i").value;}
+        if (d3_8x1_j) {d3_8x1_v5 = document.getElementById("d3_8x1j").value;}
+        if (d3_8x1_z) {d3_8x1_v5 = document.getElementById("d3_8x1z").value;}
+        if (d3_8x1_k) {d3_8x1_v6 = document.getElementById("d3_8x1k").value;}
+        if (d3_8x1_l) {d3_8x1_v6 = document.getElementById("d3_8x1l").value;}
+        if (d3_8x1_m) {d3_8x1_v7 = document.getElementById("d3_8x1m").value;}
+        if (d3_8x1_n) {d3_8x1_v7 = document.getElementById("d3_8x1n").value;}
+        if (d3_8x1_o) {d3_8x1_v8 = document.getElementById("d3_8x1o").value;}
+        if (d3_8x1_p) {d3_8x1_v8 = document.getElementById("d3_8x1p").value;}
+
+        // determine if answers are correct
+        var d3_8x1_user = [d3_8x1_v1, d3_8x1_v2, d3_8x1_v3, d3_8x1_v4, d3_8x1_v5, d3_8x1_v6, d3_8x1_v7, d3_8x1_v8];
+        var d3_8x1_key = ["Yes","Yes","@@\\{A,B,C\\}@@","@@\\{X_1,X_2,X_3,X_4\\}@@","@@\\{X_1,X_2,X_4\\}@@","Yes","No","No"];
+        var d3_8x1_bool = [false, false, false, false, false, false, false, false];
+        for (i = 0; i < d3_8x1_key.length; i++) {
+            if (d3_8x1_user[i] == d3_8x1_key[i]) {d3_8x1_bool[i] = true;}
+        }
+
+        document.getElementById("d3_8x1_y1").innerHTML = d3_8x1_v1;
+        document.getElementById("d3_8x1_y2").innerHTML = d3_8x1_v2;
+        document.getElementById("d3_8x1_y3").innerHTML = d3_8x1_v3;
+        document.getElementById("d3_8x1_y4").innerHTML = d3_8x1_v4;
+        document.getElementById("d3_8x1_y5").innerHTML = d3_8x1_v5;
+        document.getElementById("d3_8x1_y6").innerHTML = d3_8x1_v6;
+        document.getElementById("d3_8x1_y7").innerHTML = d3_8x1_v7;
+        document.getElementById("d3_8x1_y8").innerHTML = d3_8x1_v8;
+        MathJax.typeset()
+
+        // if incorrect
+        if (!d3_8x1_bool[0]) {document.getElementById("d3_8x1_r1").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r1").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[1]) {document.getElementById("d3_8x1_r2").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r2").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[2]) {document.getElementById("d3_8x1_r3").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r3").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[3]) {document.getElementById("d3_8x1_r4").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r4").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[4]) {document.getElementById("d3_8x1_r5").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r5").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[5]) {document.getElementById("d3_8x1_r6").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r6").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[6]) {document.getElementById("d3_8x1_r7").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r7").innerHTML = "incorrect";}
+        if (!d3_8x1_bool[7]) {document.getElementById("d3_8x1_r8").style.backgroundColor = "#B5534F"; document.getElementById("d3_8x1_r8").innerHTML = "incorrect";}
+
+        // if correct
+        if (d3_8x1_bool[0]) {document.getElementById("d3_8x1_r1").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r1").innerHTML = "correct";}
+        if (d3_8x1_bool[1]) {document.getElementById("d3_8x1_r2").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r2").innerHTML = "correct";}
+        if (d3_8x1_bool[2]) {document.getElementById("d3_8x1_r3").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r3").innerHTML = "correct";}
+        if (d3_8x1_bool[3]) {document.getElementById("d3_8x1_r4").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r4").innerHTML = "correct";}
+        if (d3_8x1_bool[4]) {document.getElementById("d3_8x1_r5").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r5").innerHTML = "correct";}
+        if (d3_8x1_bool[5]) {document.getElementById("d3_8x1_r6").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r6").innerHTML = "correct";}
+        if (d3_8x1_bool[6]) {document.getElementById("d3_8x1_r7").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r7").innerHTML = "correct";}
+        if (d3_8x1_bool[7]) {document.getElementById("d3_8x1_r8").style.backgroundColor = "#739E5B"; document.getElementById("d3_8x1_r8").innerHTML = "correct";}
+    }
     // 3.9
     /* discrete interactive */
 }
